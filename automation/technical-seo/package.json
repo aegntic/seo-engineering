@@ -1,0 +1,20 @@
+{
+  "name": "seoautomate-technical-seo",
+  "version": "0.1.0",
+  "description": "Technical SEO analysis module for SEOAutomate",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "playwright": "^1.32.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "private": true
+}

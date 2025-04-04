@@ -1,0 +1,29 @@
+{
+  "name": "seoautomate-competitor-analysis",
+  "version": "1.0.0",
+  "description": "Competitor analysis module for SEOAutomate",
+  "main": "index.js",
+  "scripts": {
+    "analyze": "node cli.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "seo",
+    "automation",
+    "competitors",
+    "analysis"
+  ],
+  "author": "SEOAutomate Team",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.1",
+    "playwright": "^1.22.0",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "jest": "^28.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

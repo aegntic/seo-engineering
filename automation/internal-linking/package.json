@@ -1,0 +1,28 @@
+{
+  "name": "seoautomate-internal-linking",
+  "version": "1.0.0",
+  "description": "Internal linking optimization module for SEOAutomate",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.js",
+    "lint": "eslint --fix **/*.js",
+    "start": "node examples/analyze-site.js"
+  },
+  "keywords": [
+    "seo",
+    "internal linking",
+    "optimization",
+    "link graph",
+    "anchor text"
+  ],
+  "author": "SEOAutomate Team",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "perf_hooks": "^0.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^8.15.0",
+    "mocha": "^10.0.0"
+  }
+}

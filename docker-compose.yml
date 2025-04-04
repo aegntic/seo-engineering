@@ -1,0 +1,91 @@
+version: '3'
+
+services:
+  # MongoDB
+  mongodb:
+    image: mongo:latest
+    container_name: seo-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=seoautomate
+    restart: always
+
+  # API server
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: seo-api
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://mongodb:27017/seoautomate
+      - PORT=3001
+    depends_on:
+      - mongodb
+    restart: always
+
+  # Frontend
+  website:
+    build:
+      context: ./website
+      dockerfile: Dockerfile
+    container_name: seo-website
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./website:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:3001
+    restart: always
+
+  # n8n
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: seo-n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=${N8N_HOST:-localhost}
+      - N8N_PORT=${N8N_PORT:-5678}
+      - N8N_PROTOCOL=${N8N_PROTOCOL:-http}
+      - NODE_ENV=production
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY:-seoautomate_secret_key}
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=n8n
+      - DB_POSTGRESDB_USER=n8n
+      - DB_POSTGRESDB_PASSWORD=${DB_POSTGRESDB_PASSWORD:-n8n_password}
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./workflows/n8n:/home/node/.n8n/workflows
+    depends_on:
+      - postgres
+    restart: always
+
+  # Postgres for n8n
+  postgres:
+    image: postgres:14
+    container_name: seo-postgres
+    environment:
+      - POSTGRES_USER=n8n
+      - POSTGRES_PASSWORD=${DB_POSTGRESDB_PASSWORD:-n8n_password}
+      - POSTGRES_DB=n8n
+      - POSTGRES_NON_ROOT_USER=n8n
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  mongodb_data:
+  postgres_data:
+  n8n_data:

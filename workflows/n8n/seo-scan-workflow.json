@@ -1,0 +1,176 @@
+{
+  "name": "SEO Scan Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "={{ $json.website }}",
+        "options": {
+          "waitForSelector": "body",
+          "timeout": 30000
+        }
+      },
+      "name": "Playwright Browser",
+      "type": "n8n-nodes-base.playwrightBrowser",
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $node[\"Playwright Browser\"].json.html }}",
+        "dataPropertyName": "html",
+        "options": {}
+      },
+      "name": "Extract Meta Tags",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "// Extract meta tags from HTML\nconst cheerio = require('cheerio');\nconst $ = cheerio.load($input.html);\n\nconst metaTags = {};\n\n// Title\nmetaTags.title = $('title').text();\n\n// Meta description\nmetaTags.description = $('meta[name=\"description\"]').attr('content');\n\n// Canonical URL\nmetaTags.canonical = $('link[rel=\"canonical\"]').attr('href');\n\n// Open Graph tags\nmetaTags.ogTitle = $('meta[property=\"og:title\"]').attr('content');\nmetaTags.ogDescription = $('meta[property=\"og:description\"]').attr('content');\nmetaTags.ogImage = $('meta[property=\"og:image\"]').attr('content');\nmetaTags.ogUrl = $('meta[property=\"og:url\"]').attr('content');\nmetaTags.ogType = $('meta[property=\"og:type\"]').attr('content');\n\n// Twitter Card tags\nmetaTags.twitterCard = $('meta[name=\"twitter:card\"]').attr('content');\nmetaTags.twitterTitle = $('meta[name=\"twitter:title\"]').attr('content');\nmetaTags.twitterDescription = $('meta[name=\"twitter:description\"]').attr('content');\nmetaTags.twitterImage = $('meta[name=\"twitter:image\"]').attr('content');\n\n// Robots\nmetaTags.robots = $('meta[name=\"robots\"]').attr('content');\n\n// Structured data\nconst structuredData = [];\n$('script[type=\"application/ld+json\"]').each((i, el) => {\n  try {\n    const data = JSON.parse($(el).html());\n    structuredData.push(data);\n  } catch (e) {\n    // Invalid JSON\n  }\n});\nmetaTags.structuredData = structuredData;\n\n// Headers\nmetaTags.h1 = [];\n$('h1').each((i, el) => {\n  metaTags.h1.push($(el).text().trim());\n});\nmetaTags.h2Count = $('h2').length;\nmetaTags.h3Count = $('h3').length;\n\n// Images without alt text\nmetaTags.imagesWithoutAlt = [];\n$('img').each((i, el) => {\n  const img = $(el);\n  if (!img.attr('alt')) {\n    metaTags.imagesWithoutAlt.push({\n      src: img.attr('src'),\n      dimensions: {\n        width: img.attr('width'),\n        height: img.attr('height')\n      }\n    });\n  }\n});\n\n// Issues and recommendations\nmetaTags.issues = [];\nmetaTags.score = 100; // Start with perfect score\n\n// Check title\nif (!metaTags.title) {\n  metaTags.issues.push({\n    type: 'critical',\n    message: 'Missing page title',\n    recommendation: 'Add a descriptive page title using the <title> tag.'\n  });\n  metaTags.score -= 15;\n} else if (metaTags.title.length < 10) {\n  metaTags.issues.push({\n    type: 'warning',\n    message: 'Title too short',\n    recommendation: 'Make the title more descriptive (at least 30 characters).'\n  });\n  metaTags.score -= 5;\n} else if (metaTags.title.length > 60) {\n  metaTags.issues.push({\n    type: 'warning',\n    message: 'Title too long',\n    recommendation: 'Keep the title under 60 characters to prevent truncation in SERPs.'\n  });\n  metaTags.score -= 5;\n}\n\n// Check description\nif (!metaTags.description) {\n  metaTags.issues.push({\n    type: 'major',\n    message: 'Missing meta description',\n    recommendation: 'Add a meta description to improve click-through rates from search results.'\n  });\n  metaTags.score -= 10;\n} else if (metaTags.description.length < 50) {\n  metaTags.issues.push({\n    type: 'warning',\n    message: 'Meta description too short',\n    recommendation: 'Make the meta description more informative (at least 120 characters).'\n  });\n  metaTags.score -= 5;\n} else if (metaTags.description.length > 160) {\n  metaTags.issues.push({\n    type: 'info',\n    message: 'Meta description too long',\n    recommendation: 'Keep the meta description under 160 characters to prevent truncation in SERPs.'\n  });\n  metaTags.score -= 2;\n}\n\n// Check H1\nif (metaTags.h1.length === 0) {\n  metaTags.issues.push({\n    type: 'major',\n    message: 'Missing H1 heading',\n    recommendation: 'Add an H1 heading that clearly describes the page content.'\n  });\n  metaTags.score -= 10;\n} else if (metaTags.h1.length > 1) {\n  metaTags.issues.push({\n    type: 'warning',\n    message: 'Multiple H1 headings',\n    recommendation: 'Use only one H1 heading per page for clear content hierarchy.'\n  });\n  metaTags.score -= 5;\n}\n\n// Check canonical URL\nif (!metaTags.canonical) {\n  metaTags.issues.push({\n    type: 'info',\n    message: 'Missing canonical URL',\n    recommendation: 'Add a canonical URL to prevent duplicate content issues.'\n  });\n  metaTags.score -= 3;\n}\n\n// Check for images without alt text\nif (metaTags.imagesWithoutAlt.length > 0) {\n  metaTags.issues.push({\n    type: 'warning',\n    message: `${metaTags.imagesWithoutAlt.length} images missing alt text`,\n    recommendation: 'Add descriptive alt text to all images for accessibility and SEO.'\n  });\n  metaTags.score -= Math.min(10, metaTags.imagesWithoutAlt.length);\n}\n\n// Check for structured data\nif (metaTags.structuredData.length === 0) {\n  metaTags.issues.push({\n    type: 'info',\n    message: 'No structured data found',\n    recommendation: 'Add relevant structured data (Schema.org) to enhance SERP appearances.'\n  });\n  metaTags.score -= 5;\n}\n\n// Ensure score doesn't go below 0\nmetaTags.score = Math.max(0, metaTags.score);\n\n// Add timestamp\nmetaTags.scanTime = new Date().toISOString();\n\nreturn [metaTags];"
+      },
+      "name": "Process SEO Data",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        680,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "everyX",
+              "value": 1,
+              "unit": "days"
+            }
+          ]
+        }
+      },
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        20,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://api.example.com/seo-results",
+        "options": {
+          "method": "POST",
+          "body": "={{ JSON.stringify($node[\"Process SEO Data\"].json) }}",
+          "headers": {
+            "Content-Type": "application/json"
+          }
+        }
+      },
+      "name": "Send Results to API",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        900,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $node[\"Process SEO Data\"].json.score < 70 }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "name": "Low Score?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        900,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "alerts@seoautomate.com",
+        "toEmail": "={{ $json.clientEmail }}",
+        "subject": "Critical SEO Issues Detected on {{ $json.website }}",
+        "text": "=Our automated scan has detected critical SEO issues on your website that require attention.\n\nWebsite: {{ $json.website }}\nSEO Score: {{ $node[\"Process SEO Data\"].json.score }}/100\n\nCritical Issues:\n{% for issue in $node[\"Process SEO Data\"].json.issues %}\n{% if issue.type === 'critical' %}\n- {{ issue.message }}: {{ issue.recommendation }}\n{% endif %}\n{% endfor %}\n\nPlease log into your SEOAutomate dashboard to view the full report and implement the recommended fixes.\n\nThe SEOAutomate Team",
+        "options": {}
+      },
+      "name": "Send Alert Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        1080,
+        460
+      ]
+    }
+  ],
+  "connections": {
+    "Playwright Browser": {
+      "main": [
+        [
+          {
+            "node": "Extract Meta Tags",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Meta Tags": {
+      "main": [
+        [
+          {
+            "node": "Process SEO Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process SEO Data": {
+      "main": [
+        [
+          {
+            "node": "Send Results to API",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Low Score?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Playwright Browser",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Low Score?": {
+      "main": [
+        [
+          {
+            "node": "Send Alert Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

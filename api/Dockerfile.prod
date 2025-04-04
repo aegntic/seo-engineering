@@ -1,0 +1,54 @@
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci --only=production
+
+# Copy source files
+COPY . .
+
+# Build the application if needed
+RUN npm run build
+
+# Production stage
+FROM node:18-alpine
+
+# Set environment variables
+ENV NODE_ENV production
+
+WORKDIR /app
+
+# Copy package files and install production dependencies
+COPY package*.json ./
+RUN npm ci --only=production
+
+# Copy built application from builder stage
+COPY --from=builder /app/dist ./dist
+
+# Copy other necessary files
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/scripts ./scripts
+COPY --from=builder /app/uploads ./uploads
+
+# Create directory for uploads if it doesn't exist
+RUN mkdir -p uploads && chmod 755 uploads
+
+# Add a non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001 -G nodejs
+
+# Set ownership
+RUN chown -R nodejs:nodejs /app
+
+# Switch to non-root user
+USER nodejs
+
+# Expose API port
+EXPOSE 3001
+
+# Start the server
+CMD ["node", "dist/server.js"]

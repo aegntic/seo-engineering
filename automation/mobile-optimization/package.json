@@ -1,0 +1,23 @@
+{
+  "name": "seoautomate-mobile-optimization",
+  "version": "1.0.0",
+  "description": "Mobile Optimization module for SEOAutomate",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.test.js",
+    "lint": "eslint ."
+  },
+  "author": "SEOAutomate Team",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "playwright": "^1.32.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "eslint": "^8.36.0",
+    "mocha": "^10.2.0",
+    "sinon": "^15.0.2"
+  }
+}

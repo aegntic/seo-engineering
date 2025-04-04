@@ -1,0 +1,26 @@
+{
+  "name": "seoautomate",
+  "version": "0.1.0",
+  "description": "The Future of Technical SEO Automation",
+  "scripts": {
+    "start": "concurrently \"npm run start:api\" \"npm run start:website\"",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:website\"",
+    "start:api": "cd api && npm start",
+    "dev:api": "cd api && npm run dev",
+    "start:website": "cd website && npm run build && npm run preview",
+    "dev:website": "cd website && npm run dev",
+    "install:all": "npm install && cd api && npm install && cd ../website && npm install && cd ../automation && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "seo",
+    "automation",
+    "technical-seo",
+    "performance"
+  ],
+  "author": "SEOAutomate Team",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

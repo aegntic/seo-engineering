@@ -1,0 +1,41 @@
+{
+  "name": "seoautomate-automation",
+  "version": "0.1.0",
+  "description": "SEOAutomate Crawler and Automation Tools",
+  "main": "index.js",
+  "scripts": {
+    "crawl": "node crawler/crawl-site.js",
+    "test": "mocha tests/**/*.test.js",
+    "test:unit": "mocha tests/unit/*.test.js",
+    "test:integration": "mocha tests/integration/*.test.js",
+    "test:coverage": "nyc mocha tests/**/*.test.js",
+    "test:watch": "mocha --watch tests/**/*.test.js",
+    "example:error-handling": "node examples/error-handling-example.js"
+  },
+  "keywords": [
+    "seo",
+    "automation",
+    "crawler",
+    "playwright"
+  ],
+  "author": "SEOAutomate Team",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.3.1",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3",
+    "nodemailer": "^6.9.7",
+    "playwright": "^1.40.1",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "mongodb-memory-server": "^9.1.1",
+    "nyc": "^15.1.0",
+    "sinon": "^17.0.1"
+  }
+}
