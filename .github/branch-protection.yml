@@ -1,0 +1,37 @@
+name: Branch Protection Rules
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  protect-main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo
+            
+            // Configure branch protection
+            await github.rest.repos.updateBranchProtection({
+              owner,
+              repo,
+              branch: 'main',
+              required_status_checks: {
+                strict: true,
+                contexts: [
+                  'build (18.x)',
+                  'build (20.x)',
+                  'Run Linter',
+                  'Run Tests',
+                  'Security Scan'
+                ]
+              },
+              enforce_admins: true,
+              required_pull_request_reviews: {
+                required_approving_review_count: 1
+              },
+              restrictions: null
+            })
