@@ -220,13 +220,21 @@ exports.handleWebhook = async (req, res) => {
   let event;
 
   try {
-    event = stripe.webhooks.constructEvent(
-      req.rawBody, // ensure express is configured to provide raw body for webhook
-      signature,
-      process.env.STRIPE_WEBHOOK_SECRET
-    );
+    try {
+      event = stripe.webhooks.constructEvent(
+        req.rawBody, // ensure express is configured to provide raw body for webhook
+        signature,
+        process.env.STRIPE_WEBHOOK_SECRET_WRITE
+      );
+    } catch (err1) {
+      event = stripe.webhooks.constructEvent(
+        req.rawBody,
+        signature,
+        process.env.STRIPE_WEBHOOK_SECRET_READ
+      );
+    }
   } catch (error) {
-    console.error('Webhook signature verification failed', error.message);
+    console.error('Webhook signature verification failed with both secrets:', error.message);
     return res.status(400).send(`Webhook Error: ${error.message}`);
   }
 
