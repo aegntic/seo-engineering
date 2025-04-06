@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # API server
+  api:
+    build:
+      context: ../api
+      dockerfile: Dockerfile.prod.fixed
+    container_name: seo-api
+    volumes:
+      - ../api/uploads:/app/uploads
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://admin:u0(Wj@&_QZT#cL9Lnl)CwUk(pD@UM!7fbPy#Xk^9UKlGV_vj@mongodb:27017/seoautomate?authSource=admin
+      - PORT=3001
+      - REDIS_URI=redis://redis:6379
+      - JWT_ACCESS_SECRET=${JWT_ACCESS_SECRET}
+      - JWT_REFRESH_SECRET=${JWT_REFRESH_SECRET}
+      - N8N_API_KEY=${N8N_API_KEY}
+      - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+      - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY}
+    networks:
+      - deployment_seo_network
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Frontend
+  website:
+    build:
+      context: ../website
+      dockerfile: Dockerfile.prod.fixed
+    container_name: seo-website
+    environment:
+      - VITE_API_URL=https://${DOMAIN}/api
+      - VITE_STRIPE_PUBLIC_KEY=${STRIPE_PUBLIC_KEY}
+    networks:
+      - deployment_seo_network
+    restart: always
+    volumes:
+      - website_build:/app/dist
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  deployment_seo_network:
+    external: true
+
+volumes:
+  website_build:

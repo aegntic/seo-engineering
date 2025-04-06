@@ -1,0 +1,4 @@
+# Ignore production environment secrets
+deployment/.env.production
+.env.production
+backups/pre-launch/.env.production

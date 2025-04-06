@@ -1,0 +1,32 @@
+FROM node:18-alpine
+
+# Set environment variables
+ENV NODE_ENV production
+
+WORKDIR /app
+
+# Copy package files and install production dependencies
+COPY package*.json ./
+RUN npm ci --only=production
+
+# Copy application source
+COPY . .
+
+# Create directory for uploads if it doesn't exist
+RUN mkdir -p uploads && chmod 755 uploads
+
+# Add a non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001 -G nodejs
+
+# Set ownership
+RUN chown -R nodejs:nodejs /app
+
+# Switch to non-root user
+USER nodejs
+
+# Expose API port
+EXPOSE 3001
+
+# Start the server
+CMD ["node", "src/server.js"]
