@@ -17,15 +17,23 @@ const logger = require('../../utils/logger');
  * @returns {Promise<Object>} - MongoDB memory server instance
  */
 async function setupTestDatabase() {
-  const mongoServer = await MongoMemoryServer.create();
-  const mongoUri = mongoServer.getUri();
-  
-  // Connect to the in-memory database
+  let mongoUri;
+  let mongoServer = null;
+
+  if (process.env.MONGODB_URI) {
+    mongoUri = process.env.MONGODB_URI;
+    console.log('[Test Utils] Using existing MongoDB URI:', mongoUri);
+  } else {
+    mongoServer = await MongoMemoryServer.create();
+    mongoUri = mongoServer.getUri();
+    console.log('[Test Utils] Started new in-memory MongoDB at', mongoUri);
+  }
+
   await mongoose.connect(mongoUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   });
-  
+
   return mongoServer;
 }
 
