@@ -50,22 +50,14 @@ async function testConnection(uri, maxRetries = 10, delay = 2000) {
 }
 
 before(async function () {
-  // Prefer real MongoDB if URL is provided
-  if (process.env.MONGO_URL) {
-    console.log('Using provided MongoDB at', process.env.MONGO_URL);
-    if (!await testConnection(process.env.MONGO_URL)) {
-      throw new Error('Failed to connect to provided MongoDB');
-    }
-  } 
-  // Fall back to in-memory MongoDB if no URL provided or in CI
-  else if (process.env.CI === 'true') {
-    mongoServer = await MongoMemoryServer.create();
-    const uri = mongoServer.getUri();
-    process.env.MONGODB_URI = uri;
-    console.log('[CI] Started in-memory MongoDB at', uri);
-    if (!await testConnection(uri)) {
-      throw new Error('Failed to connect to in-memory MongoDB');
-    }
+  // Always use in-memory MongoDB for tests
+  mongoServer = await MongoMemoryServer.create();
+  const uri = mongoServer.getUri();
+  process.env.MONGODB_URI = uri;
+  console.log('Using in-memory MongoDB at', uri);
+  
+  if (!await testConnection(uri)) {
+    throw new Error('Failed to connect to in-memory MongoDB');
   }
 });
 
