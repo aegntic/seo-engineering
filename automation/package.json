@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "crawl": "node crawler/crawl-site.js",
-  "test": "mocha --require ./tests/test-setup.js tests/**/*.test.js",
+  "test": "mocha --require ./tests/test-setup.js tests/**/*.test.js --reporter spec --timeout 60000 --slow 3000 --colors",
   "test:unit": "mocha --require ./tests/test-setup.js tests/unit/*.test.js",
   "test:integration": "mocha --require ./tests/test-setup.js tests/integration/*.test.js",
   "test:coverage": "nyc mocha --require ./tests/test-setup.js tests/**/*.test.js",
