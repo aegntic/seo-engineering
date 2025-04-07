@@ -5,18 +5,47 @@ const util = require('util');
 const sleep = util.promisify(setTimeout);
 let mongoServer;
 
-async function testConnection(uri, maxRetries = 5, delay = 1000) {
+async function testConnection(uri, maxRetries = 10, delay = 2000) {
+  console.log(`Attempting to connect to MongoDB at ${uri}`);
+  console.log('Available environment variables:', {
+    MONGO_URL: process.env.MONGO_URL,
+    MONGODB_URI: process.env.MONGODB_URI,
+    CI: process.env.CI
+  });
+
   for (let i = 0; i < maxRetries; i++) {
     try {
-      await mongoose.connect(uri, {connectTimeoutMS: 5000});
-      await mongoose.connection.db.admin().ping();
-      console.log('Successfully connected to MongoDB at', uri);
+      console.log(`Connection attempt ${i + 1}/${maxRetries}`);
+      await mongoose.connect(uri, {
+        connectTimeoutMS: 10000,
+        socketTimeoutMS: 30000,
+        serverSelectionTimeoutMS: 10000
+      });
+      
+      const pingResult = await mongoose.connection.db.admin().ping();
+      console.log('MongoDB ping result:', pingResult);
+      
+      const dbStats = await mongoose.connection.db.stats();
+      console.log('MongoDB connection stats:', {
+        host: mongoose.connection.host,
+        port: mongoose.connection.port,
+        db: dbStats.db
+      });
+
       return true;
     } catch (err) {
-      console.warn(`Connection attempt ${i + 1} failed:`, err.message);
-      if (i < maxRetries - 1) await sleep(delay);
+      console.error(`Connection attempt ${i + 1} failed:`, {
+        message: err.message,
+        stack: err.stack,
+        name: err.name
+      });
+      if (i < maxRetries - 1) {
+        console.log(`Waiting ${delay}ms before next attempt...`);
+        await sleep(delay);
+      }
     }
   }
+  console.error(`All ${maxRetries} connection attempts failed`);
   return false;
 }
 
