@@ -9,8 +9,14 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    services:
+      mongodb:
+        image: mongo:latest
+        ports:
+          - 27017:27017
     env:
       CI: true
+      MONGO_URL: mongodb://localhost:27017/seo-engineering-test
     strategy:
       matrix:
         node-version: [18.x, 20.x]
