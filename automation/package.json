@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "crawl": "node crawler/crawl-site.js",
-    "test": "mocha tests/**/*.test.js",
-    "test:unit": "mocha tests/unit/*.test.js",
-    "test:integration": "mocha tests/integration/*.test.js",
-    "test:coverage": "nyc mocha tests/**/*.test.js",
-    "test:watch": "mocha --watch tests/**/*.test.js",
+  "test": "mocha --require ./tests/test-setup.js tests/**/*.test.js",
+  "test:unit": "mocha --require ./tests/test-setup.js tests/unit/*.test.js",
+  "test:integration": "mocha --require ./tests/test-setup.js tests/integration/*.test.js",
+  "test:coverage": "nyc mocha --require ./tests/test-setup.js tests/**/*.test.js",
+  "test:watch": "mocha --require ./tests/test-setup.js --watch tests/**/*.test.js",
     "example:error-handling": "node examples/error-handling-example.js"
   },
   "keywords": [
