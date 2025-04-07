@@ -49,6 +49,15 @@ jobs:
       run: npm run build
       working-directory: website
 
+    - name: Wait for MongoDB
+      run: |
+        timeout 30 bash -c 'until nc -z localhost 27017; do sleep 1; echo "Waiting for MongoDB..."; done'
+        echo "MongoDB is ready!"
+
     - name: Run Automation Tests
       run: npm test
       working-directory: automation
+      timeout-minutes: 10
+      env:
+        MONGODB_URI: mongodb://localhost:27017/seo-engineering-test
+        MONGO_URL: mongodb://localhost:27017/seo-engineering-test
