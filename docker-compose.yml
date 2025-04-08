@@ -30,7 +30,7 @@ services:
     command: npm start
     environment:
       - NODE_ENV=production
-      - MONGODB_URI=mongodb://admin:F0ujdluYOVCCDX7N@mongodb:27017/seo_engineering?authSource=admin
+      - MONGODB_URI=mongodb://admin:${MONGO_ADMIN_PASSWORD:-default_password_for_development}@mongodb:27017/seo_engineering?authSource=admin
     depends_on:
       - mongodb
       - redis
@@ -52,7 +52,7 @@ services:
       - mongodb_data:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=F0ujdluYOVCCDX7N
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ADMIN_PASSWORD:-default_password_for_development}
       - MONGO_INITDB_DATABASE=seo_engineering
     networks:
       - seo_network

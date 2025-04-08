@@ -24,10 +24,13 @@ create_network() {
 # MongoDB Deployment
 deploy_mongodb() {
     log_message "📦 Launching MongoDB Container"
+    # Use environment variable with fallback
+    MONGO_ADMIN_PWD=${MONGO_ADMIN_PASSWORD:-default_password_for_development}
+    
     docker run -d --name seo-mongodb \
       --network seo_engineering \
       -e MONGO_INITDB_ROOT_USERNAME=admin \
-      -e MONGO_INITDB_ROOT_PASSWORD=F0ujdluYOVCCDX7N \
+      -e MONGO_INITDB_ROOT_PASSWORD="$MONGO_ADMIN_PWD" \
       -p 27017:27017 \
       mongo:latest
 }
@@ -44,10 +47,13 @@ deploy_redis() {
 # API Service Deployment
 deploy_api() {
     log_message "🔧 Launching API Service Container"
+    # Use environment variable with fallback
+    MONGO_ADMIN_PWD=${MONGO_ADMIN_PASSWORD:-default_password_for_development}
+    
     docker run -d --name seo-api \
       --network seo_engineering \
       -p 3001:3001 \
-      -e MONGODB_URI=mongodb://admin:F0ujdluYOVCCDX7N@seo-mongodb:27017 \
+      -e MONGODB_URI=mongodb://admin:${MONGO_ADMIN_PWD}@seo-mongodb:27017 \
       -e REDIS_URL=redis://seo-redis:6379 \
       seo-engineering-api:latest
 }
