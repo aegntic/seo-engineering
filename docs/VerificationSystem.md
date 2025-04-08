@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Verification System is a critical component of SEOAutomate that confirms and measures the impact of SEO fixes. It operates through four complementary verification strategies to ensure that implemented fixes have been successful, haven't caused regressions, and have made measurable improvements to site performance.
+The Verification System is a critical component of SEO.engineering that confirms and measures the impact of SEO fixes. It operates through four complementary verification strategies to ensure that implemented fixes have been successful, haven't caused regressions, and have made measurable improvements to site performance.
 
 ## Core Components
 
@@ -160,19 +160,19 @@ GET /api/verification/:siteId/fix/:fixId
 
 ```bash
 # Verify a specific site
-seoautomate verify -s siteId
+seo.engineering verify -s siteId
 
 # Verify all sites
-seoautomate verify -a
+seo.engineering verify -a
 
 # Verify a specific fix
-seoautomate verify -s siteId -f fixId
+seo.engineering verify -s siteId -f fixId
 
 # List recent verifications
-seoautomate verify -l
+seo.engineering verify -l
 
 # Schedule verification
-seoautomate verify -s siteId --schedule "0 0 * * *"
+seo.engineering verify -s siteId --schedule "0 0 * * *"
 ```
 
 ### Scheduled Verification

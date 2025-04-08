@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# SEOAutomate Benchmark Testing Script
+# SEO.engineering Benchmark Testing Script
 # This script demonstrates the Benchmark Comparison Framework
 
 # Create sample data directory

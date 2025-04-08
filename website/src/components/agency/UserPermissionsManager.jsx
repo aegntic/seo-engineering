@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowLeftIcon, 
-  UserAddIcon, 
-  SearchIcon, 
-  PencilAltIcon, 
+  UserPlusIcon, 
+  MagnifyingGlassIcon, 
+  PencilIcon, 
   TrashIcon,
   PlusIcon,
-  XIcon
-} from '@heroicons/react/outline';
+  XMarkIcon
+} from '@heroicons/react/24/outline';
 
 /**
  * UserPermissionsManager component allows agencies to manage user access
@@ -260,7 +260,7 @@ const UserPermissionsManager = () => {
                   onClick={() => setShowAddUserModal(true)}
                   className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
-                  <UserAddIcon className="h-4 w-4 mr-2" aria-hidden="true" />
+                  <UserPlusIcon className="h-4 w-4 mr-2" aria-hidden="true" />
                   Add User
                 </button>
               </div>
@@ -269,7 +269,7 @@ const UserPermissionsManager = () => {
             <div className="mb-4">
               <div className="relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <SearchIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                  <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
                 </div>
                 <input
                   type="text"
@@ -342,7 +342,7 @@ const UserPermissionsManager = () => {
                           type="button"
                           className="text-blue-600 hover:text-blue-900 mr-3"
                         >
-                          <PencilAltIcon className="h-4 w-4" aria-hidden="true" />
+                          <PencilIcon className="h-4 w-4" aria-hidden="true" />
                           <span className="sr-only">Edit</span>
                         </button>
                         <button
@@ -480,7 +480,7 @@ const UserPermissionsManager = () => {
                     className="text-gray-400 hover:text-gray-500"
                     onClick={() => setShowAddUserModal(false)}
                   >
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
                 </div>
                 
@@ -582,7 +582,7 @@ const UserPermissionsManager = () => {
                               onClick={() => removeClient(client)}
                             >
                               <span className="sr-only">Remove {client}</span>
-                              <XIcon className="h-3 w-3" aria-hidden="true" />
+                              <XMarkIcon className="h-3 w-3" aria-hidden="true" />
                             </button>
                           </span>
                         ))}

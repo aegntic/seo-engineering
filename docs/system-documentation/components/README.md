@@ -1,10 +1,10 @@
-# SEOAutomate Component Documentation
+# SEO.engineering Component Documentation
 
-This directory contains detailed documentation for each of the major components of the SEOAutomate system.
+This directory contains detailed documentation for each of the major components of the SEO.engineering system.
 
 ## Component Overview
 
-The SEOAutomate system is composed of the following major components:
+The SEO.engineering system is composed of the following major components:
 
 1. [Crawler Module](./crawler.md)
 2. [Analysis Engine](./analysis-engine.md)

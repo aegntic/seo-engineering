@@ -2,7 +2,7 @@
 
 ## Component Overview
 
-The Analysis Engine is a core component of the SEOAutomate system responsible for processing crawled website data to identify technical SEO issues, prioritize them based on impact, and determine appropriate fix strategies. It serves as the brain of the system, applying SEO expertise and best practices to transform raw website data into actionable insights.
+The Analysis Engine is a core component of the SEO.engineering system responsible for processing crawled website data to identify technical SEO issues, prioritize them based on impact, and determine appropriate fix strategies. It serves as the brain of the system, applying SEO expertise and best practices to transform raw website data into actionable insights.
 
 The Analysis Engine is designed to be:
 - **Comprehensive**: Covering all aspects of technical SEO
@@ -262,12 +262,12 @@ The Analysis Engine can be deployed as a Docker container:
 
 ```bash
 docker run -d \
-  --name seoautomate-analysis \
-  -e MONGODB_URI=mongodb://mongodb:27017/seoautomate \
+  --name seo.engineering-analysis \
+  -e MONGODB_URI=mongodb://mongodb:27017/seo.engineering \
   -e REDIS_URI=redis://redis:6379 \
   -e LOG_LEVEL=info \
   -v /data/rules:/app/rules \
-  seoautomate/analysis-engine:latest
+  seo.engineering/analysis-engine:latest
 ```
 
 ### Kubernetes Deployment
@@ -278,20 +278,20 @@ For production deployments, a Kubernetes configuration is recommended:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: seoautomate-analysis
+  name: seo.engineering-analysis
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: seoautomate-analysis
+      app: seo.engineering-analysis
   template:
     metadata:
       labels:
-        app: seoautomate-analysis
+        app: seo.engineering-analysis
     spec:
       containers:
       - name: analysis
-        image: seoautomate/analysis-engine:latest
+        image: seo.engineering/analysis-engine:latest
         resources:
           requests:
             memory: "4Gi"
@@ -303,12 +303,12 @@ spec:
         - name: MONGODB_URI
           valueFrom:
             secretKeyRef:
-              name: seoautomate-secrets
+              name: seo.engineering-secrets
               key: mongodb-uri
         - name: REDIS_URI
           valueFrom:
             secretKeyRef:
-              name: seoautomate-secrets
+              name: seo.engineering-secrets
               key: redis-uri
         - name: LOG_LEVEL
           value: "info"
@@ -444,10 +444,10 @@ Specific tests for rule categories:
 
 ```bash
 # Clone the repository
-git clone https://github.com/organization/SEOAutomate.git
+git clone https://github.com/organization/SEO.engineering.git
 
 # Navigate to the analysis engine directory
-cd SEOAutomate/automation/analysis
+cd SEO.engineering/automation/analysis
 
 # Install dependencies
 npm install
@@ -552,7 +552,7 @@ module.exports = {
 Enable debug logging:
 
 ```
-export DEBUG=seoautomate:analysis:*
+export DEBUG=seo.engineering:analysis:*
 npm run start
 ```
 

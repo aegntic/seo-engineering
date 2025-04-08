@@ -355,7 +355,7 @@ class ResponsiveDesignTester {
         // Create context with custom viewport
         const context = await browser.newContext({
           viewport: { width: breakpoint.width, height: breakpoint.height },
-          userAgent: options.userAgent || 'SEOAutomate/1.0 Responsive Testing Bot'
+          userAgent: options.userAgent || 'SEO.engineering/1.0 Responsive Testing Bot'
         });
         
         // Create page

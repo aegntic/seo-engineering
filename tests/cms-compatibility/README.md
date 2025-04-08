@@ -1,10 +1,10 @@
 # CMS Compatibility Testing Framework
 
-This directory contains the testing framework for verifying SEOAutomate's compatibility with various Content Management Systems (CMS).
+This directory contains the testing framework for verifying SEO.engineering's compatibility with various Content Management Systems (CMS).
 
 ## Overview
 
-The CMS Compatibility Testing Framework is designed to verify that SEOAutomate works correctly across different CMS platforms. It tests various aspects of SEOAutomate's functionality including crawling, analysis, automated fixes, and verification on platforms like WordPress, Shopify, Wix, Squarespace, and Joomla.
+The CMS Compatibility Testing Framework is designed to verify that SEO.engineering works correctly across different CMS platforms. It tests various aspects of SEO.engineering's functionality including crawling, analysis, automated fixes, and verification on platforms like WordPress, Shopify, Wix, Squarespace, and Joomla.
 
 ## Framework Structure
 
@@ -60,7 +60,7 @@ The framework tests the following features across all supported platforms:
 To run the CMS compatibility tests:
 
 ```bash
-cd ./SEOAutomate
+cd ./SEO.engineering
 node tests/cms-compatibility/test-runner.js
 ```
 
@@ -113,7 +113,7 @@ If you encounter issues with specific CMS platforms, please report them with the
 This testing framework should be updated whenever:
 
 1. New CMS platforms need to be supported
-2. New SEOAutomate features are added
+2. New SEO.engineering features are added
 3. Existing CMS platforms make significant changes to their architecture
 4. New tests are needed to verify functionality
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChartBarIcon, UserGroupIcon, ClockIcon } from '@heroicons/react/outline';
+import { ChartBarIcon, UserGroupIcon, ClockIcon } from '@heroicons/react/24/outline';
 
 /**
  * AgencyHeader component displays the agency name and key metrics 

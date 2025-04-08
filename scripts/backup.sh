@@ -1,5 +1,5 @@
 #!/bin/bash
-# SEOAutomate Backup Script
+# SEO.engineering Backup Script
 # =========================
 # This script performs automated backups of MongoDB and PostgreSQL databases.
 # It should be scheduled via cron to run daily.
@@ -14,7 +14,7 @@ MONGO_BACKUP_FILE="mongodb-backup-${DATE}.gz"
 MONGO_HOST="mongodb"
 MONGO_USER=${MONGO_ROOT_USERNAME:-admin}
 MONGO_PASS=${MONGO_ROOT_PASSWORD:-password}
-MONGO_DB="seoautomate"
+MONGO_DB="seo.engineering"
 
 # PostgreSQL backup
 PG_BACKUP_FILE="postgres-backup-${DATE}.gz"

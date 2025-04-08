@@ -1,5 +1,5 @@
 /**
- * SEOAutomate API Server
+ * SEO.engineering API Server
  */
 
 const express = require('express');
@@ -83,7 +83,7 @@ app.get('/api/docs', (req, res) => {
       { path: '/api/reports', methods: ['GET'], description: 'Report generation and retrieval' },
       { path: '/api/payments', methods: ['GET', 'POST', 'PUT', 'DELETE'], description: 'Payment processing and subscription management' }
     ],
-    documentation: 'https://docs.seoautomate.com/api'
+    documentation: 'https://docs.seo.engineering.com/api'
   });
 });
 

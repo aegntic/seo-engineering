@@ -1,8 +1,8 @@
-# SEOAutomate MVP Feature Definition
+# SEO.engineering MVP Feature Definition
 
 ## Overview
 
-This document clearly defines the Minimum Viable Product (MVP) feature set for SEOAutomate, distinguishing core functionality from future enhancements. The MVP is designed to deliver immediate value to users while establishing a foundation for future expansion.
+This document clearly defines the Minimum Viable Product (MVP) feature set for SEO.engineering, distinguishing core functionality from future enhancements. The MVP is designed to deliver immediate value to users while establishing a foundation for future expansion.
 
 ## Feature Categorization Framework
 
@@ -18,7 +18,7 @@ Features are categorized using the following framework:
 
 ## MVP Core Features
 
-These features represent the absolute minimum required for SEOAutomate to function and deliver value to users.
+These features represent the absolute minimum required for SEO.engineering to function and deliver value to users.
 
 ### Crawler Module
 - Playwright-based website scanning
@@ -327,6 +327,6 @@ Each feature category will be measured against the following success metrics:
 
 ## Conclusion
 
-This MVP definition provides a clear roadmap for SEOAutomate's initial release and future development. By focusing on core technical SEO automation features in the MVP, we can deliver immediate value to users while establishing a foundation for more advanced capabilities in subsequent releases.
+This MVP definition provides a clear roadmap for SEO.engineering's initial release and future development. By focusing on core technical SEO automation features in the MVP, we can deliver immediate value to users while establishing a foundation for more advanced capabilities in subsequent releases.
 
 The MVP will enable users to automate the most critical and time-consuming aspects of technical SEO, while future enhancements will expand the platform's capabilities to address more complex and specialized requirements.

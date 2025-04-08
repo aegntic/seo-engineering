@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  UserAddIcon, 
-  DocumentReportIcon, 
+  UserPlusIcon, 
+  DocumentChartBarIcon, 
   CogIcon, 
-  AdjustmentsIcon,
+  AdjustmentsVerticalIcon,
   TagIcon,
   CurrencyDollarIcon
-} from '@heroicons/react/outline';
+} from '@heroicons/react/24/outline';
 
 /**
  * AgencyActionPanel component provides quick action buttons for
@@ -19,14 +19,14 @@ const AgencyActionPanel = () => {
     {
       name: 'Add Client',
       description: 'Add a new client to your agency',
-      icon: UserAddIcon,
+      icon: UserPlusIcon,
       to: '/agency/clients/new',
       color: 'bg-blue-500 hover:bg-blue-600'
     },
     {
       name: 'Bulk Report',
       description: 'Generate reports for multiple clients',
-      icon: DocumentReportIcon,
+      icon: DocumentChartBarIcon,
       to: '/agency/reports/bulk',
       color: 'bg-purple-500 hover:bg-purple-600'
     },

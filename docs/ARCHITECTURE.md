@@ -1,6 +1,6 @@
-# SEOAutomate System Architecture
+# SEO.engineering System Architecture
 
-This document defines the detailed system architecture and data flow for the SEOAutomate platform.
+This document defines the detailed system architecture and data flow for the SEO.engineering platform.
 
 ## System Components
 
@@ -135,7 +135,7 @@ This document defines the detailed system architecture and data flow for the SEO
 
 ## Authentication Flow
 
-1. Client registers on the SEOAutomate website
+1. Client registers on the SEO.engineering website
 2. Verification email is sent to client
 3. Client confirms email and sets up password
 4. Client logs in to dashboard

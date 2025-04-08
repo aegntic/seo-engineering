@@ -2,7 +2,7 @@
 
 ## Description
 
-This PR implements the Git integration module for tracking and managing changes made to client websites by the SEOAutomate platform. This is a critical component that enables the Implementation Module to safely apply and track changes with full versioning and rollback capabilities.
+This PR implements the Git integration module for tracking and managing changes made to client websites by the SEO.engineering platform. This is a critical component that enables the Implementation Module to safely apply and track changes with full versioning and rollback capabilities.
 
 ## Changes Made
 

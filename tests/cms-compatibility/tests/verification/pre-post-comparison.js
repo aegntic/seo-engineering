@@ -147,21 +147,21 @@ async function simulateChanges(page) {
     if (!metaDesc) {
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name', 'description');
-      metaDesc.setAttribute('content', 'This is an optimized meta description added by SEOAutomate for better search visibility.');
+      metaDesc.setAttribute('content', 'This is an optimized meta description added by SEO.engineering for better search visibility.');
       document.head.appendChild(metaDesc);
       
       window._simulatedChanges.push({ 
         type: 'metaDescription', 
         from: null, 
-        to: 'This is an optimized meta description added by SEOAutomate for better search visibility.' 
+        to: 'This is an optimized meta description added by SEO.engineering for better search visibility.' 
       });
     } else {
-      metaDesc.setAttribute('content', 'This is an optimized meta description modified by SEOAutomate for better search visibility.');
+      metaDesc.setAttribute('content', 'This is an optimized meta description modified by SEO.engineering for better search visibility.');
       
       window._simulatedChanges.push({ 
         type: 'metaDescription', 
         from: originalMetaDesc, 
-        to: 'This is an optimized meta description modified by SEOAutomate for better search visibility.' 
+        to: 'This is an optimized meta description modified by SEO.engineering for better search visibility.' 
       });
     }
     

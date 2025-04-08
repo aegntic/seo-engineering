@@ -34,7 +34,7 @@ const HomePage = () => {
             <div className="bg-white p-4 rounded-xl shadow-lg">
               <img 
                 src="/images/dashboard-preview.jpg" 
-                alt="SEOAutomate Dashboard Preview" 
+                alt="SEO.engineering Dashboard Preview" 
                 className="rounded-lg w-full"
               />
             </div>
@@ -145,7 +145,7 @@ const HomePage = () => {
             Ready to transform your technical SEO?
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-            Join hundreds of companies already using SEOAutomate to improve their search performance.
+            Join hundreds of companies already using SEO.engineering to improve their search performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/signup" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary-700 focus:ring-white transition duration-150 ease-in-out">

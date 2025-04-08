@@ -1,7 +1,7 @@
 {
-  "name": "seoautomate-website",
+  "name": "seo.engineering-website",
   "version": "0.1.0",
-  "description": "SEOAutomate - The Future of Technical SEO Automation",
+  "description": "SEO.engineering - The Future of Technical SEO Automation",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,19 +15,21 @@
     "technical-seo",
     "performance"
   ],
-  "author": "SEOAutomate Team",
+  "author": "SEO.engineering Team",
   "license": "UNLICENSED",
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@stripe/react-stripe-js": "^3.6.0",
     "@stripe/stripe-js": "^7.0.0",
-    "d3": "^7.8.5",
+    "@visx/visx": "^3.8.0",
+    "d3": "^7.9.0",
+    "d3-shape": "^3.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-force-graph": "^1.44.1",
     "react-router-dom": "^7.4.1",
-    "recharts": "^2.10.3",
     "react-table": "^7.8.0",
-    "@visx/visx": "^3.8.0"
+    "recharts": "^2.10.3"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",

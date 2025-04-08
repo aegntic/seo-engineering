@@ -1,6 +1,6 @@
-# SEOAutomate Data Flow Diagrams
+# SEO.engineering Data Flow Diagrams
 
-This document provides visual representations of the data flows between SEOAutomate modules, highlighting the specific integration points and communication patterns.
+This document provides visual representations of the data flows between SEO.engineering modules, highlighting the specific integration points and communication patterns.
 
 ## Primary System Data Flow
 

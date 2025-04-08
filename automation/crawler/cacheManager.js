@@ -1,5 +1,5 @@
 /**
- * SEOAutomate Cache Manager
+ * SEO.engineering Cache Manager
  * 
  * This file implements a caching system for the crawler to reduce 
  * redundant requests and improve performance.

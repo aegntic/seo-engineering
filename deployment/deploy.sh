@@ -1,7 +1,7 @@
 #!/bin/bash
-# SEOAutomate Deployment Script
+# SEO.engineering Deployment Script
 # =============================
-# This script automates the deployment of the SEOAutomate platform.
+# This script automates the deployment of the SEO.engineering platform.
 
 # Color codes for output
 RED='\033[0;31m'
@@ -94,7 +94,7 @@ configure_nginx() {
     print_status "Configuring Nginx..."
     
     # Check if SSL certificates exist
-    if [ ! -f "nginx/ssl/seoautomate.com.crt" ] || [ ! -f "nginx/ssl/seoautomate.com.key" ]; then
+    if [ ! -f "nginx/ssl/seo.engineering.com.crt" ] || [ ! -f "nginx/ssl/seo.engineering.com.key" ]; then
         print_warning "SSL certificates not found in nginx/ssl/"
         print_warning "Please install SSL certificates before proceeding to production."
         
@@ -102,8 +102,8 @@ configure_nginx() {
         print_status "Creating self-signed certificates for development environment..."
         
         openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-            -keyout nginx/ssl/seoautomate.com.key \
-            -out nginx/ssl/seoautomate.com.crt \
+            -keyout nginx/ssl/seo.engineering.com.key \
+            -out nginx/ssl/seo.engineering.com.crt \
             -subj "/CN=localhost" -addext "subjectAltName=DNS:localhost"
             
         print_status "Self-signed certificates created for development."
@@ -200,7 +200,7 @@ setup_backup() {
         
         cat > scripts/backup.sh << 'EOF'
 #!/bin/bash
-# SEOAutomate Backup Script
+# SEO.engineering Backup Script
 # =========================
 # This script performs automated backups of MongoDB and PostgreSQL databases.
 # It should be scheduled via cron to run daily.
@@ -215,7 +215,7 @@ MONGO_BACKUP_FILE="mongodb-backup-${DATE}.gz"
 MONGO_HOST="mongodb"
 MONGO_USER=${MONGO_ROOT_USERNAME:-admin}
 MONGO_PASS=${MONGO_ROOT_PASSWORD:-password}
-MONGO_DB="seoautomate"
+MONGO_DB="seo.engineering"
 
 # PostgreSQL backup
 PG_BACKUP_FILE="postgres-backup-${DATE}.gz"
@@ -457,7 +457,7 @@ display_info() {
     
     echo ""
     echo -e "${GREEN}===================================${NC}"
-    echo -e "${GREEN}  SEOAutomate Deployment Complete  ${NC}"
+    echo -e "${GREEN}  SEO.engineering Deployment Complete  ${NC}"
     echo -e "${GREEN}===================================${NC}"
     echo ""
     print_status "Access the following services:"
@@ -501,7 +501,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 # Main deployment flow
-print_status "Starting SEOAutomate deployment in ${ENVIRONMENT} mode..."
+print_status "Starting SEO.engineering deployment in ${ENVIRONMENT} mode..."
 check_prerequisites
 create_directories
 setup_environment
@@ -515,4 +515,4 @@ start_containers
 check_container_status
 display_info
 
-print_status "Deployment completed successfully. Enjoy using SEOAutomate!"
+print_status "Deployment completed successfully. Enjoy using SEO.engineering!"

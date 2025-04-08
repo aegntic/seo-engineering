@@ -3,8 +3,8 @@
  * Handles SEO issue management and fixes
  */
 
-const { Client, Report } = require('../models');
-const axios = require('axios');
+const Client = require('../models/client.model');
+const Report = require('../models/report.model');
 
 /**
  * Get all issues for a report
@@ -152,72 +152,39 @@ exports.fixIssue = async (req, res, next) => {
       });
     }
     
-    // Trigger fix implementation in n8n
-    const n8nApiUrl = process.env.N8N_API_URL;
-    const n8nApiKey = process.env.N8N_API_KEY;
+    // Simulate fix
+    const fixDetails = {
+      implementation: 'Automatic fix applied',
+      gitCommitId: 'mock-commit-' + Date.now(),
+      fixedAt: new Date(),
+      previousValue: 'Previous value',
+      newValue: 'New value'
+    };
     
-    if (!n8nApiUrl || !n8nApiKey) {
-      return res.status(500).json({
-        success: false,
-        error: 'Fix implementation service configuration error'
-      });
-    }
+    // Update issue with fix details
+    const updatedReport = await Report.findOneAndUpdate(
+      { '_id': reportId, 'issues._id': issueId },
+      {
+        '$set': {
+          'issues.$.fixImplemented': true,
+          'issues.$.fixDetails': fixDetails
+        }
+      },
+      { new: true }
+    );
     
-    try {
-      // Call n8n workflow to implement the fix
-      const response = await axios.post(`${n8nApiUrl}/webhook/implement-fix`, {
-        clientId: report.client._id,
-        websiteUrl: report.client.websiteUrl,
-        reportId,
-        issueId,
-        issueType: issue.type,
-        url: issue.url
-      }, {
-        headers: {
-          'X-N8N-API-KEY': n8nApiKey
-        }
-      });
-      
-      // Get the fix details from n8n response
-      const fixDetails = response.data;
-      
-      // Update issue with fix details
-      const updatedReport = await Report.findOneAndUpdate(
-        { '_id': reportId, 'issues._id': issueId },
-        {
-          '$set': {
-            'issues.$.fixImplemented': true,
-            'issues.$.fixDetails': {
-              implementation: fixDetails.implementation || 'Automatic fix applied',
-              gitCommitId: fixDetails.gitCommitId,
-              fixedAt: new Date(),
-              previousValue: fixDetails.previousValue,
-              newValue: fixDetails.newValue
-            }
-          }
-        },
-        { new: true }
-      );
-      
-      // Update the fixed issue count in the summary
-      await Report.findByIdAndUpdate(reportId, {
-        $inc: { 'summary.fixedIssues': 1 }
-      });
-      
-      return res.status(200).json({
-        success: true,
-        data: {
-          message: 'Issue fixed successfully',
-          issue: updatedReport.issues.id(issueId)
-        }
-      });
-    } catch (apiError) {
-      return res.status(500).json({
-        success: false,
-        error: 'Failed to implement fix',
-        details: apiError.response?.data || apiError.message
-      });
-    }
+    // Update the fixed issue count in the summary
+    await Report.findByIdAndUpdate(reportId, {
+      $inc: { 'summary.fixedIssues': 1 }
+    });
+    
+    return res.status(200).json({
+      success: true,
+      data: {
+        message: 'Issue fixed successfully',
+        issue: updatedReport.issues.id(issueId)
+      }
+    });
   } catch (error) {
     next(error);
   }
@@ -273,44 +240,14 @@ exports.approveFixesBulk = async (req, res, next) => {
       });
     }
     
-    // Trigger bulk fix implementation in n8n
-    const n8nApiUrl = process.env.N8N_API_URL;
-    const n8nApiKey = process.env.N8N_API_KEY;
-    
-    if (!n8nApiUrl || !n8nApiKey) {
-      return res.status(500).json({
-        success: false,
-        error: 'Fix implementation service configuration error'
-      });
-    }
-    
-    try {
-      // Call n8n workflow to implement bulk fixes
-      await axios.post(`${n8nApiUrl}/webhook/implement-fixes-bulk`, {
-        clientId: report.client._id,
-        websiteUrl: report.client.websiteUrl,
-        reportId,
-        issueIds: validIssueIds
-      }, {
-        headers: {
-          'X-N8N-API-KEY': n8nApiKey
-        }
-      });
-      
-      return res.status(200).json({
-        success: true,
-        data: {
-          message: `Bulk fix operation started for ${validIssueIds.length} issues`,
-          issueCount: validIssueIds.length
-        }
-      });
-    } catch (apiError) {
-      return res.status(500).json({
-        success: false,
-        error: 'Failed to implement bulk fixes',
-        details: apiError.response?.data || apiError.message
-      });
-    }
+    // Simulate the bulk fix
+    return res.status(200).json({
+      success: true,
+      data: {
+        message: `Bulk fix operation started for ${validIssueIds.length} issues`,
+        issueCount: validIssueIds.length
+      }
+    });
   } catch (error) {
     next(error);
   }

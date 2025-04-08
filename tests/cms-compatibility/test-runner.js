@@ -1,7 +1,7 @@
 /**
  * CMS Compatibility Test Runner
  * 
- * This script runs tests for SEOAutomate across different CMS platforms
+ * This script runs tests for SEO.engineering across different CMS platforms
  * to verify compatibility and functionality.
  */
 
@@ -327,7 +327,7 @@ class CMSCompatibilityTester {
       <!DOCTYPE html>
       <html>
       <head>
-        <title>SEOAutomate CMS Compatibility Test Report</title>
+        <title>SEO.engineering CMS Compatibility Test Report</title>
         <style>
           body { font-family: Arial, sans-serif; margin: 20px; }
           h1, h2, h3 { color: #333; }
@@ -343,7 +343,7 @@ class CMSCompatibilityTester {
         </style>
       </head>
       <body>
-        <h1>SEOAutomate CMS Compatibility Test Report</h1>
+        <h1>SEO.engineering CMS Compatibility Test Report</h1>
         <div class="summary">
           <h2>Summary</h2>
           <p>Start time: ${this.results.startTime}</p>

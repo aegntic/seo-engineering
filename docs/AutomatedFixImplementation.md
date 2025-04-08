@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Automated Fix Implementation System automatically applies fixes for technical SEO issues identified by the Analysis Engine. This system is a cornerstone of SEOAutomate's value proposition, turning SEO recommendations into actual improvements without manual intervention.
+The Automated Fix Implementation System automatically applies fixes for technical SEO issues identified by the Analysis Engine. This system is a cornerstone of SEO.engineering's value proposition, turning SEO recommendations into actual improvements without manual intervention.
 
 ## Architecture
 

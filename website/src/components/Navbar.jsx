@@ -11,7 +11,7 @@ const Navbar = () => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center">
-                <span className="text-2xl font-display font-bold text-primary-600">SEOAutomate</span>
+                <span className="text-2xl font-display font-bold text-primary-600">SEO.engineering</span>
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">

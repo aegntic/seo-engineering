@@ -1,7 +1,7 @@
 /**
- * SEOAutomate - Git Integration Module Entry Point
+ * SEO.engineering - Git Integration Module Entry Point
  * 
- * This module exports the Git integration functionality for use in the SEOAutomate system.
+ * This module exports the Git integration functionality for use in the SEO.engineering system.
  * It provides the main interface for tracking and managing changes to client websites.
  */
 

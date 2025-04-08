@@ -1,4 +1,4 @@
-# SEOAutomate Priority Tasks
+# SEO.engineering Priority Tasks
 
 *Last updated: April 4, 2025 at 20:00*
 
@@ -116,7 +116,7 @@ Completing these priority tasks will:
 3. Create comprehensive documentation for development and operations
 4. Lay the groundwork for competitive analysis features
 
-These components together form the critical infrastructure needed to ensure SEOAutomate can scale reliably to serve a growing customer base with diverse technical environments.
+These components together form the critical infrastructure needed to ensure SEO.engineering can scale reliably to serve a growing customer base with diverse technical environments.
 
 ## Progress Update (April 4, 2025 at 20:00)
 

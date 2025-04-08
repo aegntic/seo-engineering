@@ -1,10 +1,10 @@
 # Trend Analysis Module Integration
 
-This document details how the Trend Analysis Reporting module interfaces with other components in the SEOAutomate system architecture.
+This document details how the Trend Analysis Reporting module interfaces with other components in the SEO.engineering system architecture.
 
 ## System Integration Architecture
 
-The Trend Analysis Reporting module occupies a central position in the SEOAutomate analytics pipeline, processing historical data and feeding insights to downstream components:
+The Trend Analysis Reporting module occupies a central position in the SEO.engineering analytics pipeline, processing historical data and feeding insights to downstream components:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐

@@ -9,7 +9,7 @@ const { AgencyUser, Role, Agency, Client } = require('../../src/models');
 const mongoose = require('mongoose');
 const { ValidationError, NotFoundError, AuthorizationError } = require('../../utils/errors');
 const crypto = require('crypto');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 module.exports = {

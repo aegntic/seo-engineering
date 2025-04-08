@@ -1,6 +1,6 @@
 # Strategy Recommendation Engine
 
-The Strategy Recommendation Engine is a sophisticated component of SEOAutomate that transforms analytical data into actionable strategic plans. It leverages the results from Gap Analysis and Benchmark Comparison to generate comprehensive SEO strategies with prioritized recommendations, implementation timelines, and ROI projections.
+The Strategy Recommendation Engine is a sophisticated component of SEO.engineering that transforms analytical data into actionable strategic plans. It leverages the results from Gap Analysis and Benchmark Comparison to generate comprehensive SEO strategies with prioritized recommendations, implementation timelines, and ROI projections.
 
 ## Key Features
 

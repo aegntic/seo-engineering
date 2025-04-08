@@ -1,4 +1,4 @@
-# SEOAutomate Project Context & Priority Matrix (2025-04-02 22:30)
+# SEO.engineering Project Context & Priority Matrix (2025-04-02 22:30)
 
 ## Project State Vector
 
@@ -152,10 +152,10 @@ All modules follow these integration protocols:
 
 ```bash
 # Clone the repository
-git clone https://github.com/organization/SEOAutomate.git
+git clone https://github.com/organization/SEO.engineering.git
 
 # Install dependencies
-cd SEOAutomate
+cd SEO.engineering
 npm install
 
 # Configure environment variables
@@ -171,7 +171,7 @@ npm run dev
 When continuing the project, use this template:
 
 ```
-Continue the SEOAutomate project implementation. 
+Continue the SEO.engineering project implementation. 
 Focus on building the Detailed Performance Tracking module as defined in PRIORITYTASKS_2025-04-02_22:30.md.
 This system will enhance tracking of Core Web Vitals and other performance metrics with granular analysis.
 

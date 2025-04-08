@@ -27,7 +27,7 @@ class PageSpeedAnalyzer {
       
       // Create a new context with specific device
       const context = await browser.newContext({
-        userAgent: options.userAgent || 'SEOAutomate/1.0',
+        userAgent: options.userAgent || 'SEO.engineering/1.0',
         viewport: { width: 1280, height: 720 },
         deviceScaleFactor: 1,
       });

@@ -6,7 +6,7 @@ The Gap Analysis CLI tool is a powerful command-line utility for analyzing gaps 
 
 ## Installation
 
-The tool is part of the SEOAutomate platform and comes pre-installed when you set up the competitor analysis module. No additional installation is required beyond the dependencies in the main package.json file.
+The tool is part of the SEO.engineering platform and comes pre-installed when you set up the competitor analysis module. No additional installation is required beyond the dependencies in the main package.json file.
 
 ## Prerequisites
 
@@ -176,4 +176,4 @@ If you encounter issues with the Gap Analysis CLI tool, check the following:
 
 ## License
 
-This tool is part of the SEOAutomate platform and is subject to the same license terms.
+This tool is part of the SEO.engineering platform and is subject to the same license terms.

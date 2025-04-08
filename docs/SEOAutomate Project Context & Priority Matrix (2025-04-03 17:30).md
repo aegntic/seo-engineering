@@ -1,4 +1,4 @@
-# SEOAutomate Project Context & Priority Matrix (2025-04-03 17:30)
+# SEO.engineering Project Context & Priority Matrix (2025-04-03 17:30)
 
 ## Project State Vector
 
@@ -184,10 +184,10 @@ All modules follow these integration protocols:
 
 ```bash
 # Clone the repository
-git clone https://github.com/organization/SEOAutomate.git
+git clone https://github.com/organization/SEO.engineering.git
 
 # Install dependencies
-cd SEOAutomate
+cd SEO.engineering
 npm install
 
 # Configure environment variables
@@ -203,7 +203,7 @@ npm run dev
 When continuing the project, use this template:
 
 ```
-Continue the SEOAutomate project implementation. 
+Continue the SEO.engineering project implementation. 
 Focus on building the Internal Linking Optimization system as defined in PRIORITYTASKS_2025-04-03_17:30.md.
 This system will analyze and improve the internal linking structure of websites.
 

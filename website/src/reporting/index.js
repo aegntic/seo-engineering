@@ -1,5 +1,5 @@
 /**
- * SEOAutomate Reporting Module
+ * SEO.engineering Reporting Module
  * 
  * This module provides components and utilities for generating, displaying,
  * and exporting SEO reports based on scan data.

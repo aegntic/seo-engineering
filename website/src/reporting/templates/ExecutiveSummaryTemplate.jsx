@@ -14,7 +14,7 @@ const ExecutiveSummaryTemplate = ({
   data, 
   branding = { 
     logo: '/logo.svg', 
-    companyName: 'SEOAutomate' 
+    companyName: 'SEO.engineering' 
   }
 }) => {
   if (!data) {

@@ -1,6 +1,6 @@
-# SEOAutomate: Technical SEO Module
+# SEO.engineering: Technical SEO Module
 
-This module provides comprehensive technical SEO audit capabilities for the SEOAutomate platform. It performs in-depth analysis of websites to identify technical issues that may affect search engine rankings and provides actionable recommendations for improvement.
+This module provides comprehensive technical SEO audit capabilities for the SEO.engineering platform. It performs in-depth analysis of websites to identify technical issues that may affect search engine rankings and provides actionable recommendations for improvement.
 
 ## Features
 
@@ -18,7 +18,7 @@ This module provides comprehensive technical SEO audit capabilities for the SEOA
 ## Installation
 
 ```bash
-cd SEOAutomate/automation/technical-seo
+cd SEO.engineering/automation/technical-seo
 npm install
 ```
 
@@ -69,7 +69,7 @@ async function auditWebsite() {
 ### Audit Options
 
 - **maxPages**: Maximum number of pages to scan (default: 100)
-- **userAgent**: Custom user agent for the crawler (default: 'SEOAutomate/1.0')
+- **userAgent**: Custom user agent for the crawler (default: 'SEO.engineering/1.0')
 - **includeSubdomains**: Whether to include subdomains in the crawl (default: false)
 - **checkExternal**: Whether to check external links (default: false)
 - **depth**: Maximum crawl depth (default: 3)
@@ -106,4 +106,4 @@ The module follows a modular structure with specialized analyzers for each aspec
 
 ## Integration
 
-This module integrates with the core SEOAutomate platform through a simple API. It can be used standalone or as part of the larger automation workflow.
+This module integrates with the core SEO.engineering platform through a simple API. It can be used standalone or as part of the larger automation workflow.

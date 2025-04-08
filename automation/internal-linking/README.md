@@ -25,7 +25,7 @@ The module uses a modular architecture with four key components:
 
 ## Integration Points
 
-This module integrates with other SEOAutomate components:
+This module integrates with other SEO.engineering components:
 
 - **Crawler Module**: Receives site structure and page content data
 - **Analysis Engine**: Provides link analysis metrics and optimization opportunities

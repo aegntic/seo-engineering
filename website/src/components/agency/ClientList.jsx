@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { SearchIcon, FilterIcon, PlusIcon } from '@heroicons/react/outline';
+import { MagnifyingGlassIcon, FunnelIcon, PlusIcon } from '@heroicons/react/24/outline';
 
 /**
  * ClientList component displays a list of all clients managed by the agency
@@ -116,7 +116,7 @@ const ClientList = () => {
         <div className="flex space-x-3">
           <div className="relative rounded-md shadow-sm">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <SearchIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+              <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
             </div>
             <input
               type="text"
@@ -131,7 +131,7 @@ const ClientList = () => {
             className="inline-flex items-center px-3 py-2 border border-gray-300 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             onClick={() => setShowFilters(!showFilters)}
           >
-            <FilterIcon className="h-4 w-4 mr-2" aria-hidden="true" />
+            <FunnelIcon className="h-4 w-4 mr-2" aria-hidden="true" />
             Filter
           </button>
           <Link

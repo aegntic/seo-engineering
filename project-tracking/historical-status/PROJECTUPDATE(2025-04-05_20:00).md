@@ -1,4 +1,4 @@
-# SEOAutomate Project Status Update
+# SEO.engineering Project Status Update
 
 *Last updated: April 5, 2025 at 20:00*
 
@@ -192,4 +192,4 @@ The newly implemented Competitor Analysis Crawler includes:
    - Error handling and recovery
    - Efficient resource allocation
 
-The implementation includes both a programmatic API and a command-line interface, making it flexible for various use cases within the SEOAutomate platform.
+The implementation includes both a programmatic API and a command-line interface, making it flexible for various use cases within the SEO.engineering platform.

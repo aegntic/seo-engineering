@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# SEOAutomate CMS Compatibility Check
+# SEO.engineering CMS Compatibility Check
 # This script tests CMS compatibility and updates documentation
 
 # Echo with color
@@ -23,7 +23,7 @@ function echo_color() {
 
 # Header
 echo_color "blue" "====================================================="
-echo_color "blue" "  SEOAutomate CMS Compatibility Check"
+echo_color "blue" "  SEO.engineering CMS Compatibility Check"
 echo_color "blue" "====================================================="
 echo ""
 echo_color "yellow" "This script will test CMS compatibility and update documentation"

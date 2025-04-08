@@ -1,8 +1,8 @@
-# SEOAutomate Competitor Analysis Module
+# SEO.engineering Competitor Analysis Module
 
 ## Overview
 
-The Competitor Analysis Module is a powerful component of the SEOAutomate platform that analyzes competitor websites to identify gaps and opportunities for SEO improvements. By crawling and analyzing competitor sites, this module provides valuable insights into their performance, content strategy, and SEO practices.
+The Competitor Analysis Module is a powerful component of the SEO.engineering platform that analyzes competitor websites to identify gaps and opportunities for SEO improvements. By crawling and analyzing competitor sites, this module provides valuable insights into their performance, content strategy, and SEO practices.
 
 ## Features
 
@@ -223,4 +223,4 @@ See the main project's [CONTRIBUTING.md](../../CONTRIBUTING.md) for guidelines.
 
 ## License
 
-This module is part of the SEOAutomate platform and is subject to the same license terms.
+This module is part of the SEO.engineering platform and is subject to the same license terms.

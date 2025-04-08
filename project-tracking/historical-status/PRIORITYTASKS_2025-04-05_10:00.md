@@ -1,4 +1,4 @@
-# SEOAutomate Priority Tasks
+# SEO.engineering Priority Tasks
 
 *Last updated: April 5, 2025 at 10:00*
 
@@ -98,7 +98,7 @@ The most critical dependency chain is:
 5. Develop Benchmark Comparison Framework →
 6. Launch Competitive Analysis System
 
-This chain represents the key steps needed to develop the competitive analysis capabilities that will form a core component of SEOAutomate's value proposition.
+This chain represents the key steps needed to develop the competitive analysis capabilities that will form a core component of SEO.engineering's value proposition.
 
 ## Resource Requirements
 
@@ -117,7 +117,7 @@ Completing these priority tasks will:
 3. Create comprehensive documentation for development and operations
 4. Lay the groundwork for competitive analysis features
 
-These components together form the critical infrastructure needed to ensure SEOAutomate can scale reliably to serve a growing customer base with diverse technical environments.
+These components together form the critical infrastructure needed to ensure SEO.engineering can scale reliably to serve a growing customer base with diverse technical environments.
 
 ## Progress Update (April 5, 2025 at 10:00)
 

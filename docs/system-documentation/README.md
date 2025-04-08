@@ -1,8 +1,8 @@
-# SEOAutomate System Documentation
+# SEO.engineering System Documentation
 
 ## Overview
 
-This is the comprehensive documentation for the SEOAutomate system, covering all aspects of the platform's architecture, components, and operations.
+This is the comprehensive documentation for the SEO.engineering system, covering all aspects of the platform's architecture, components, and operations.
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@ This is the comprehensive documentation for the SEOAutomate system, covering all
 
 ## Introduction
 
-SEOAutomate is a fully automated technical SEO platform that provides end-to-end automation for technical SEO audits, fixes, and performance optimization. The system bridges the gap between technical SEO knowledge and implementation, delivering enterprise-grade results at scale.
+SEO.engineering is a fully automated technical SEO platform that provides end-to-end automation for technical SEO audits, fixes, and performance optimization. The system bridges the gap between technical SEO knowledge and implementation, delivering enterprise-grade results at scale.
 
 ### Core Value Proposition
 
@@ -36,7 +36,7 @@ SEOAutomate is a fully automated technical SEO platform that provides end-to-end
 
 ## Project Status
 
-SEOAutomate is currently in active development with approximately 40% of the planned functionality completed. The core components (crawler, analysis engine, implementation module, verification system, client dashboard) are operational, with additional features being added according to the project roadmap.
+SEO.engineering is currently in active development with approximately 40% of the planned functionality completed. The core components (crawler, analysis engine, implementation module, verification system, client dashboard) are operational, with additional features being added according to the project roadmap.
 
 ## How to Use This Documentation
 
@@ -64,4 +64,4 @@ When contributing to this documentation, please follow these guidelines:
 
 ## Support and Contact
 
-For questions or issues related to this documentation, please contact the documentation team at docs@seoautomate.dev.
+For questions or issues related to this documentation, please contact the documentation team at docs@seo.engineering.dev.

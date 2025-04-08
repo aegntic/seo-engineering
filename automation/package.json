@@ -1,7 +1,7 @@
 {
-  "name": "seoautomate-automation",
+  "name": "seo.engineering-automation",
   "version": "0.1.0",
-  "description": "SEOAutomate Crawler and Automation Tools",
+  "description": "SEO.engineering Crawler and Automation Tools",
   "main": "index.js",
   "scripts": {
     "crawl": "node crawler/crawl-site.js",
@@ -18,7 +18,7 @@
     "crawler",
     "playwright"
   ],
-  "author": "SEOAutomate Team",
+  "author": "SEO.engineering Team",
   "license": "UNLICENSED",
   "dependencies": {
     "axios": "^1.6.2",

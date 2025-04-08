@@ -51,7 +51,7 @@ const clientSchema = new mongoose.Schema({
     },
     userAgent: {
       type: String,
-      default: 'SEOAutomate Crawler'
+      default: 'SEO.engineering Crawler'
     },
     respectRobotsTxt: {
       type: Boolean,

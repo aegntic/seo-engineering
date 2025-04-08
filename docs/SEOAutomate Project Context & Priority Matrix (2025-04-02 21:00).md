@@ -1,4 +1,4 @@
-# SEOAutomate Project Context & Priority Matrix (2025-04-02 21:00)
+# SEO.engineering Project Context & Priority Matrix (2025-04-02 21:00)
 
 ## Project State Vector
 
@@ -138,10 +138,10 @@ All modules follow these integration protocols:
 
 ```bash
 # Clone the repository
-git clone https://github.com/organization/SEOAutomate.git
+git clone https://github.com/organization/SEO.engineering.git
 
 # Install dependencies
-cd SEOAutomate
+cd SEO.engineering
 npm install
 
 # Configure environment variables
@@ -157,7 +157,7 @@ npm run dev
 When continuing the project, use this template:
 
 ```
-Continue the SEOAutomate project implementation. 
+Continue the SEO.engineering project implementation. 
 Focus on creating the Advanced SEO Score Calculation module as defined in PRIORITYTASKS_2025-04-02_21:00.md.
 This system will enhance the SEO scoring with weighted factors, industry benchmarks, and competitor comparison metrics.
 

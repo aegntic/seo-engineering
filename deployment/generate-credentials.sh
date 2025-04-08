@@ -1,7 +1,7 @@
 #!/bin/bash
-# SEOAutomate Secure Credential Generator
+# SEO.engineering Secure Credential Generator
 # =======================================
-# This script generates secure credentials for SEOAutomate deployment
+# This script generates secure credentials for SEO.engineering deployment
 # and facilitates integration with external services like Stripe and n8n.
 
 # Color codes for output
@@ -108,7 +108,7 @@ collect_credentials() {
     print_status "Starting credential collection..."
     
     # Domain information
-    print_input "Enter your domain name (e.g., seoautomate.com):"
+    print_input "Enter your domain name (e.g., seo.engineering.com):"
     read DOMAIN
     
     # Stripe credentials
@@ -134,7 +134,7 @@ collect_credentials() {
     print_input "Enter SMTP Password:"
     read SMTP_PASS
     
-    print_input "Enter SMTP Sender Email (e.g., noreply@seoautomate.com):"
+    print_input "Enter SMTP Sender Email (e.g., noreply@seo.engineering.com):"
     read SMTP_SENDER
     
     print_status "All required credentials collected."
@@ -208,10 +208,10 @@ encrypt_credentials() {
 
 # Welcome message
 echo -e "${GREEN}=========================================${NC}"
-echo -e "${GREEN}  SEOAutomate Secure Credential Generator${NC}"
+echo -e "${GREEN}  SEO.engineering Secure Credential Generator${NC}"
 echo -e "${GREEN}=========================================${NC}"
 echo ""
-print_status "This utility will generate and collect secure credentials for your SEOAutomate deployment."
+print_status "This utility will generate and collect secure credentials for your SEO.engineering deployment."
 echo ""
 
 # Main execution flow

@@ -35,7 +35,7 @@ async function runTechnicalSeoAudit(url, options = {}) {
     // Default options
     const defaultOptions = {
       maxPages: 100,
-      userAgent: 'SEOAutomate/1.0',
+      userAgent: 'SEO.engineering/1.0',
       includeSubdomains: false,
       checkExternal: false,
       depth: 3,

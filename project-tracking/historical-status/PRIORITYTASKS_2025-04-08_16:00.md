@@ -1,4 +1,4 @@
-# SEOAutomate Priority Tasks
+# SEO.engineering Priority Tasks
 
 *Last updated: April 8, 2025 at 16:00*
 

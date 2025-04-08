@@ -2,7 +2,7 @@
 
 ## Component Overview
 
-The Crawler Module is a core component of the SEOAutomate system responsible for scanning client websites to collect comprehensive data for technical SEO analysis. It uses browser automation to simulate real user visits, ensuring accurate measurement of website behavior and performance.
+The Crawler Module is a core component of the SEO.engineering system responsible for scanning client websites to collect comprehensive data for technical SEO analysis. It uses browser automation to simulate real user visits, ensuring accurate measurement of website behavior and performance.
 
 The Crawler Module is designed to be:
 - **Efficient**: Minimizing resource usage while maximizing data collection
@@ -161,7 +161,7 @@ The Crawler Module is configured using the following parameters:
   "pageTimeout": 30000,
   
   // User agent string
-  "userAgent": "SEOAutomate Crawler/1.0 (+https://seoautomate.dev/bot)"
+  "userAgent": "SEO.engineering Crawler/1.0 (+https://seo.engineering.dev/bot)"
 }
 ```
 
@@ -246,12 +246,12 @@ The Crawler Module can be deployed as a Docker container:
 
 ```bash
 docker run -d \
-  --name seoautomate-crawler \
-  -e MONGODB_URI=mongodb://mongodb:27017/seoautomate \
+  --name seo.engineering-crawler \
+  -e MONGODB_URI=mongodb://mongodb:27017/seo.engineering \
   -e REDIS_URI=redis://redis:6379 \
   -e MAX_CONCURRENCY=5 \
   -v /data/crawler:/app/data \
-  seoautomate/crawler:latest
+  seo.engineering/crawler:latest
 ```
 
 ### Kubernetes Deployment
@@ -262,20 +262,20 @@ For production deployments, a Kubernetes configuration is recommended:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: seoautomate-crawler
+  name: seo.engineering-crawler
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: seoautomate-crawler
+      app: seo.engineering-crawler
   template:
     metadata:
       labels:
-        app: seoautomate-crawler
+        app: seo.engineering-crawler
     spec:
       containers:
       - name: crawler
-        image: seoautomate/crawler:latest
+        image: seo.engineering/crawler:latest
         resources:
           requests:
             memory: "2Gi"
@@ -287,12 +287,12 @@ spec:
         - name: MONGODB_URI
           valueFrom:
             secretKeyRef:
-              name: seoautomate-secrets
+              name: seo.engineering-secrets
               key: mongodb-uri
         - name: REDIS_URI
           valueFrom:
             secretKeyRef:
-              name: seoautomate-secrets
+              name: seo.engineering-secrets
               key: redis-uri
         - name: MAX_CONCURRENCY
           value: "5"
@@ -434,10 +434,10 @@ Specific tests for various CMS platforms:
 
 ```bash
 # Clone the repository
-git clone https://github.com/organization/SEOAutomate.git
+git clone https://github.com/organization/SEO.engineering.git
 
 # Navigate to the crawler directory
-cd SEOAutomate/automation/crawler
+cd SEO.engineering/automation/crawler
 
 # Install dependencies
 npm install
@@ -513,7 +513,7 @@ The Crawler Module follows these coding standards:
 Enable debug logging:
 
 ```
-export DEBUG=seoautomate:crawler:*
+export DEBUG=seo.engineering:crawler:*
 npm run start
 ```
 

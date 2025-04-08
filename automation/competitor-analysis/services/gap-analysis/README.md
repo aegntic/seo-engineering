@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Gap Analysis module is a critical component of the SEOAutomate platform that analyzes the differences between a client's website and its competitors. It identifies areas where the client site is underperforming or missing opportunities compared to competitors, and generates actionable recommendations for improvement.
+The Gap Analysis module is a critical component of the SEO.engineering platform that analyzes the differences between a client's website and its competitors. It identifies areas where the client site is underperforming or missing opportunities compared to competitors, and generates actionable recommendations for improvement.
 
 ## Features
 

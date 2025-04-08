@@ -8,7 +8,7 @@ mkdir -p ./reports/cms-compatibility
 
 # Display banner
 echo "==============================================="
-echo "  SEOAutomate CMS Compatibility Test Runner   "
+echo "  SEO.engineering CMS Compatibility Test Runner   "
 echo "==============================================="
 echo ""
 echo "Starting tests at $(date)"

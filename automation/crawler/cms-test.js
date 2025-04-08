@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * SEOAutomate CMS Testing CLI
+ * SEO.engineering CMS Testing CLI
  * 
  * Command-line interface for running CMS compatibility tests
  */
@@ -15,7 +15,7 @@ const availablePopularities = [...new Set(testSites.map(site => site.popularity)
 
 // Command help
 function showHelp() {
-  console.log('SEOAutomate CMS Testing CLI');
+  console.log('SEO.engineering CMS Testing CLI');
   console.log('=============================\n');
   console.log('Usage: node cms-test.js [options]\n');
   console.log('Options:');

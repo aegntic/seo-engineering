@@ -1,12 +1,12 @@
-# SEOAutomate System Architecture
+# SEO.engineering System Architecture
 
 ## Architecture Overview
 
-SEOAutomate follows a modular microservices architecture composed of specialized components that work together to provide end-to-end technical SEO automation. The system is designed to be scalable, maintainable, and extensible, with clear boundaries between components and well-defined interfaces.
+SEO.engineering follows a modular microservices architecture composed of specialized components that work together to provide end-to-end technical SEO automation. The system is designed to be scalable, maintainable, and extensible, with clear boundaries between components and well-defined interfaces.
 
 ## System Components
 
-The following diagram illustrates the high-level architecture of the SEOAutomate system:
+The following diagram illustrates the high-level architecture of the SEO.engineering system:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -218,7 +218,7 @@ The Client Dashboard provides a user-friendly interface for clients to view thei
 
 ## Scalability Considerations
 
-The SEOAutomate architecture is designed for scalability:
+The SEO.engineering architecture is designed for scalability:
 
 - **Horizontal Scaling:** Components can be scaled independently based on demand
 - **Microservices Design:** Clear separation of concerns allows for distributed deployment
@@ -236,9 +236,9 @@ The SEOAutomate architecture is designed for scalability:
 
 ## Integration Points
 
-SEOAutomate provides several integration points for extending functionality and connecting with external systems:
+SEO.engineering provides several integration points for extending functionality and connecting with external systems:
 
-- **REST APIs:** Public APIs for programmatic access to SEOAutomate functions
+- **REST APIs:** Public APIs for programmatic access to SEO.engineering functions
 - **Webhooks:** Event-driven notifications for system events
 - **Data Export:** Export of reports and data in various formats
 - **Authentication Integration:** Support for SSO and external identity providers

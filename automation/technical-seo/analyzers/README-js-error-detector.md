@@ -44,9 +44,9 @@ console.log(`Total Errors: ${results.metrics.totalErrors}`);
 console.log(`Issues: ${results.issues.length}`);
 ```
 
-## Integration with SEOAutomate
+## Integration with SEO.engineering
 
-The JavaScript Error Detector is fully integrated with the Technical SEO module in SEOAutomate. When enabled, it will:
+The JavaScript Error Detector is fully integrated with the Technical SEO module in SEO.engineering. When enabled, it will:
 
 1. Run as part of the comprehensive technical SEO audit
 2. Contribute issues to the overall issue list

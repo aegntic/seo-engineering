@@ -2,7 +2,7 @@
 
 ## Architecture Overview
 
-The SEOAutomate API implements a modular, RESTful architecture designed to support the agency portal and multi-client management system. The API follows domain-driven design principles with clear separation of concerns and comprehensive error handling.
+The SEO.engineering API implements a modular, RESTful architecture designed to support the agency portal and multi-client management system. The API follows domain-driven design principles with clear separation of concerns and comprehensive error handling.
 
 ## Core Components
 

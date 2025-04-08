@@ -65,7 +65,7 @@ const FeatureShowcase = () => {
                 See how it works
               </h3>
               <p className="text-gray-600 mb-6">
-                Watch our quick demo to see how SEOAutomate transforms technical SEO from a manual,
+                Watch our quick demo to see how SEO.engineering transforms technical SEO from a manual,
                 time-consuming process into an automated workflow.
               </p>
               <a 

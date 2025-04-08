@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * SEOAutomate Competitor Analysis CLI
+ * SEO.engineering Competitor Analysis CLI
  * 
  * Command-line interface for running competitor analysis.
  */
@@ -26,7 +26,7 @@ const options = {
 
 // Help message
 function showHelp() {
-  console.log('SEOAutomate Competitor Analysis');
+  console.log('SEO.engineering Competitor Analysis');
   console.log('===============================\n');
   console.log('Usage: node cli.js [options]\n');
   console.log('Options:');
@@ -128,7 +128,7 @@ async function runAnalysis() {
   // Parse command line arguments
   await parseArgs();
   
-  console.log('SEOAutomate Competitor Analysis');
+  console.log('SEO.engineering Competitor Analysis');
   console.log('===============================\n');
   console.log('Configuration:');
   console.log(`- Output directory: ${options.outputDir}`);

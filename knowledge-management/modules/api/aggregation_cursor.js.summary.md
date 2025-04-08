@@ -1,0 +1,24 @@
+# Summary of aggregation_cursor.js
+  
+## File Path
+`/home/tabs/seo-engineering/api/node_modules/mongodb/lib/cursor/aggregation_cursor.js`
+
+## Content Preview
+```
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AggregationCursor = void 0;
+const error_1 = require("../error");
+const explain_1 = require("../explain");
+const aggregate_1 = require("../operations/aggregate");
+const execute_operation_1 = require("../operations/execute_operation");
+const utils_1 = require("../utils");
+const abstract_cursor_1 = require("./abstract_cursor");
+/**
+[...truncated...]
+```
+
+## Key Points
+- File type: .js
+- Estimated size: 6767 characters
+- Lines: 163

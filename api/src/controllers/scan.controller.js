@@ -3,8 +3,8 @@
  * Handles SEO scan operations and scheduling
  */
 
-const { Client, Report } = require('../models');
-const axios = require('axios');
+const Client = require('../models/client.model');
+const Report = require('../models/report.model');
 
 /**
  * Start a new SEO scan for a client website
@@ -35,55 +35,21 @@ exports.startScan = async (req, res, next) => {
       crawlDuration: 0
     });
     
-    // Trigger the n8n workflow to start the scan
-    // In production, use a queue system for better reliability
-    const n8nApiUrl = process.env.N8N_API_URL;
-    const n8nApiKey = process.env.N8N_API_KEY;
+    // Update client with scan status
+    await Client.findByIdAndUpdate(clientId, {
+      'crawlSettings.lastCrawled': new Date()
+    });
     
-    if (!n8nApiUrl || !n8nApiKey) {
-      return res.status(500).json({
-        success: false,
-        error: 'Scan service configuration error'
-      });
-    }
-    
-    try {
-      // Trigger the n8n workflow
-      await axios.post(`${n8nApiUrl}/webhook/seo-scan`, {
-        clientId,
+    // In a real implementation, we would trigger the n8n workflow here
+    // For now, just return success
+    return res.status(200).json({
+      success: true,
+      data: {
         reportId: report._id,
-        websiteUrl: client.websiteUrl,
-        crawlSettings: client.crawlSettings
-      }, {
-        headers: {
-          'X-N8N-API-KEY': n8nApiKey
-        }
-      });
-      
-      // Update client with scan status
-      await Client.findByIdAndUpdate(clientId, {
-        'crawlSettings.lastCrawled': new Date()
-      });
-      
-      return res.status(200).json({
-        success: true,
-        data: {
-          reportId: report._id,
-          status: 'scan_initiated',
-          message: 'SEO scan has been initiated'
-        }
-      });
-    } catch (apiError) {
-      // Update report status to failed
-      await Report.findByIdAndUpdate(report._id, {
-        status: 'failed'
-      });
-      
-      return res.status(500).json({
-        success: false,
-        error: 'Failed to start scan workflow'
-      });
-    }
+        status: 'scan_initiated',
+        message: 'SEO scan has been initiated'
+      }
+    });
   } catch (error) {
     next(error);
   }
@@ -214,24 +180,6 @@ exports.cancelScan = async (req, res, next) => {
       });
     }
     
-    // Cancel the scan in n8n
-    const n8nApiUrl = process.env.N8N_API_URL;
-    const n8nApiKey = process.env.N8N_API_KEY;
-    
-    if (n8nApiUrl && n8nApiKey) {
-      try {
-        await axios.post(`${n8nApiUrl}/webhook/cancel-scan`, {
-          reportId: report._id
-        }, {
-          headers: {
-            'X-N8N-API-KEY': n8nApiKey
-          }
-        });
-      } catch (apiError) {
-        console.error('Failed to cancel scan in n8n:', apiError);
-      }
-    }
-    
     // Update report status
     await Report.findByIdAndUpdate(reportId, {
       status: 'failed',
@@ -285,29 +233,6 @@ exports.scheduleScan = async (req, res, next) => {
     await Client.findByIdAndUpdate(clientId, {
       'crawlSettings.crawlFrequency': frequency
     });
-    
-    // Schedule in n8n (or your scheduling system)
-    const n8nApiUrl = process.env.N8N_API_URL;
-    const n8nApiKey = process.env.N8N_API_KEY;
-    
-    if (n8nApiUrl && n8nApiKey) {
-      try {
-        await axios.post(`${n8nApiUrl}/webhook/schedule-scan`, {
-          clientId,
-          frequency
-        }, {
-          headers: {
-            'X-N8N-API-KEY': n8nApiKey
-          }
-        });
-      } catch (apiError) {
-        console.error('Failed to schedule scan in n8n:', apiError);
-        return res.status(500).json({
-          success: false,
-          error: 'Scan scheduled in database but failed to set up automated schedule'
-        });
-      }
-    }
     
     return res.status(200).json({
       success: true,

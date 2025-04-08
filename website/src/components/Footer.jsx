@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-display font-bold text-primary-600">SEOAutomate</span>
+              <span className="text-2xl font-display font-bold text-primary-600">SEO.engineering</span>
             </Link>
             <p className="mt-4 text-base text-gray-500">
               The future of technical SEO automation. Deliver enterprise-grade results at scale with our AI-powered platform.
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8">
           <p className="text-base text-gray-400 text-center">
-            &copy; {new Date().getFullYear()} SEOAutomate. All rights reserved.
+            &copy; {new Date().getFullYear()} SEO.engineering. All rights reserved.
           </p>
         </div>
       </div>

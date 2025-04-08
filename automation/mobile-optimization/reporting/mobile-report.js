@@ -23,7 +23,7 @@ function generateMobileReport(auditResults, options = {}) {
       includeScreenshots: true,
       detailedIssues: true,
       format: 'json',
-      brandName: 'SEOAutomate',
+      brandName: 'SEO.engineering',
       clientName: 'Client',
       projectName: 'Website Audit'
     };

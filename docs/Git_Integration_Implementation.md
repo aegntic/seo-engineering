@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Git Integration module provides a comprehensive system for tracking and managing changes made to client websites by the SEOAutomate platform. This functionality is essential for implementing automated fixes, maintaining version control, and providing rollback capabilities for all modifications made to client sites.
+The Git Integration module provides a comprehensive system for tracking and managing changes made to client websites by the SEO.engineering platform. This functionality is essential for implementing automated fixes, maintaining version control, and providing rollback capabilities for all modifications made to client sites.
 
 ## Architecture
 
@@ -137,14 +137,14 @@ npm test -- automation/git-integration
 
 ## Implementation Notes
 
-The Git integration module follows all SEOAutomate golden rules:
+The Git integration module follows all SEO.engineering golden rules:
 
 - All files are under 500 lines for better maintainability
 - Comprehensive documentation is provided
 - Code is thoroughly tested
 - Secure handling of sensitive information
 
-This implementation supports the core SEOAutomate workflow for site improvements:
+This implementation supports the core SEO.engineering workflow for site improvements:
 
 1. Scan site → 
 2. Identify issues → 

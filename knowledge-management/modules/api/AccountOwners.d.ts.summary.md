@@ -1,0 +1,24 @@
+# Summary of AccountOwners.d.ts
+  
+## File Path
+`/home/tabs/seo-engineering/api/node_modules/stripe/types/FinancialConnections/AccountOwners.d.ts`
+
+## Content Preview
+```
+// File generated from our OpenAPI spec
+
+declare module 'stripe' {
+  namespace Stripe {
+    namespace FinancialConnections {
+      /**
+       * Describes an owner of an account.
+       */
+      interface AccountOwner {
+        /**
+[...truncated...]
+```
+
+## Key Points
+- File type: .ts
+- Estimated size: 1140 characters
+- Lines: 53

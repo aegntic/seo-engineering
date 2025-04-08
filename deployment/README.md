@@ -1,6 +1,6 @@
-# SEOAutomate Deployment System
+# SEO.engineering Deployment System
 
-This directory contains a modular deployment system for SEOAutomate, designed to facilitate seamless deployment in both development and production environments.
+This directory contains a modular deployment system for SEO.engineering, designed to facilitate seamless deployment in both development and production environments.
 
 ## System Architecture
 

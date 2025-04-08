@@ -1,6 +1,7 @@
 const Agency = require('./Agency');
 const AgencyUser = require('./AgencyUser');
-const Client = require('./Client');
+// Use ClientAgency name to avoid conflict with client.model.js
+const ClientAgency = require('./Client');
 const Role = require('./Role');
 const WebhookSubscription = require('./WebhookSubscription');
 const WebhookDelivery = require('./WebhookDelivery');
@@ -8,7 +9,7 @@ const WebhookDelivery = require('./WebhookDelivery');
 module.exports = {
   Agency,
   AgencyUser,
-  Client,
+  ClientAgency,
   Role,
   WebhookSubscription,
   WebhookDelivery

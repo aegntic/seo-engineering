@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Script to run tests for the SEOAutomate dashboard components
+# Script to run tests for the SEO.engineering dashboard components
 
-echo "Running tests for SEOAutomate dashboard components..."
+echo "Running tests for SEO.engineering dashboard components..."
 
 # Navigate to the website directory
 cd website

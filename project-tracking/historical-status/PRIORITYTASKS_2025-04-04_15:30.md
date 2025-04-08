@@ -1,4 +1,4 @@
-# SEOAutomate Priority Tasks
+# SEO.engineering Priority Tasks
 
 *Last updated: April 4, 2025 at 15:30*
 
@@ -92,7 +92,7 @@ The most critical dependency chain is:
 12. Implement Mobile Optimization Checks →
 13. Launch Enhanced Analytics
 
-This chain represents the critical features that enable SEOAutomate to provide comprehensive SEO optimization and demonstrate value to clients.
+This chain represents the critical features that enable SEO.engineering to provide comprehensive SEO optimization and demonstrate value to clients.
 
 ## Resource Requirements
 
@@ -112,7 +112,7 @@ Completing these priority tasks will:
 3. Provide competitive intelligence for strategic SEO planning
 4. Create infrastructure for agency partner network expansion
 
-These components together form the next layer of functionality that enables SEOAutomate to provide comprehensive SEO optimization services beyond technical fixes.
+These components together form the next layer of functionality that enables SEO.engineering to provide comprehensive SEO optimization services beyond technical fixes.
 
 ## Progress Update (April 4, 2025 at 15:30)
 

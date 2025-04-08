@@ -8,7 +8,7 @@ services:
     volumes:
       - mongodb_data:/data/db
     environment:
-      - MONGO_INITDB_DATABASE=seoautomate
+      - MONGO_INITDB_DATABASE=seo_engineering
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
     networks:
@@ -37,15 +37,19 @@ services:
 
   # API server
   api:
-    build:
-      context: ./api
-      dockerfile: Dockerfile.prod
+    image: node:18-alpine
     container_name: seo-api
+    working_dir: /app
     volumes:
-      - ./api/uploads:/app/uploads
+      - ../api:/app
+      - ../api/uploads:/app/uploads
+    command: >
+      sh -c "npm install bcrypt bcryptjs &&
+             npm install &&
+             node src/server.js"
     environment:
       - NODE_ENV=production
-      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@mongodb:27017/seoautomate?authSource=admin
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@mongodb:27017/seo_engineering?authSource=admin
       - PORT=3001
       - REDIS_URI=redis://redis:6379
       - JWT_ACCESS_SECRET=${JWT_ACCESS_SECRET}
@@ -106,7 +110,7 @@ services:
       - N8N_SMTP_PORT=${SMTP_PORT:-587}
       - N8N_SMTP_USER=${SMTP_USER}
       - N8N_SMTP_PASS=${SMTP_PASS}
-      - N8N_SMTP_SENDER=${SMTP_SENDER:-noreply@seoautomate.com}
+      - N8N_SMTP_SENDER=${SMTP_SENDER:-noreply@seo.engineering}
     volumes:
       - n8n_data:/home/node/.n8n
       - ./workflows/n8n:/home/node/.n8n/workflows
@@ -171,7 +175,7 @@ services:
     image: prom/prometheus:latest
     container_name: seo-prometheus
     volumes:
-      - ./monitoring/prometheus:/etc/prometheus
+      - ../monitoring/prometheus:/etc/prometheus
       - prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'

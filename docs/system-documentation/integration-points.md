@@ -1,12 +1,12 @@
-# SEOAutomate Integration Points
+# SEO.engineering Integration Points
 
 ## Overview
 
-This document defines the integration points between the various modules of the SEOAutomate system. These integration points provide clear boundaries between components and enable modular development and deployment.
+This document defines the integration points between the various modules of the SEO.engineering system. These integration points provide clear boundaries between components and enable modular development and deployment.
 
 ## Module Interactions
 
-The following diagram illustrates the high-level interactions between the main components of the SEOAutomate system:
+The following diagram illustrates the high-level interactions between the main components of the SEO.engineering system:
 
 ```
                      ┌─────────────────┐
@@ -44,7 +44,7 @@ The following diagram illustrates the high-level interactions between the main c
 
 ## Integration Types
 
-The SEOAutomate system uses three primary types of integration:
+The SEO.engineering system uses three primary types of integration:
 
 1. **REST APIs**: Synchronous request-response interactions
 2. **Event-based Messaging**: Asynchronous event notifications
@@ -54,7 +54,7 @@ The SEOAutomate system uses three primary types of integration:
 
 ### API Gateway
 
-The API Gateway serves as the primary entry point for external interactions with the system. It provides a unified API surface for all SEOAutomate functionality.
+The API Gateway serves as the primary entry point for external interactions with the system. It provides a unified API surface for all SEO.engineering functionality.
 
 | Endpoint | Method | Description | Consumer |
 |----------|--------|-------------|----------|
@@ -126,7 +126,7 @@ The API Gateway serves as the primary entry point for external interactions with
 
 ## Event-based Messaging Integrations
 
-The SEOAutomate system uses an event-based messaging system to enable asynchronous communication between components. The following events are published and consumed by various components:
+The SEO.engineering system uses an event-based messaging system to enable asynchronous communication between components. The following events are published and consumed by various components:
 
 ### Crawler Module Events
 
@@ -183,7 +183,7 @@ The SEOAutomate system uses an event-based messaging system to enable asynchrono
 
 ## Database Integrations
 
-The SEOAutomate system uses MongoDB as the primary data store. The following collections are shared between components:
+The SEO.engineering system uses MongoDB as the primary data store. The following collections are shared between components:
 
 | Collection | Primary Owner | Other Consumers | Description |
 |------------|--------------|-----------------|-------------|

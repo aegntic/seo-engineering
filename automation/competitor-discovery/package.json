@@ -1,7 +1,7 @@
 {
-  "name": "seoautomate-competitor-discovery",
+  "name": "seo.engineering-competitor-discovery",
   "version": "1.0.0",
-  "description": "Competitor discovery module for SEOAutomate",
+  "description": "Competitor discovery module for SEO.engineering",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -16,7 +16,7 @@
     "discovery",
     "analysis"
   ],
-  "author": "SEOAutomate Team",
+  "author": "SEO.engineering Team",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {

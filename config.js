@@ -1,7 +1,7 @@
 /**
  * Global Configuration
  * 
- * Central configuration for the SEOAutomate system
+ * Central configuration for the SEO.engineering system
  * Uses environment variables with sensible defaults
  */
 
@@ -13,7 +13,7 @@ module.exports = {
   NODE_ENV: process.env.NODE_ENV || 'development',
   
   // Database configuration
-  MONGODB_URI: process.env.MONGODB_URI || 'mongodb://localhost:27017/seoautomate',
+  MONGODB_URI: process.env.MONGODB_URI || 'mongodb://localhost:27017/seo.engineering',
   
   // Authentication
   JWT_ACCESS_SECRET: process.env.JWT_ACCESS_SECRET,
@@ -37,7 +37,7 @@ module.exports = {
   // Logging
   LOG_LEVEL: process.env.LOG_LEVEL || 'info',
   LOG_TO_FILE: process.env.LOG_TO_FILE === 'true',
-  LOG_FILE_PATH: process.env.LOG_FILE_PATH || './logs/seoautomate.log',
+  LOG_FILE_PATH: process.env.LOG_FILE_PATH || './logs/seo.engineering.log',
   
   // Performance
   MAX_CONCURRENT_SCANS: parseInt(process.env.MAX_CONCURRENT_SCANS || '5', 10),

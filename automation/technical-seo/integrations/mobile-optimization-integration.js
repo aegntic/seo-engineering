@@ -20,7 +20,7 @@ async function runMobileChecks(url, options = {}) {
     
     // Run the mobile optimization audit
     const mobileResults = await mobileOptimization.runMobileOptimizationAudit(url, {
-      userAgent: options.userAgent || 'SEOAutomate Technical SEO Mobile Checker',
+      userAgent: options.userAgent || 'SEO.engineering Technical SEO Mobile Checker',
       timeout: options.timeout || 30000,
       devices: options.devices || ['iPhone 12', 'Galaxy S20', 'iPad Mini'],
       checks: options.mobileChecks || {

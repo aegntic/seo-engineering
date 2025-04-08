@@ -1,5 +1,5 @@
 #!/bin/bash
-# SEOAutomate Launch Script for seo.engineering
+# SEO.engineering Launch Script
 # A ceremonial incantation to awaken your digital realm
 
 # Embrace color - the visual language of status and emotion
@@ -9,7 +9,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 echo -e "${GREEN}=======================================================${NC}"
-echo -e "${GREEN}  SEOAutomate Deployment for seo.engineering          ${NC}"
+echo -e "${GREEN}  SEO.engineering Deployment                          ${NC}"
 echo -e "${GREEN}  The Fusion of SEO Science and Engineering Artistry  ${NC}"
 echo -e "${GREEN}=======================================================${NC}"
 
@@ -28,10 +28,10 @@ fi
 if [ ! -f "nginx/ssl/seo.engineering.crt" ]; then
     echo -e "${YELLOW}⚠ SSL certificate not found. Your digital identity lacks its secure sigil.${NC}"
     
-    # Check if we can copy from SEOAutomate
-    if [ -f "/home/tabs/SEOAutomate/deployment/nginx/ssl/seo.engineering.crt" ]; then
-        echo -e "${BLUE}► Found SSL certificates in SEOAutomate directory. Copying them...${NC}"
-        cp /home/tabs/SEOAutomate/deployment/nginx/ssl/seo.engineering.* nginx/ssl/
+    # Check if we can copy from SEO.engineering
+    if [ -f "/home/tabs/SEO.engineering/deployment/nginx/ssl/seo.engineering.crt" ]; then
+        echo -e "${BLUE}► Found SSL certificates in SEO.engineering directory. Copying them...${NC}"
+        cp /home/tabs/SEO.engineering/deployment/nginx/ssl/seo.engineering.* nginx/ssl/
     else
         exit 1
     fi
@@ -139,10 +139,10 @@ fi
 if [ ! -f "nginx/.htpasswd" ]; then
     echo -e "\n${BLUE}► Creating authentication file...${NC}"
     
-    # Check if we can copy from SEOAutomate
-    if [ -f "/home/tabs/SEOAutomate/deployment/nginx/.htpasswd" ]; then
+    # Check if we can copy from SEO.engineering
+    if [ -f "/home/tabs/SEO.engineering/deployment/nginx/.htpasswd" ]; then
         mkdir -p nginx
-        cp /home/tabs/SEOAutomate/deployment/nginx/.htpasswd nginx/
+        cp /home/tabs/SEO.engineering/deployment/nginx/.htpasswd nginx/
     else
         mkdir -p nginx
         echo 'admin:$apr1$3cYCaLyh$uVis/0Y6iWZ.o289SdCjb/' > nginx/.htpasswd
@@ -165,7 +165,7 @@ docker-compose --env-file deployment/.env.production -f deployment/docker-compos
 
 if [ $? -eq 0 ]; then
     # The digital birth was successful - your realm now exists
-    echo -e "\n${GREEN}✓ SEOAutomate has been successfully deployed!${NC}"
+    echo -e "\n${GREEN}✓ SEO.engineering has been successfully deployed!${NC}"
     
     # Revealing the map to your digital domains
     echo -e "\n${BLUE}► Your digital gateways:${NC}"

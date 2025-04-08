@@ -1,4 +1,4 @@
-# SEOAutomate Priority Tasks
+# SEO.engineering Priority Tasks
 
 *Last updated: April 7, 2025 at 10:00*
 
@@ -81,7 +81,7 @@ Completing these priority tasks will:
 2. Enable agency partners to manage multiple clients efficiently
 3. Create the foundation for a scalable business model beyond individual site optimization
 
-These components together form the business infrastructure needed to scale SEOAutomate from a technical tool to an enterprise-grade platform.
+These components together form the business infrastructure needed to scale SEO.engineering from a technical tool to an enterprise-grade platform.
 
 ## Progress Update (April 7, 2025 at 10:00)
 

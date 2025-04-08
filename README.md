@@ -4,7 +4,7 @@
 
 ### Project Status: 100% Complete
 
-SEOAutomate delivers fully automated technical SEO audits, fixes, and performance optimization through an innovative AI-powered platform.
+SEO.engineering delivers fully automated technical SEO audits, fixes, and performance optimization through an innovative AI-powered platform.
 
 #### Key Features
 - End-to-End SEO Automation

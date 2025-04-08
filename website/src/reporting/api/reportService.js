@@ -1,7 +1,7 @@
 /**
  * API service for fetching and managing report data
  * 
- * This module provides functions to interact with the SEOAutomate API
+ * This module provides functions to interact with the SEO.engineering API
  * for retrieving, generating, and managing SEO reports.
  */
 

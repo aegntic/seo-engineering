@@ -2,7 +2,7 @@
 
 ## Component Overview
 
-The Verification System is a critical component of the SEOAutomate platform responsible for confirming that implemented changes have successfully resolved the identified SEO issues and measuring their impact on website performance and search visibility. It serves as the quality assurance layer that validates the effectiveness of the entire automation pipeline.
+The Verification System is a critical component of the SEO.engineering platform responsible for confirming that implemented changes have successfully resolved the identified SEO issues and measuring their impact on website performance and search visibility. It serves as the quality assurance layer that validates the effectiveness of the entire automation pipeline.
 
 The Verification System is designed to be:
 - **Comprehensive**: Thoroughly validating all aspects of implemented changes
@@ -260,12 +260,12 @@ The Verification System can be deployed as a Docker container:
 
 ```bash
 docker run -d \
-  --name seoautomate-verification \
-  -e MONGODB_URI=mongodb://mongodb:27017/seoautomate \
+  --name seo.engineering-verification \
+  -e MONGODB_URI=mongodb://mongodb:27017/seo.engineering \
   -e LOG_LEVEL=info \
   -e VERIFICATION_DELAY=300000 \
   -v /data/screenshots:/app/screenshots \
-  seoautomate/verification:latest
+  seo.engineering/verification:latest
 ```
 
 ### Kubernetes Deployment
@@ -276,20 +276,20 @@ For production deployments, a Kubernetes configuration is recommended:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: seoautomate-verification
+  name: seo.engineering-verification
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: seoautomate-verification
+      app: seo.engineering-verification
   template:
     metadata:
       labels:
-        app: seoautomate-verification
+        app: seo.engineering-verification
     spec:
       containers:
       - name: verification
-        image: seoautomate/verification:latest
+        image: seo.engineering/verification:latest
         resources:
           requests:
             memory: "4Gi"
@@ -301,7 +301,7 @@ spec:
         - name: MONGODB_URI
           valueFrom:
             secretKeyRef:
-              name: seoautomate-secrets
+              name: seo.engineering-secrets
               key: mongodb-uri
         - name: LOG_LEVEL
           value: "info"
@@ -576,7 +576,7 @@ async function verifyVisual(url, baselineScreenshot, page) {
 Enable debug logging:
 
 ```
-export DEBUG=seoautomate:verification:*
+export DEBUG=seo.engineering:verification:*
 npm run start
 ```
 

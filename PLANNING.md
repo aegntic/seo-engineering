@@ -1,9 +1,9 @@
-SEOAutomate Project Planning
+SEO.engineering Project Planning
 =========================
 
 ## Project Vision
 
-SEOAutomate reimagines technical SEO as a fully automated process. By leveraging cutting-edge automation tools, we're building a system that can audit, prioritize, implement, and verify technical SEO improvements with minimal human intervention. This transforms what has been a labor-intensive consulting service into a scalable product offering.
+SEO.engineering reimagines technical SEO as a fully automated process. By leveraging cutting-edge automation tools, we're building a system that can audit, prioritize, implement, and verify technical SEO improvements with minimal human intervention. This transforms what has been a labor-intensive consulting service into a scalable product offering.
 
 ## Golden Rules
 

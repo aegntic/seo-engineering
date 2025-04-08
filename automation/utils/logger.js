@@ -33,7 +33,7 @@ const COLORS = {
 
 // File logging configuration
 const LOG_TO_FILE = process.env.LOG_TO_FILE === 'true';
-const LOG_FILE_PATH = process.env.LOG_FILE_PATH || './logs/seoautomate.log';
+const LOG_FILE_PATH = process.env.LOG_FILE_PATH || './logs/seo.engineering.log';
 
 // Operational context tracking
 let currentContext = null;

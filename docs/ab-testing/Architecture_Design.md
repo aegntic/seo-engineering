@@ -4,7 +4,7 @@
 
 ## Overview
 
-The A/B Testing Framework extends SEOAutomate's capabilities to systematically test SEO optimizations, measure their impact, and automatically implement winning variants. This data-driven approach ensures that we make changes that demonstrably improve search performance and user experience.
+The A/B Testing Framework extends SEO.engineering's capabilities to systematically test SEO optimizations, measure their impact, and automatically implement winning variants. This data-driven approach ensures that we make changes that demonstrably improve search performance and user experience.
 
 ## Core Principles
 

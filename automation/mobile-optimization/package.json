@@ -1,13 +1,13 @@
 {
-  "name": "seoautomate-mobile-optimization",
+  "name": "seo.engineering-mobile-optimization",
   "version": "1.0.0",
-  "description": "Mobile Optimization module for SEOAutomate",
+  "description": "Mobile Optimization module for SEO.engineering",
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js",
     "lint": "eslint ."
   },
-  "author": "SEOAutomate Team",
+  "author": "SEO.engineering Team",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {

@@ -1,5 +1,5 @@
 /**
- * SEOAutomate CMS Platform Testing
+ * SEO.engineering CMS Platform Testing
  * 
  * This script tests the crawler across different CMS platforms
  * to ensure compatibility and proper performance.

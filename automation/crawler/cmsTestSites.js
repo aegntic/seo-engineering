@@ -1,5 +1,5 @@
 /**
- * SEOAutomate CMS Test Sites
+ * SEO.engineering CMS Test Sites
  * 
  * This file contains a comprehensive list of test sites for different CMS platforms
  * to ensure thorough compatibility testing of the crawler and CMS detection system.

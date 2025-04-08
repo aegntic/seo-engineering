@@ -41,9 +41,9 @@ console.log(`Total Links: ${results.metrics.totalLinks}`);
 console.log(`Broken Links: ${results.metrics.brokenLinks}`);
 ```
 
-## Integration with SEOAutomate
+## Integration with SEO.engineering
 
-The Broken Link Identifier is fully integrated with the Technical SEO module in SEOAutomate. When enabled, it will:
+The Broken Link Identifier is fully integrated with the Technical SEO module in SEO.engineering. When enabled, it will:
 
 1. Run as part of the comprehensive technical SEO audit
 2. Contribute issues to the overall issue list

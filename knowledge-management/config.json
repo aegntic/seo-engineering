@@ -1,0 +1,38 @@
+{
+  "modules": [
+    {
+      "name": "api",
+      "description": "API endpoints, middleware, and controllers",
+      "priority": 1,
+      "includePatterns": ["api/**/*.js", "api/**/*.ts"],
+      "excludePatterns": ["**/tests/**"]
+    },
+    {
+      "name": "automation",
+      "description": "SEO automation scripts and tools",
+      "priority": 2,
+      "includePatterns": ["automation/**/*.js", "automation/**/*.ts"]
+    },
+    {
+      "name": "deployment",
+      "description": "Deployment configurations and scripts",
+      "priority": 3,
+      "includePatterns": ["deployment/**/*.yml", "deployment/**/*.sh"]
+    },
+    {
+      "name": "documentation",
+      "description": "Project documentation and reference",
+      "priority": 4,
+      "includePatterns": ["docs/**/*.md"]
+    }
+  ],
+  "settings": {
+    "chunkSize": 2000,
+    "summaryLength": 250,
+    "embeddingModel": "text-embedding-3-small",
+    "vectorDatabase": {
+      "type": "weaviate",
+      "autoSchema": true
+    }
+  }
+}

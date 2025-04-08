@@ -1,4 +1,4 @@
-# SEOAutomate Priority Tasks
+# SEO.engineering Priority Tasks
 
 *Last updated: April 4, 2025 at 16:30*
 
@@ -93,7 +93,7 @@ The most critical dependency chain is:
 10. Implement A/B Testing Framework →
 11. Build Competitor Analysis System
 
-This chain represents the evolution from technical fixes to data-driven SEO optimization, enabling SEOAutomate to provide comprehensive value.
+This chain represents the evolution from technical fixes to data-driven SEO optimization, enabling SEO.engineering to provide comprehensive value.
 
 ## Resource Requirements
 
@@ -113,7 +113,7 @@ Completing these priority tasks will:
 3. Allow competitive analysis to identify new opportunities
 4. Enhance system performance for large-scale deployments
 
-These components together form the next layer of functionality that transforms SEOAutomate from a technical fix platform to a comprehensive SEO strategy tool that drives measurable business outcomes.
+These components together form the next layer of functionality that transforms SEO.engineering from a technical fix platform to a comprehensive SEO strategy tool that drives measurable business outcomes.
 
 ## Progress Update (April 4, 2025 at 16:30)
 

@@ -25,7 +25,7 @@ const competitorDiscovery = initialize(app);
 app.use(errorHandler);
 
 // Get MongoDB connection string from environment variables
-const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/seoautomate';
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/seo.engineering';
 
 // Connect to MongoDB
 mongoose.connect(mongoUri)

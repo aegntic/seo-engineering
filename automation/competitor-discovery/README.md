@@ -29,7 +29,7 @@ The Competitor Discovery Module consists of the following components:
 ## Installation
 
 ```bash
-cd SEOAutomate/automation/competitor-discovery
+cd SEO.engineering/automation/competitor-discovery
 npm install
 ```
 
@@ -240,7 +240,7 @@ npm test -- --watch
 
 ## Integration with Other Modules
 
-The Competitor Discovery Module integrates with the following SEOAutomate modules:
+The Competitor Discovery Module integrates with the following SEO.engineering modules:
 
 - **Crawler Module**: Uses crawled data to extract keywords and content information
 - **Analysis Engine**: Provides competitive analysis data for SEO recommendations

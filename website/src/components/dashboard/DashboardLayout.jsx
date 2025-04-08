@@ -40,7 +40,7 @@ const DashboardLayout = ({ children, userData, pageTitle, moduleName = 'client' 
 
   // Determine correct logo text based on module
   const getLogoText = () => {
-    return moduleName === 'agency' ? 'SEOAutomate Agency' : 'SEOAutomate';
+    return moduleName === 'agency' ? 'SEO.engineering Agency' : 'SEO.engineering';
   };
   
   // Determine title text

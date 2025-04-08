@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# SEOAutomate Competitor Analysis Script
+# SEO.engineering Competitor Analysis Script
 # This script runs the competitor analysis module with the specified parameters.
 
 # Script location
@@ -27,7 +27,7 @@ function echo_color() {
 
 # Header
 echo_color "blue" "====================================================="
-echo_color "blue" "  SEOAutomate Competitor Analysis"
+echo_color "blue" "  SEO.engineering Competitor Analysis"
 echo_color "blue" "====================================================="
 echo ""
 

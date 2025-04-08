@@ -1,4 +1,4 @@
-# SEOAutomate Project Context & Priority Matrix (2025-04-03 10:00)
+# SEO.engineering Project Context & Priority Matrix (2025-04-03 10:00)
 
 ## Project State Vector
 
@@ -162,10 +162,10 @@ All modules follow these integration protocols:
 
 ```bash
 # Clone the repository
-git clone https://github.com/organization/SEOAutomate.git
+git clone https://github.com/organization/SEO.engineering.git
 
 # Install dependencies
-cd SEOAutomate
+cd SEO.engineering
 npm install
 
 # Configure environment variables
@@ -181,7 +181,7 @@ npm run dev
 When continuing the project, use this template:
 
 ```
-Continue the SEOAutomate project implementation. 
+Continue the SEO.engineering project implementation. 
 Focus on implementing the Trend Analysis Reporting module as defined in PRIORITYTASKS_2025-04-03_10:00.md.
 This system will provide historical performance tracking and competitive benchmarking capabilities.
 

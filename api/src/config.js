@@ -1,7 +1,7 @@
 /**
- * SEOAutomate - Configuration
+ * SEO.engineering - Configuration
  * 
- * Central configuration file for the SEOAutomate system.
+ * Central configuration file for the SEO.engineering system.
  * Loads environment variables and provides defaults.
  */
 
@@ -15,7 +15,7 @@ const config = {
   NODE_ENV: process.env.NODE_ENV || 'development',
   
   // Database settings
-  DB_URI: process.env.DB_URI || 'mongodb://localhost:27017/seoautomate',
+  DB_URI: process.env.DB_URI || 'mongodb://localhost:27017/seo.engineering',
   
   // JWT settings
   JWT_SECRET: process.env.JWT_SECRET || 'development-secret-key',
@@ -23,7 +23,7 @@ const config = {
   
   // Git integration settings
   REPOS_BASE_PATH: process.env.REPOS_BASE_PATH || path.join(process.cwd(), 'site-repos'),
-  GIT_DEFAULT_AUTHOR: process.env.GIT_DEFAULT_AUTHOR || 'SEOAutomate <automation@seoautomate.com>',
+  GIT_DEFAULT_AUTHOR: process.env.GIT_DEFAULT_AUTHOR || 'SEO.engineering <automation@seo.engineering.com>',
   GIT_DEFAULT_BRANCH: process.env.GIT_DEFAULT_BRANCH || 'main',
   
   // Automation settings

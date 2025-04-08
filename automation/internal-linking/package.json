@@ -1,7 +1,7 @@
 {
-  "name": "seoautomate-internal-linking",
+  "name": "seo.engineering-internal-linking",
   "version": "1.0.0",
-  "description": "Internal linking optimization module for SEOAutomate",
+  "description": "Internal linking optimization module for SEO.engineering",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/**/*.js",
@@ -15,7 +15,7 @@
     "link graph",
     "anchor text"
   ],
-  "author": "SEOAutomate Team",
+  "author": "SEO.engineering Team",
   "license": "UNLICENSED",
   "dependencies": {
     "perf_hooks": "^0.0.1"

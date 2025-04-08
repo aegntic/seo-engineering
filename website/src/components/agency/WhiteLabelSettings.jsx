@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeftIcon, SaveIcon, PhotographIcon } from '@heroicons/react/outline';
+import { ArrowLeftIcon, DocumentCheckIcon, PhotoIcon } from '@heroicons/react/24/outline';
 
 /**
  * WhiteLabelSettings component allows agencies to customize the branding and appearance
@@ -75,7 +75,7 @@ const WhiteLabelSettings = () => {
       <div className="bg-white shadow rounded-lg">
         <div className="px-4 py-5 sm:p-6">
           <h3 className="text-lg leading-6 font-medium text-gray-900 mb-8">
-            Customize the appearance of your SEOAutomate instance for clients
+            Customize the appearance of your SEO.engineering instance for clients
           </h3>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -92,7 +92,7 @@ const WhiteLabelSettings = () => {
                           <img src={settings.logoPreviewUrl} alt="Logo preview" className="h-full w-full object-contain" />
                         ) : (
                           <div className="flex items-center justify-center h-full w-full bg-gray-100">
-                            <PhotographIcon className="h-8 w-8 text-gray-400" aria-hidden="true" />
+                            <PhotoIcon className="h-8 w-8 text-gray-400" aria-hidden="true" />
                           </div>
                         )}
                       </div>
@@ -127,7 +127,7 @@ const WhiteLabelSettings = () => {
                           <img src={settings.faviconPreviewUrl} alt="Favicon preview" className="h-full w-full object-contain" />
                         ) : (
                           <div className="flex items-center justify-center h-full w-full bg-gray-100">
-                            <PhotographIcon className="h-4 w-4 text-gray-400" aria-hidden="true" />
+                            <PhotoIcon className="h-4 w-4 text-gray-400" aria-hidden="true" />
                           </div>
                         )}
                       </div>
@@ -357,9 +357,9 @@ const WhiteLabelSettings = () => {
                     </div>
                     <div className="ml-3 text-sm">
                       <label htmlFor="hideSeoBrandingInReports" className="font-medium text-gray-700">
-                        Hide SEOAutomate Branding in Reports
+                        Hide SEO.engineering Branding in Reports
                       </label>
-                      <p className="text-gray-500">Remove all mentions of SEOAutomate from client-facing reports.</p>
+                      <p className="text-gray-500">Remove all mentions of SEO.engineering from client-facing reports.</p>
                     </div>
                   </div>
                 </div>
@@ -488,7 +488,7 @@ const WhiteLabelSettings = () => {
               type="button"
               className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
-              <SaveIcon className="h-4 w-4 mr-2" aria-hidden="true" />
+              <DocumentCheckIcon className="h-4 w-4 mr-2" aria-hidden="true" />
               Save Settings
             </button>
           </div>

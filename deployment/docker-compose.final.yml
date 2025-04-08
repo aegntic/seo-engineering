@@ -11,7 +11,7 @@ services:
       - ../api/uploads:/app/uploads
     environment:
       - NODE_ENV=production
-      - MONGODB_URI=mongodb://admin:u0(Wj@&_QZT#cL9Lnl)CwUk(pD@UM!7fbPy#Xk^9UKlGV_vj@mongodb:27017/seoautomate?authSource=admin
+      - MONGODB_URI=mongodb://admin:u0(Wj@&_QZT#cL9Lnl)CwUk(pD@UM!7fbPy#Xk^9UKlGV_vj@mongodb:27017/seo_engineering?authSource=admin
       - PORT=3001
       - REDIS_URI=redis://redis:6379
       - JWT_ACCESS_SECRET=${JWT_ACCESS_SECRET}

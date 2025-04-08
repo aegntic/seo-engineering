@@ -1,12 +1,12 @@
-# SEOAutomate Developer Onboarding Guide
+# SEO.engineering Developer Onboarding Guide
 
-## Welcome to SEOAutomate
+## Welcome to SEO.engineering
 
-Welcome to the SEOAutomate development team! This guide will help you get set up with the project, understand our architecture, and learn our development workflows.
+Welcome to the SEO.engineering development team! This guide will help you get set up with the project, understand our architecture, and learn our development workflows.
 
 ## Project Overview
 
-SEOAutomate is a fully automated technical SEO platform that provides end-to-end automation for technical SEO audits, fixes, and performance optimization. The system bridges the gap between technical SEO knowledge and implementation, delivering enterprise-grade results at scale.
+SEO.engineering is a fully automated technical SEO platform that provides end-to-end automation for technical SEO audits, fixes, and performance optimization. The system bridges the gap between technical SEO knowledge and implementation, delivering enterprise-grade results at scale.
 
 ### Core Value Proposition
 
@@ -38,8 +38,8 @@ Before you start, make sure you have the following installed:
 
 2. **Clone the Repository**
    ```bash
-   git clone https://github.com/organization/SEOAutomate.git
-   cd SEOAutomate
+   git clone https://github.com/organization/SEO.engineering.git
+   cd SEO.engineering
    ```
 
 3. **Install Dependencies**
@@ -60,14 +60,14 @@ Before you start, make sure you have the following installed:
 
 6. **Verify Installation**
    - Open http://localhost:3000 in your browser
-   - You should see the SEOAutomate dashboard
+   - You should see the SEO.engineering dashboard
    - Run tests to verify everything is working: `npm test`
 
 ## Development Environment
 
 ### Component Structure
 
-The SEOAutomate project follows a modular architecture with the following main components:
+The SEO.engineering project follows a modular architecture with the following main components:
 
 - `/workflows` - n8n workflow definitions
 - `/automation` - Custom automation scripts

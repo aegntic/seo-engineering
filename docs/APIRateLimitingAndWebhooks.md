@@ -2,7 +2,7 @@
 
 ## Rate Limiting Framework
 
-The SEOAutomate API implements a flexible, configurable rate limiting framework to ensure system stability, prevent abuse, and provide fair resource allocation across clients.
+The SEO.engineering API implements a flexible, configurable rate limiting framework to ensure system stability, prevent abuse, and provide fair resource allocation across clients.
 
 ### Architecture Overview
 
@@ -122,7 +122,7 @@ Proper response headers are included to help clients understand limits:
 
 ## Webhook System
 
-The SEOAutomate API includes a comprehensive webhook system to deliver real-time event notifications to external systems.
+The SEO.engineering API includes a comprehensive webhook system to deliver real-time event notifications to external systems.
 
 ### Architecture Overview
 
@@ -168,7 +168,7 @@ Webhook payloads are secured using:
 2. **Timing-Safe Comparison**: Signature verification uses constant-time algorithms
 3. **HTTPS-Only Delivery**: All webhooks must use secure HTTPS endpoints
 
-Signatures are included in the `X-SEOAutomate-Signature` header, allowing recipients to verify payload authenticity.
+Signatures are included in the `X-SEO.engineering-Signature` header, allowing recipients to verify payload authenticity.
 
 ### Delivery Reliability
 

@@ -27,7 +27,7 @@ class ViewportConfigAnalyzer {
       
       // Create a new context with mobile user agent
       const context = await browser.newContext({
-        userAgent: options.userAgent || 'SEOAutomate/1.0 Mobile Optimization Checker',
+        userAgent: options.userAgent || 'SEO.engineering/1.0 Mobile Optimization Checker',
         viewport: { width: 375, height: 667 }, // iPhone 8 size
         deviceScaleFactor: 2,
       });

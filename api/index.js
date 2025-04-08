@@ -1,5 +1,5 @@
 /**
- * SEOAutomate API Server
+ * SEO.engineering API Server
  * 
  * Main Express application entry point that configures middleware,
  * connects to MongoDB, and registers API routes.

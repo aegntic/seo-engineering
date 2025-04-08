@@ -1,5 +1,5 @@
 /**
- * SEOAutomate Optimized Crawler
+ * SEO.engineering Optimized Crawler
  * 
  * This is the main crawler implementation with performance optimizations
  * for handling large websites efficiently.

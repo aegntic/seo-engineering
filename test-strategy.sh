@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# SEOAutomate Strategy Testing Script
+# SEO.engineering Strategy Testing Script
 # This script demonstrates the Strategy Recommendation Engine
 
 # Use sample data from test-benchmark.sh

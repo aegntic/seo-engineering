@@ -1,5 +1,5 @@
 /**
- * SEOAutomate - Change Tracker Module
+ * SEO.engineering - Change Tracker Module
  * 
  * This module leverages the Git wrapper to track and manage changes made
  * to client websites by the automation tools. It provides a higher-level
@@ -110,11 +110,11 @@ class ChangeTracker {
       };
       
       await fs.writeFile(
-        path.join(this.repoPath, '.seoautomate-batch.json'),
+        path.join(this.repoPath, '.seo.engineering-batch.json'),
         JSON.stringify(metadata, null, 2)
       );
       
-      await this.git.add('.seoautomate-batch.json');
+      await this.git.add('.seo.engineering-batch.json');
       await this.git.commit(`Start SEO fix batch: ${description}`, { batchId });
       
       return branchName;
@@ -134,7 +134,7 @@ class ChangeTracker {
   async recordChange(filePath, changeType, metadata = {}) {
     try {
       // Read the current batch metadata
-      const metadataPath = path.join(this.repoPath, '.seoautomate-batch.json');
+      const metadataPath = path.join(this.repoPath, '.seo.engineering-batch.json');
       const metadataContent = await fs.readFile(metadataPath, 'utf8');
       const batchMetadata = JSON.parse(metadataContent);
       
@@ -251,7 +251,7 @@ class ChangeTracker {
       await this.git.checkout(branchName);
       
       // Read the batch metadata
-      const metadataPath = path.join(this.repoPath, '.seoautomate-batch.json');
+      const metadataPath = path.join(this.repoPath, '.seo.engineering-batch.json');
       const metadataContent = await fs.readFile(metadataPath, 'utf8');
       const batchMetadata = JSON.parse(metadataContent);
       
@@ -313,15 +313,15 @@ class ChangeTracker {
       
       const commits = await this.git.log(limit);
       
-      // Process commits to extract SEOAutomate metadata
+      // Process commits to extract SEO.engineering metadata
       return commits.map(commit => {
         const { hash, author, date, subject } = commit;
         
         // Try to extract metadata from commit message if it exists
         let metadata = {};
-        if (subject.includes('SEOAutomate-Metadata:')) {
+        if (subject.includes('SEO.engineering-Metadata:')) {
           try {
-            const metadataString = subject.split('SEOAutomate-Metadata:')[1].trim();
+            const metadataString = subject.split('SEO.engineering-Metadata:')[1].trim();
             metadata = JSON.parse(metadataString);
           } catch (e) {
             // If parsing fails, just continue with empty metadata
@@ -332,7 +332,7 @@ class ChangeTracker {
           hash,
           author,
           date,
-          subject: subject.split('SEOAutomate-Metadata:')[0].trim(),
+          subject: subject.split('SEO.engineering-Metadata:')[0].trim(),
           metadata
         };
       });

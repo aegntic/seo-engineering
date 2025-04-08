@@ -1,5 +1,5 @@
 /**
- * SEOAutomate Crawler Configuration
+ * SEO.engineering Crawler Configuration
  * 
  * This file defines the configuration options for the optimized crawler module.
  * It supports various performance optimizations for handling large websites.

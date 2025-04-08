@@ -169,4 +169,5 @@ ClientSchema.index({ agency: 1, status: 1 });
 ClientSchema.index({ agency: 1, name: 1 });
 ClientSchema.index({ agency: 1, website: 1 });
 
-module.exports = mongoose.model('Client', ClientSchema);
+// Use ClientAgency name to avoid conflict with client.model.js
+module.exports = mongoose.model('ClientAgency', ClientSchema);

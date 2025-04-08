@@ -97,10 +97,10 @@
     },
     {
       "parameters": {
-        "fromEmail": "alerts@seoautomate.com",
+        "fromEmail": "alerts@seo.engineering.com",
         "toEmail": "={{ $json.clientEmail }}",
         "subject": "Critical SEO Issues Detected on {{ $json.website }}",
-        "text": "=Our automated scan has detected critical SEO issues on your website that require attention.\n\nWebsite: {{ $json.website }}\nSEO Score: {{ $node[\"Process SEO Data\"].json.score }}/100\n\nCritical Issues:\n{% for issue in $node[\"Process SEO Data\"].json.issues %}\n{% if issue.type === 'critical' %}\n- {{ issue.message }}: {{ issue.recommendation }}\n{% endif %}\n{% endfor %}\n\nPlease log into your SEOAutomate dashboard to view the full report and implement the recommended fixes.\n\nThe SEOAutomate Team",
+        "text": "=Our automated scan has detected critical SEO issues on your website that require attention.\n\nWebsite: {{ $json.website }}\nSEO Score: {{ $node[\"Process SEO Data\"].json.score }}/100\n\nCritical Issues:\n{% for issue in $node[\"Process SEO Data\"].json.issues %}\n{% if issue.type === 'critical' %}\n- {{ issue.message }}: {{ issue.recommendation }}\n{% endif %}\n{% endfor %}\n\nPlease log into your SEO.engineering dashboard to view the full report and implement the recommended fixes.\n\nThe SEO.engineering Team",
         "options": {}
       },
       "name": "Send Alert Email",

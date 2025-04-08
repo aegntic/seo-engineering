@@ -1,5 +1,5 @@
 /**
- * SEOAutomate Crawler Module
+ * SEO.engineering Crawler Module
  * 
  * This module provides the core functionality for crawling websites and gathering
  * technical SEO data using Playwright.
@@ -20,7 +20,7 @@ class SEOCrawler {
       maxPages: 100,
       maxDepth: 5,
       respectRobotsTxt: true,
-      userAgent: 'SEOAutomate Crawler/1.0 (+https://seoautomate.com/bot)',
+      userAgent: 'SEO.engineering Crawler/1.0 (+https://seo.engineering.com/bot)',
       screenshotDir: path.join(__dirname, '../data/screenshots'),
       ...options
     };
@@ -505,7 +505,7 @@ class SEOCrawler {
     
     try {
       await client.connect();
-      const database = client.db('seoautomate');
+      const database = client.db('seo.engineering');
       const collection = database.collection('scan_results');
       
       // Add clientId to each result

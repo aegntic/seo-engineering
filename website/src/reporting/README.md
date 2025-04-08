@@ -1,6 +1,6 @@
-# SEOAutomate Reporting System
+# SEO.engineering Reporting System
 
-This module provides a comprehensive system for generating, displaying, and exporting SEO reports based on scan results. The reporting system is designed to be flexible, customizable, and easy to integrate with the rest of the SEOAutomate platform.
+This module provides a comprehensive system for generating, displaying, and exporting SEO reports based on scan results. The reporting system is designed to be flexible, customizable, and easy to integrate with the rest of the SEO.engineering platform.
 
 ## Features
 
@@ -43,7 +43,7 @@ const ReportView = ({ siteId }) => {
       data={report}
       branding={{
         logo: '/logo.svg',
-        companyName: 'SEOAutomate'
+        companyName: 'SEO.engineering'
       }}
     />
   );
@@ -135,7 +135,7 @@ The reporting system includes the following components:
 
 ## API Integration
 
-The reporting system is designed to work with the SEOAutomate API, but includes mock data for development and testing. To connect to the actual API, ensure that the `API_BASE_URL` in `reportService.js` is set correctly.
+The reporting system is designed to work with the SEO.engineering API, but includes mock data for development and testing. To connect to the actual API, ensure that the `API_BASE_URL` in `reportService.js` is set correctly.
 
 ## Customization
 

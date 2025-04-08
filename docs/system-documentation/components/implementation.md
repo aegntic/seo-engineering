@@ -2,7 +2,7 @@
 
 ## Component Overview
 
-The Implementation Module is a critical component of the SEOAutomate system responsible for executing the fix strategies determined by the Analysis Engine. It safely implements technical SEO improvements to client websites through automated processes, ensuring changes are tracked, versioned, and can be rolled back if needed.
+The Implementation Module is a critical component of the SEO.engineering system responsible for executing the fix strategies determined by the Analysis Engine. It safely implements technical SEO improvements to client websites through automated processes, ensuring changes are tracked, versioned, and can be rolled back if needed.
 
 The Implementation Module is designed to be:
 - **Safe**: Making changes with minimal risk to site functionality
@@ -171,9 +171,9 @@ The Implementation Module is configured using the following parameters:
   // Git configuration
   "git": {
     "enabled": true,
-    "commitMessage": "SEOAutomate: Automated SEO improvements",
-    "authorName": "SEOAutomate",
-    "authorEmail": "bot@seoautomate.dev",
+    "commitMessage": "SEO.engineering: Automated SEO improvements",
+    "authorName": "SEO.engineering",
+    "authorEmail": "bot@seo.engineering.dev",
     "createBranch": true,
     "branchPattern": "seo-fixes-{siteId}-{timestamp}"
   },
@@ -261,13 +261,13 @@ The Implementation Module can be deployed as a Docker container:
 
 ```bash
 docker run -d \
-  --name seoautomate-implementation \
-  -e MONGODB_URI=mongodb://mongodb:27017/seoautomate \
+  --name seo.engineering-implementation \
+  -e MONGODB_URI=mongodb://mongodb:27017/seo.engineering \
   -e GIT_ENABLED=true \
   -e APPROVAL_REQUIRED=true \
   -v /data/repositories:/app/repositories \
   -v /data/ssh:/root/.ssh \
-  seoautomate/implementation:latest
+  seo.engineering/implementation:latest
 ```
 
 ### Kubernetes Deployment
@@ -278,20 +278,20 @@ For production deployments, a Kubernetes configuration is recommended:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: seoautomate-implementation
+  name: seo.engineering-implementation
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: seoautomate-implementation
+      app: seo.engineering-implementation
   template:
     metadata:
       labels:
-        app: seoautomate-implementation
+        app: seo.engineering-implementation
     spec:
       containers:
       - name: implementation
-        image: seoautomate/implementation:latest
+        image: seo.engineering/implementation:latest
         resources:
           requests:
             memory: "2Gi"
@@ -303,7 +303,7 @@ spec:
         - name: MONGODB_URI
           valueFrom:
             secretKeyRef:
-              name: seoautomate-secrets
+              name: seo.engineering-secrets
               key: mongodb-uri
         - name: GIT_ENABLED
           value: "true"
@@ -438,10 +438,10 @@ Specific tests for various CMS platforms:
 
 ```bash
 # Clone the repository
-git clone https://github.com/organization/SEOAutomate.git
+git clone https://github.com/organization/SEO.engineering.git
 
 # Navigate to the implementation directory
-cd SEOAutomate/automation/implementation
+cd SEO.engineering/automation/implementation
 
 # Install dependencies
 npm install
@@ -631,7 +631,7 @@ async function implementStructuredData(page, schemaData, cmsAdapter) {
 Enable debug logging:
 
 ```
-export DEBUG=seoautomate:implementation:*
+export DEBUG=seo.engineering:implementation:*
 npm run start
 ```
 

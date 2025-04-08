@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * SEOAutomate Strategy CLI
+ * SEO.engineering Strategy CLI
  * 
  * This CLI tool generates strategic SEO recommendations based on gap analysis
  * and benchmark comparison data.
@@ -18,7 +18,7 @@ const logger = require('../utils/logger');
 // Configure CLI
 program
   .name('strategy')
-  .description('SEOAutomate Strategy Recommendation Tool')
+  .description('SEO.engineering Strategy Recommendation Tool')
   .version('1.0.0');
 
 program

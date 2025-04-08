@@ -1,5 +1,5 @@
 /**
- * SEOAutomate - Git Controller
+ * SEO.engineering - Git Controller
  * 
  * API controller for Git integration functionality.
  * Handles requests related to change tracking and management.

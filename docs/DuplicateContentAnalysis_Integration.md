@@ -2,7 +2,7 @@
 
 ## System Integration Architecture
 
-The Duplicate Content Analysis module integrates with the SEOAutomate ecosystem through well-defined interfaces that maintain separation of concerns while ensuring data fluidity. This document outlines the integration points, data flows, and implementation considerations.
+The Duplicate Content Analysis module integrates with the SEO.engineering ecosystem through well-defined interfaces that maintain separation of concerns while ensuring data fluidity. This document outlines the integration points, data flows, and implementation considerations.
 
 ## Integration Points
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the detailed plan for implementing the Technical SEO Checks Module for SEOAutomate. Based on our research of industry-standard SEO tools and best practices, this module will provide comprehensive technical SEO auditing capabilities to identify and help resolve common technical issues that affect search engine rankings.
+This document outlines the detailed plan for implementing the Technical SEO Checks Module for SEO.engineering. Based on our research of industry-standard SEO tools and best practices, this module will provide comprehensive technical SEO auditing capabilities to identify and help resolve common technical issues that affect search engine rankings.
 
 ## Core Technical SEO Checks
 
@@ -163,7 +163,7 @@ This document outlines the detailed plan for implementing the Technical SEO Chec
 
 ## Integration Points
 
-The Technical SEO Checks Module will integrate with other SEOAutomate components:
+The Technical SEO Checks Module will integrate with other SEO.engineering components:
 
 1. **Crawler Module**: Receives URLs and crawl data
 2. **Analysis Engine**: Sends technical SEO issues for prioritization
@@ -226,7 +226,7 @@ The effectiveness of the Technical SEO Checks Module will be measured by:
 3. **Medium-term (1-2 weeks)**:
    - Add medium-priority checks
    - Implement recommendations engine
-   - Integrate with other SEOAutomate modules
+   - Integrate with other SEO.engineering modules
 
 4. **Long-term (2+ weeks)**:
    - Add low-priority and enhancement checks

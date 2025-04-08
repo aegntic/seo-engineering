@@ -3,3 +3,4 @@ deployment/.env.production
 .env.production
 backups/pre-launch/.env.production
 node_modules
+.vscode/claudesync.json

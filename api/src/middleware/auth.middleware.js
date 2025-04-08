@@ -8,7 +8,7 @@ const User = require('../models/user.model');
 /**
  * Verify JWT token
  */
-exports.verifyToken = async (req, res, next) => {
+exports.authenticate = async (req, res, next) => {
   try {
     const authHeader = req.headers.authorization;
     

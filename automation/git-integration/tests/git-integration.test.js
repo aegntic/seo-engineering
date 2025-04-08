@@ -1,5 +1,5 @@
 /**
- * SEOAutomate - Git Integration Tests
+ * SEO.engineering - Git Integration Tests
  * 
  * Jest test suite for the Git integration module.
  */
@@ -12,7 +12,7 @@ const GitWrapper = require('../git-wrapper');
 const gitIntegration = require('../index');
 
 // Create a temporary directory for test repositories
-const TEST_DIR = path.join(os.tmpdir(), `seoautomate-git-test-${Date.now()}`);
+const TEST_DIR = path.join(os.tmpdir(), `seo.engineering-git-test-${Date.now()}`);
 
 // Setup and cleanup functions
 beforeAll(async () => {
@@ -105,7 +105,7 @@ describe('ChangeTracker', () => {
     expect(branchName).toBe(`seo-fix-${batchId}`);
     
     // Verify metadata file exists
-    const metadataPath = path.join(repoPath, '.seoautomate-batch.json');
+    const metadataPath = path.join(repoPath, '.seo.engineering-batch.json');
     const metadata = JSON.parse(await fs.readFile(metadataPath, 'utf8'));
     
     expect(metadata.batchId).toBe(batchId);
@@ -126,7 +126,7 @@ describe('ChangeTracker', () => {
     });
     
     // Verify metadata was updated
-    const metadataPath = path.join(repoPath, '.seoautomate-batch.json');
+    const metadataPath = path.join(repoPath, '.seo.engineering-batch.json');
     const metadata = JSON.parse(await fs.readFile(metadataPath, 'utf8'));
     
     expect(metadata.changes).toHaveLength(1);

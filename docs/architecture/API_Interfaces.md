@@ -1,6 +1,6 @@
-# SEOAutomate API Interfaces
+# SEO.engineering API Interfaces
 
-This document provides detailed specifications for all API interfaces between SEOAutomate modules, including endpoints, request/response formats, and authentication requirements.
+This document provides detailed specifications for all API interfaces between SEO.engineering modules, including endpoints, request/response formats, and authentication requirements.
 
 ## Authentication
 
@@ -1099,7 +1099,7 @@ When rate limits are exceeded, a `429 Too Many Requests` response is returned.
 
 ## Webhook System
 
-In addition to the event system, SEOAutomate provides webhooks for integration with external systems:
+In addition to the event system, SEO.engineering provides webhooks for integration with external systems:
 
 ```
 POST /api/v1/webhooks
@@ -1132,4 +1132,4 @@ Interactive documentation is available through Swagger UI at:
 
 ## Conclusion
 
-This document provides a comprehensive overview of the API interfaces between SEOAutomate modules. Any changes to these interfaces should be carefully managed to maintain compatibility and should follow the versioning strategy outlined above.
+This document provides a comprehensive overview of the API interfaces between SEO.engineering modules. Any changes to these interfaces should be carefully managed to maintain compatibility and should follow the versioning strategy outlined above.

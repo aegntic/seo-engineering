@@ -1,6 +1,6 @@
-# SEOAutomate Task Tracking System
+# SEO.engineering Task Tracking System
 
-This directory contains the Model Context Protocol (MCP) for SEOAutomate task tracking. The system provides a single source of truth for project status while maintaining compatibility with distributed development workflows.
+This directory contains the Model Context Protocol (MCP) for SEO.engineering task tracking. The system provides a single source of truth for project status while maintaining compatibility with distributed development workflows.
 
 ## Architecture Overview
 

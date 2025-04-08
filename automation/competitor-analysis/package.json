@@ -1,7 +1,7 @@
 {
-  "name": "seoautomate-competitor-analysis",
+  "name": "seo.engineering-competitor-analysis",
   "version": "1.0.0",
-  "description": "Competitor analysis module for SEOAutomate",
+  "description": "Competitor analysis module for SEO.engineering",
   "main": "index.js",
   "scripts": {
     "analyze": "node cli.js",
@@ -13,7 +13,7 @@
     "competitors",
     "analysis"
   ],
-  "author": "SEOAutomate Team",
+  "author": "SEO.engineering Team",
   "license": "UNLICENSED",
   "dependencies": {
     "express": "^4.17.1",

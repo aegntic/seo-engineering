@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Automated Fix Implementation System is a core component of SEOAutomate that automatically implements fixes for technical SEO issues identified by the Analysis Engine. It's designed to safely and efficiently apply best-practice changes to websites through a modular, extensible architecture.
+The Automated Fix Implementation System is a core component of SEO.engineering that automatically implements fixes for technical SEO issues identified by the Analysis Engine. It's designed to safely and efficiently apply best-practice changes to websites through a modular, extensible architecture.
 
 ## Architecture
 
@@ -128,7 +128,7 @@ Configuration is managed through the global `config.js` file or environment vari
 | `ENABLE_IMAGE_OPTIMIZATION` | Enable image file optimization | `false` |
 | `LOG_LEVEL` | Logging level (debug, info, warn, error) | `info` |
 | `LOG_TO_FILE` | Whether to log to file | `false` |
-| `LOG_FILE_PATH` | Path to log file | `./logs/seoautomate.log` |
+| `LOG_FILE_PATH` | Path to log file | `./logs/seo.engineering.log` |
 
 ## Extending the System
 

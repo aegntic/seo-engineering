@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# SEOAutomate CMS Testing Script
+# SEO.engineering CMS Testing Script
 # This script runs the CMS compatibility tests with configurable options
 
 # Default values
@@ -14,7 +14,7 @@ POPULARITY="High"
 while [[ $# -gt 0 ]]; do
   case $1 in
     --help|-h)
-      echo "SEOAutomate CMS Testing Script"
+      echo "SEO.engineering CMS Testing Script"
       echo "==============================="
       echo ""
       echo "Usage: ./test-cms.sh [options]"
@@ -98,7 +98,7 @@ fi
 CMD_ARGS="$CMD_ARGS --depth $DEPTH --concurrency $CONCURRENCY"
 
 # Print configuration
-echo "SEOAutomate CMS Testing"
+echo "SEO.engineering CMS Testing"
 echo "======================="
 echo ""
 echo "Configuration:"

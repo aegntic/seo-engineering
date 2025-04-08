@@ -3,14 +3,14 @@ import React from 'react';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "SEOAutomate has transformed how we handle technical SEO for our clients. What used to take weeks now happens in hours, with better results.",
+      quote: "SEO.engineering has transformed how we handle technical SEO for our clients. What used to take weeks now happens in hours, with better results.",
       author: "Sarah Johnson",
       role: "SEO Director",
       company: "Digital Growth Agency",
       avatar: "/testimonials/avatar1.jpg"
     },
     {
-      quote: "I was skeptical at first, but SEOAutomate identified and fixed issues our team had missed for months. Our organic traffic is up 43% since implementing it.",
+      quote: "I was skeptical at first, but SEO.engineering identified and fixed issues our team had missed for months. Our organic traffic is up 43% since implementing it.",
       author: "Michael Chen",
       role: "Marketing Manager",
       company: "TechStart Solutions",

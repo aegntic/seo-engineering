@@ -23,7 +23,7 @@ async function runMobileOptimizationAudit(url, options = {}) {
   try {
     // Default options
     const defaultOptions = {
-      userAgent: 'SEOAutomate/1.0 Mobile Optimization Checker',
+      userAgent: 'SEO.engineering/1.0 Mobile Optimization Checker',
       timeout: 30000, // 30 seconds
       devices: ['iPhone 12', 'Galaxy S20', 'iPad Mini'], // Default devices to test
       checks: {

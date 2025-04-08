@@ -1,7 +1,7 @@
 /**
- * SEOAutomate - Logger Utility
+ * SEO.engineering - Logger Utility
  * 
- * Centralized logging functionality for the SEOAutomate system.
+ * Centralized logging functionality for the SEO.engineering system.
  * Supports multiple log levels and formatted output.
  */
 
@@ -45,7 +45,7 @@ const consoleFormat = winston.format.combine(
 const logger = winston.createLogger({
   level: process.env.LOG_LEVEL || 'info',
   format: logFormat,
-  defaultMeta: { service: 'seoautomate' },
+  defaultMeta: { service: 'seo.engineering' },
   transports: [
     // Write logs with level 'error' and below to error.log
     new winston.transports.File({ 

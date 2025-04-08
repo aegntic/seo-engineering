@@ -1,6 +1,6 @@
 # Benchmark Comparison Framework
 
-The Benchmark Comparison Framework is a powerful component of SEOAutomate's Competitive Analysis System. It allows for detailed comparison of a client's website against both direct competitors and industry benchmarks across multiple SEO dimensions.
+The Benchmark Comparison Framework is a powerful component of SEO.engineering's Competitive Analysis System. It allows for detailed comparison of a client's website against both direct competitors and industry benchmarks across multiple SEO dimensions.
 
 ## Key Features
 

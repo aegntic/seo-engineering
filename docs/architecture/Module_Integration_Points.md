@@ -1,8 +1,8 @@
-# SEOAutomate Module Integration Points
+# SEO.engineering Module Integration Points
 
 ## System Architecture Overview
 
-The SEOAutomate platform consists of multiple interconnected modules that work together to provide automated technical SEO services. This document defines the integration points, interfaces, data flows, and communication protocols between these modules.
+The SEO.engineering platform consists of multiple interconnected modules that work together to provide automated technical SEO services. This document defines the integration points, interfaces, data flows, and communication protocols between these modules.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -471,7 +471,7 @@ Each module is deployed as a separate Docker container, with:
 
 Complete OpenAPI/Swagger documentation is available at:
 - Development: `http://localhost:3000/api-docs`
-- Production: `https://api.seoautomate.com/api-docs`
+- Production: `https://api.seo.engineering.com/api-docs`
 
 ## Integration Examples
 
@@ -560,7 +560,7 @@ Common integration issues and their solutions:
 ## Version Compatibility
 
 This integration specification is valid for:
-- SEOAutomate v1.0.0 and above
+- SEO.engineering v1.0.0 and above
 - API v1.0.0
 - Database schema v1.0.0
 

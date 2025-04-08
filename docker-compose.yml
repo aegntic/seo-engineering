@@ -10,7 +10,7 @@ services:
     volumes:
       - mongodb_data:/data/db
     environment:
-      - MONGO_INITDB_DATABASE=seoautomate
+      - MONGO_INITDB_DATABASE=seo_engineering
     restart: always
 
   # API server
@@ -26,7 +26,7 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
-      - MONGODB_URI=mongodb://mongodb:27017/seoautomate
+      - MONGODB_URI=mongodb://mongodb:27017/seo_engineering
       - PORT=3001
     depends_on:
       - mongodb
@@ -58,7 +58,7 @@ services:
       - N8N_PORT=${N8N_PORT:-5678}
       - N8N_PROTOCOL=${N8N_PROTOCOL:-http}
       - NODE_ENV=production
-      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY:-seoautomate_secret_key}
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY:-seo_engineering_secret_key}
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_HOST=postgres
       - DB_POSTGRESDB_PORT=5432

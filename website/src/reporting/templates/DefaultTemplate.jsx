@@ -25,7 +25,7 @@ const DefaultTemplate = ({
   data, 
   branding = { 
     logo: '/logo.svg', 
-    companyName: 'SEOAutomate' 
+    companyName: 'SEO.engineering' 
   }, 
   showRecommendations = true 
 }) => {

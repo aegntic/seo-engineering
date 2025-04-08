@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# This script updates the project dependencies for the SEOAutomate dashboard enhancement
+# This script updates the project dependencies for the SEO.engineering dashboard enhancement
 
-echo "Updating SEOAutomate dependencies..."
+echo "Updating SEO.engineering dependencies..."
 
 # Navigate to the website directory
 cd website

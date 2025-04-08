@@ -1,7 +1,7 @@
 #!/bin/bash
-# SEOAutomate Deployment Manager
+# SEO.engineering Deployment Manager
 # ==============================
-# Master control script for orchestrating the deployment of SEOAutomate
+# Master control script for orchestrating the deployment of SEO.engineering
 
 # Color codes for output
 RED='\033[0;31m'
@@ -40,7 +40,7 @@ ensure_executables() {
 show_menu() {
     clear
     echo -e "${BLUE}========================================${NC}"
-    echo -e "${BLUE}  SEOAutomate Deployment Manager v1.0   ${NC}"
+    echo -e "${BLUE}  SEO.engineering Deployment Manager v1.0   ${NC}"
     echo -e "${BLUE}========================================${NC}"
     echo ""
     echo "Please select an operation:"
@@ -99,14 +99,14 @@ create_ssl() {
         print_status "Creating self-signed certificates for development..."
         
         openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-            -keyout nginx/ssl/seoautomate.com.key \
-            -out nginx/ssl/seoautomate.com.crt \
+            -keyout nginx/ssl/seo.engineering.key \
+            -out nginx/ssl/seo.engineering.crt \
             -subj "/CN=localhost" -addext "subjectAltName=DNS:localhost"
             
         print_status "Self-signed certificates created successfully."
     elif [ "$cert_type" == "prod" ]; then
         print_status "For production certificates, you need a registered domain name."
-        echo -n "Enter your domain name (e.g., seoautomate.com): "
+        echo -n "Enter your domain name (e.g., seo.engineering): "
         read domain
         
         if [ -z "$domain" ]; then
@@ -118,8 +118,8 @@ create_ssl() {
         print_status "1. Install certbot: sudo apt install certbot"
         print_status "2. Run: sudo certbot certonly --standalone -d $domain -d www.$domain"
         print_status "3. Copy certificates to the nginx/ssl directory:"
-        print_status "   sudo cp /etc/letsencrypt/live/$domain/fullchain.pem nginx/ssl/seoautomate.com.crt"
-        print_status "   sudo cp /etc/letsencrypt/live/$domain/privkey.pem nginx/ssl/seoautomate.com.key"
+        print_status "   sudo cp /etc/letsencrypt/live/$domain/fullchain.pem nginx/ssl/seo.engineering.crt"
+        print_status "   sudo cp /etc/letsencrypt/live/$domain/privkey.pem nginx/ssl/seo.engineering.key"
         
         echo -n "Do you want to try obtaining certificates now using certbot? [y/n]: "
         read use_certbot
@@ -131,8 +131,8 @@ create_ssl() {
                 
                 if [ $? -eq 0 ]; then
                     print_status "Copying certificates to nginx/ssl directory..."
-                    sudo cp /etc/letsencrypt/live/$domain/fullchain.pem nginx/ssl/seoautomate.com.crt
-                    sudo cp /etc/letsencrypt/live/$domain/privkey.pem nginx/ssl/seoautomate.com.key
+                    sudo cp /etc/letsencrypt/live/$domain/fullchain.pem nginx/ssl/seo.engineering.crt
+                    sudo cp /etc/letsencrypt/live/$domain/privkey.pem nginx/ssl/seo.engineering.key
                     
                     print_status "Production certificates installed successfully."
                 else

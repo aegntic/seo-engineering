@@ -1,5 +1,5 @@
 {
-  "name": "seoautomate",
+  "name": "seo.engineering",
   "version": "0.1.0",
   "description": "The Future of Technical SEO Automation",
   "scripts": {
@@ -18,9 +18,10 @@
     "technical-seo",
     "performance"
   ],
-  "author": "SEOAutomate Team",
+  "author": "SEO.engineering Team",
   "license": "UNLICENSED",
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "glob": "^11.0.1"
   }
 }

@@ -1,7 +1,7 @@
 #!/bin/bash
-# SEOAutomate Credential Verification Module
+# SEO.engineering Credential Verification Module
 # ==========================================
-# This script verifies the credentials and integration points for SEOAutomate
+# This script verifies the credentials and integration points for SEO.engineering
 
 # Color codes for output
 RED='\033[0;31m'
@@ -166,7 +166,7 @@ verify_n8n_configuration() {
 
 # Welcome message
 echo -e "${GREEN}=========================================${NC}"
-echo -e "${GREEN}  SEOAutomate Credential Verification    ${NC}"
+echo -e "${GREEN}  SEO.engineering Credential Verification    ${NC}"
 echo -e "${GREEN}=========================================${NC}"
 echo ""
 

@@ -1,4 +1,4 @@
-# SEOAutomate Project Status Update
+# SEO.engineering Project Status Update
 
 *Last updated: April 9, 2025 at 10:00*
 

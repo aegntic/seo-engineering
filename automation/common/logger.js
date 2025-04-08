@@ -1,7 +1,7 @@
 /**
  * Logger Module
  * 
- * Provides a centralized logging interface for the SEOAutomate system
+ * Provides a centralized logging interface for the SEO.engineering system
  * with different log levels, formatting, and storage capabilities.
  */
 
@@ -37,7 +37,7 @@ if (!fs.existsSync(logDir)) {
 const logger = winston.createLogger({
   level: logLevel,
   format: winston.format.json(),
-  defaultMeta: { service: 'seoautomate' },
+  defaultMeta: { service: 'seo.engineering' },
   transports: [
     // Console transport
     new winston.transports.Console({

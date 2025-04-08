@@ -11,7 +11,7 @@ services:
       - N8N_PORT=${N8N_PORT:-5678}
       - N8N_PROTOCOL=${N8N_PROTOCOL:-http}
       - NODE_ENV=production
-      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY:-seoautomate_secret_key}
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY:-seo_engineering_secret_key}
       - N8N_LOG_LEVEL=${N8N_LOG_LEVEL:-info}
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_HOST=postgres

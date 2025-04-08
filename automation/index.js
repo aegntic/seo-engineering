@@ -1,5 +1,5 @@
 /**
- * SEOAutomate Automation Module
+ * SEO.engineering Automation Module
  * 
  * Main entry point for all automation features with error handling.
  * 

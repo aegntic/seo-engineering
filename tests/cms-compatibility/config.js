@@ -1,7 +1,7 @@
 /**
  * CMS Compatibility Testing Configuration
  * 
- * This file defines the configuration for testing SEOAutomate
+ * This file defines the configuration for testing SEO.engineering
  * across different CMS platforms.
  */
 
@@ -11,7 +11,7 @@ module.exports = {
     {
       name: 'WordPress',
       testUrls: [
-        'https://test-wp-site.seoautomate.dev',
+        'https://test-wp-site.seo.engineering.dev',
         'https://demo.wp-themes.dev/twentytwentyfour'
       ],
       identifiers: [
@@ -27,7 +27,7 @@ module.exports = {
     {
       name: 'Shopify',
       testUrls: [
-        'https://test-shopify-site.seoautomate.dev',
+        'https://test-shopify-site.seo.engineering.dev',
         'https://dawn-theme.myshopify.com'
       ],
       identifiers: [
@@ -43,7 +43,7 @@ module.exports = {
     {
       name: 'Wix',
       testUrls: [
-        'https://test-wix-site.seoautomate.dev',
+        'https://test-wix-site.seo.engineering.dev',
         'https://www.wix.com/website-template/view/html/2622'
       ],
       identifiers: [
@@ -59,7 +59,7 @@ module.exports = {
     {
       name: 'Squarespace',
       testUrls: [
-        'https://test-squarespace-site.seoautomate.dev',
+        'https://test-squarespace-site.seo.engineering.dev',
         'https://bedford-demo.squarespace.com'
       ],
       identifiers: [
@@ -75,7 +75,7 @@ module.exports = {
     {
       name: 'Joomla',
       testUrls: [
-        'https://test-joomla-site.seoautomate.dev',
+        'https://test-joomla-site.seo.engineering.dev',
         'https://demo.joomla.org'
       ],
       identifiers: [
@@ -141,7 +141,7 @@ module.exports = {
       name: 'default',
       browserType: 'chromium',
       viewport: { width: 1280, height: 720 },
-      userAgent: 'Mozilla/5.0 (compatible; SEOAutomate/1.0; +https://seoautomate.dev/bot)'
+      userAgent: 'Mozilla/5.0 (compatible; SEO.engineering/1.0; +https://seo.engineering.dev/bot)'
     },
     {
       name: 'mobile',

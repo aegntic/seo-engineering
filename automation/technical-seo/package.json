@@ -1,7 +1,7 @@
 {
-  "name": "seoautomate-technical-seo",
+  "name": "seo.engineering-technical-seo",
   "version": "0.1.0",
-  "description": "Technical SEO analysis module for SEOAutomate",
+  "description": "Technical SEO analysis module for SEO.engineering",
   "main": "index.js",
   "scripts": {
     "test": "jest"

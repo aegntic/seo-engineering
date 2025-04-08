@@ -1,7 +1,7 @@
 /**
- * SEOAutomate - Git Integration Module
+ * SEO.engineering - Git Integration Module
  * 
- * This module provides a wrapper around Git operations for SEOAutomate.
+ * This module provides a wrapper around Git operations for SEO.engineering.
  * It handles repository operations for client websites and manages changes
  * made by the automation tools with proper versioning and tracking.
  */
@@ -23,7 +23,7 @@ class GitWrapper {
   constructor(repoPath, options = {}) {
     this.repoPath = repoPath;
     this.options = {
-      author: options.author || 'SEOAutomate <automation@seoautomate.com>',
+      author: options.author || 'SEO.engineering <automation@seo.engineering.com>',
       defaultBranch: options.defaultBranch || 'main',
       remote: options.remote || 'origin',
       timeout: options.timeout || 60000, // 1 minute timeout for operations
@@ -135,7 +135,7 @@ class GitWrapper {
     
     if (Object.keys(metadata).length > 0) {
       const metadataJson = JSON.stringify(metadata);
-      fullMessage = `${message}\n\nSEOAutomate-Metadata: ${metadataJson}`;
+      fullMessage = `${message}\n\nSEO.engineering-Metadata: ${metadataJson}`;
     }
     
     return await this.execute(`commit -m "${fullMessage}"`);

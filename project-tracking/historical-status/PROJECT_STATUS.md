@@ -1,4 +1,4 @@
-# SEOAutomate Project Status
+# SEO.engineering Project Status
 
 *[Auto-updated: `date +"%Y-%m-%d %H:%M:%S"`]*
 

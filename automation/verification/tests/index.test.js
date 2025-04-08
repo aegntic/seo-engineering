@@ -1,7 +1,7 @@
 /**
  * Verification System Tests
  * 
- * Unit tests for the SEOAutomate Verification System,
+ * Unit tests for the SEO.engineering Verification System,
  * ensuring proper functionality of all components.
  */
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Mobile Optimization Module is a core component of SEOAutomate that evaluates websites for mobile-specific SEO factors. This module performs comprehensive checks on viewport configuration, touch elements, responsive design, and mobile performance to ensure optimal mobile user experience and search engine rankings.
+The Mobile Optimization Module is a core component of SEO.engineering that evaluates websites for mobile-specific SEO factors. This module performs comprehensive checks on viewport configuration, touch elements, responsive design, and mobile performance to ensure optimal mobile user experience and search engine rankings.
 
 ## Key Features
 
@@ -59,7 +59,7 @@ The module includes a reporting system that generates detailed reports with:
 
 ## Integration
 
-This module integrates with the broader SEOAutomate system, particularly the:
+This module integrates with the broader SEO.engineering system, particularly the:
 
 - Crawler Module
 - Technical SEO Module
@@ -82,4 +82,4 @@ npm test
 
 ## License
 
-This module is part of the SEOAutomate system and is proprietary and confidential.
+This module is part of the SEO.engineering system and is proprietary and confidential.

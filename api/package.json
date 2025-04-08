@@ -1,7 +1,7 @@
 {
-  "name": "seoautomate-api",
+  "name": "seo.engineering-api",
   "version": "0.1.0",
-  "description": "SEOAutomate API Server",
+  "description": "SEO.engineering API Server",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
@@ -14,10 +14,11 @@
     "automation",
     "express"
   ],
-  "author": "SEOAutomate Team",
+  "author": "SEO.engineering Team",
   "license": "UNLICENSED",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",

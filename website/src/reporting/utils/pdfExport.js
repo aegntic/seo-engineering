@@ -136,7 +136,7 @@ export default async function exportReportToPDF(reportData, options = {}) {
   
   // Generate filename if not provided
   const filename = options.filename || 
-    `SEOAutomate-Report-${preparedData.siteUrl.replace(/[^a-z0-9]/gi, '-')}-${new Date().toISOString().slice(0, 10)}.pdf`;
+    `SEO.engineering-Report-${preparedData.siteUrl.replace(/[^a-z0-9]/gi, '-')}-${new Date().toISOString().slice(0, 10)}.pdf`;
   
   // Mock PDF generation (would be replaced with actual implementation)
   console.log(`Generating PDF with filename: ${filename}`);

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * SEOAutomate Benchmark CLI
+ * SEO.engineering Benchmark CLI
  * 
  * This CLI tool provides benchmark comparison between a client site and its competitors.
  * It generates reports and visualizations for comprehensive benchmark analysis.
@@ -16,7 +16,7 @@ const logger = require('../utils/logger');
 // Configure CLI
 program
   .name('benchmark')
-  .description('SEOAutomate Benchmark Comparison Tool')
+  .description('SEO.engineering Benchmark Comparison Tool')
   .version('1.0.0');
 
 program

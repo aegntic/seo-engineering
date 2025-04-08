@@ -56,9 +56,9 @@ console.log(`Industry: ${results.summary.industry}`);
 console.log(`Benchmark Position: ${results.summary.benchmarkPosition}`);
 ```
 
-## Integration with SEOAutomate
+## Integration with SEO.engineering
 
-The Advanced SEO Score Calculator is fully integrated with the Technical SEO module in SEOAutomate. When enabled, it:
+The Advanced SEO Score Calculator is fully integrated with the Technical SEO module in SEO.engineering. When enabled, it:
 
 1. Processes data from all active SEO analyzers
 2. Calculates sophisticated scores using industry-specific algorithms

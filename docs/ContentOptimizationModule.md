@@ -114,7 +114,7 @@ The UI components are implemented in React:
 
 ### Integration Points
 
-The module integrates with several other SEOAutomate components:
+The module integrates with several other SEO.engineering components:
 
 - **Crawler Module**: Provides HTML content for analysis
 - **Dashboard**: Displays optimization suggestions and metrics

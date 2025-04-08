@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Cleanup script for SEOAutomate project
+# Cleanup script for SEO.engineering project
 # Creates an archive of historical status files and removes redundant files
 
-echo "SEOAutomate Project Documentation Cleanup"
+echo "SEO.engineering Project Documentation Cleanup"
 echo "========================================"
 
 # Create archive directory

@@ -8,7 +8,7 @@ services:
     volumes:
       - mongodb_data:/data/db
     environment:
-      - MONGO_INITDB_DATABASE=seoautomate
+      - MONGO_INITDB_DATABASE=seo_engineering
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD:-password}
     networks:
@@ -45,7 +45,7 @@ services:
       - ../api/uploads:/app/uploads
     environment:
       - NODE_ENV=production
-      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@mongodb:27017/seoautomate?authSource=admin
+      - MONGODB_URI=mongodb://${MONGO_ROOT_USERNAME:-admin}:${MONGO_ROOT_PASSWORD:-password}@mongodb:27017/seo_engineering?authSource=admin
       - PORT=3001
       - REDIS_URI=redis://redis:6379
       - JWT_ACCESS_SECRET=${JWT_ACCESS_SECRET}
@@ -105,7 +105,7 @@ services:
       - N8N_SMTP_PORT=${SMTP_PORT:-587}
       - N8N_SMTP_USER=${SMTP_USER}
       - N8N_SMTP_PASS=${SMTP_PASS}
-      - N8N_SMTP_SENDER=${SMTP_SENDER:-noreply@seoautomate.com}
+      - N8N_SMTP_SENDER=${SMTP_SENDER:-noreply@seo.engineering}
     volumes:
       - n8n_data:/home/node/.n8n
       - ../workflows/n8n:/home/node/.n8n/workflows

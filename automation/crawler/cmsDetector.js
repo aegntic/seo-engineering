@@ -1,5 +1,5 @@
 /**
- * SEOAutomate CMS Detector
+ * SEO.engineering CMS Detector
  * 
  * This module provides functionality to detect the CMS platform
  * of a website for platform-specific optimizations and testing.

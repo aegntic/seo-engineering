@@ -1,5 +1,5 @@
 /**
- * SEOAutomate Incremental Crawler
+ * SEO.engineering Incremental Crawler
  * 
  * This module implements incremental crawling capability to avoid
  * re-crawling unchanged pages, significantly improving performance

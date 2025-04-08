@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import DashboardLayout from '../../components/dashboard/DashboardLayout';
-import { CogIcon, UserGroupIcon, ColorSwatchIcon, GlobeAltIcon, CurrencyDollarIcon, BellIcon, DocumentDuplicateIcon } from '@heroicons/react/outline';
+import { CogIcon, UserGroupIcon, SwatchIcon, GlobeAltIcon, CurrencyDollarIcon, BellIcon, DocumentDuplicateIcon } from '@heroicons/react/24/outline';
 
 /**
  * AgencySettingsPage provides a central hub for accessing various agency settings
@@ -12,7 +12,7 @@ const AgencySettingsPage = () => {
     {
       name: 'White Label',
       description: 'Customize the look and feel of your client dashboard',
-      icon: ColorSwatchIcon,
+      icon: SwatchIcon,
       to: '/agency/settings/white-label',
       iconBg: 'bg-green-500'
     },

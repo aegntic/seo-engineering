@@ -21,7 +21,7 @@ class WebhookManager {
    */
   constructor(options = {}) {
     this.options = {
-      signatureHeader: options.signatureHeader || 'X-SEOAutomate-Signature',
+      signatureHeader: options.signatureHeader || 'X-SEO.engineering-Signature',
       signatureAlgorithm: options.signatureAlgorithm || 'sha256',
       maxRetries: options.maxRetries || 5,
       retryDelay: options.retryDelay || 5000, // 5 seconds
