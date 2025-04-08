@@ -4,3 +4,12 @@ deployment/.env.production
 backups/pre-launch/.env.production
 node_modules
 .vscode/claudesync.json
+
+# Additional sensitive files
+deployment/.env
+deployment/.env.production.gpg
+deployment/.env.production.mongodb
+api/.env.test
+nginx/.htpasswd
+nginx/.htpasswd.new
+backups/*.tar.gz
