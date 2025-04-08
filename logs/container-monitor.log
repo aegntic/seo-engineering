@@ -1,0 +1,610 @@
+[2025-04-08 14:45:02] Container Health Monitor started
+[2025-04-08 14:45:02] -------------------------------------------
+[2025-04-08 14:45:02] Checking container health...
+[2025-04-08 14:45:02] WARNING: Nginx container is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:45:03] Nginx container restart initiated
+[2025-04-08 14:45:03] WARNING: seo-api is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:45:03] seo-api restart initiated
+[2025-04-08 14:45:03] WARNING: seo-mongodb is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:45:03] seo-mongodb restart initiated
+[2025-04-08 14:45:03] WARNING: seo-redis is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:45:03] seo-redis restart initiated
+[2025-04-08 14:45:03] WARNING: seo-website is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:45:04] seo-website restart initiated
+[2025-04-08 14:45:04] WARNING: seo-n8n is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:45:04] seo-n8n restart initiated
+[2025-04-08 14:45:04] WARNING: seo-prometheus is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:45:04] seo-prometheus restart initiated
+[2025-04-08 14:45:04] WARNING: seo-grafana is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:45:04] seo-grafana restart initiated
+[2025-04-08 14:45:04] Health check complete. Next check in 300 seconds.
+[2025-04-08 14:45:04] -------------------------------------------
+[2025-04-08 14:50:04] Checking container health...
+[2025-04-08 14:50:04] WARNING: Nginx container is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:50:05] Nginx container restart initiated
+[2025-04-08 14:50:05] WARNING: seo-api is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:50:05] seo-api restart initiated
+[2025-04-08 14:50:05] WARNING: seo-mongodb is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:50:05] seo-mongodb restart initiated
+[2025-04-08 14:50:05] WARNING: seo-redis is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:50:05] seo-redis restart initiated
+[2025-04-08 14:50:05] WARNING: seo-website is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:50:06] seo-website restart initiated
+[2025-04-08 14:50:06] WARNING: seo-n8n is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:50:06] seo-n8n restart initiated
+[2025-04-08 14:50:06] WARNING: seo-prometheus is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:50:06] seo-prometheus restart initiated
+[2025-04-08 14:50:06] WARNING: seo-grafana is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:50:06] seo-grafana restart initiated
+[2025-04-08 14:50:06] Health check complete. Next check in 300 seconds.
+[2025-04-08 14:50:06] -------------------------------------------
+[2025-04-08 14:55:06] Checking container health...
+[2025-04-08 14:55:06] WARNING: Nginx container is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:55:07] Nginx container restart initiated
+[2025-04-08 14:55:07] WARNING: seo-api is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:55:07] seo-api restart initiated
+[2025-04-08 14:55:07] WARNING: seo-mongodb is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:55:07] seo-mongodb restart initiated
+[2025-04-08 14:55:07] WARNING: seo-redis is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:55:07] seo-redis restart initiated
+[2025-04-08 14:55:07] WARNING: seo-website is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:55:07] seo-website restart initiated
+[2025-04-08 14:55:08] WARNING: seo-n8n is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:55:08] seo-n8n restart initiated
+[2025-04-08 14:55:08] WARNING: seo-prometheus is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:55:08] seo-prometheus restart initiated
+[2025-04-08 14:55:08] WARNING: seo-grafana is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:55:08] seo-grafana restart initiated
+[2025-04-08 14:55:08] Health check complete. Next check in 300 seconds.
+[2025-04-08 14:55:08] -------------------------------------------
+[2025-04-08 14:56:29] Container Health Monitor started
+[2025-04-08 14:56:29] -------------------------------------------
+[2025-04-08 14:56:29] Checking container health...
+[2025-04-08 14:56:29] WARNING: Nginx container is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:56:29] Nginx container restart initiated
+[2025-04-08 14:56:29] WARNING: seo-api is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:56:29] seo-api restart initiated
+[2025-04-08 14:56:29] WARNING: seo-mongodb is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:56:30] seo-mongodb restart initiated
+[2025-04-08 14:56:30] WARNING: seo-redis is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:56:30] seo-redis restart initiated
+[2025-04-08 14:56:30] WARNING: seo-website is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:56:30] seo-website restart initiated
+[2025-04-08 14:56:30] WARNING: seo-n8n is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:56:30] seo-n8n restart initiated
+[2025-04-08 14:56:30] WARNING: seo-prometheus is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:56:30] seo-prometheus restart initiated
+[2025-04-08 14:56:31] WARNING: seo-grafana is not running (status: 
+not_found). Restarting...
+[2025-04-08 14:56:31] seo-grafana restart initiated
+[2025-04-08 14:56:31] Health check complete. Next check in 300 seconds.
+[2025-04-08 14:56:31] -------------------------------------------
+[2025-04-09 03:49:33] Container Health Monitor started
+[2025-04-09 03:49:33] -------------------------------------------
+[2025-04-09 03:49:33] Checking container health...
+[2025-04-09 03:49:33] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 03:49:34] Nginx container restart initiated
+[2025-04-09 03:49:34] seo-api status: running
+[2025-04-09 03:49:34] seo-mongodb status: running
+[2025-04-09 03:49:34] seo-redis status: running
+[2025-04-09 03:49:34] seo-website status: running
+[2025-04-09 03:49:34] seo-n8n status: running
+[2025-04-09 03:49:34] seo-prometheus status: running
+[2025-04-09 03:49:34] seo-grafana status: running
+[2025-04-09 03:49:34] Health check complete. Next check in 300 seconds.
+[2025-04-09 03:49:34] -------------------------------------------
+[2025-04-09 03:54:34] Checking container health...
+[2025-04-09 03:54:34] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 03:54:34] Nginx container restart initiated
+[2025-04-09 03:54:34] seo-api status: running
+[2025-04-09 03:54:34] seo-mongodb status: running
+[2025-04-09 03:54:34] seo-redis status: running
+[2025-04-09 03:54:34] seo-website status: running
+[2025-04-09 03:54:34] seo-n8n status: running
+[2025-04-09 03:54:34] seo-prometheus status: running
+[2025-04-09 03:54:34] seo-grafana status: running
+[2025-04-09 03:54:34] Health check complete. Next check in 300 seconds.
+[2025-04-09 03:54:34] -------------------------------------------
+[2025-04-09 03:59:34] Checking container health...
+[2025-04-09 03:59:34] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 03:59:35] Nginx container restart initiated
+[2025-04-09 03:59:35] seo-api status: running
+[2025-04-09 03:59:35] seo-mongodb status: running
+[2025-04-09 03:59:35] seo-redis status: running
+[2025-04-09 03:59:35] seo-website status: running
+[2025-04-09 03:59:35] seo-n8n status: running
+[2025-04-09 03:59:35] seo-prometheus status: running
+[2025-04-09 03:59:35] seo-grafana status: running
+[2025-04-09 03:59:35] Health check complete. Next check in 300 seconds.
+[2025-04-09 03:59:35] -------------------------------------------
+[2025-04-09 04:04:35] Checking container health...
+[2025-04-09 04:04:35] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 04:04:35] Nginx container restart initiated
+[2025-04-09 04:04:35] seo-api status: running
+[2025-04-09 04:04:35] seo-mongodb status: running
+[2025-04-09 04:04:35] seo-redis status: running
+[2025-04-09 04:04:35] seo-website status: running
+[2025-04-09 04:04:35] seo-n8n status: running
+[2025-04-09 04:04:35] seo-prometheus status: running
+[2025-04-09 04:04:35] seo-grafana status: running
+[2025-04-09 04:04:35] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:04:35] -------------------------------------------
+[2025-04-09 04:09:35] Checking container health...
+[2025-04-09 04:09:35] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 04:09:35] Nginx container restart initiated
+[2025-04-09 04:09:35] seo-api status: running
+[2025-04-09 04:09:35] seo-mongodb status: running
+[2025-04-09 04:09:35] seo-redis status: running
+[2025-04-09 04:09:35] seo-website status: running
+[2025-04-09 04:09:35] seo-n8n status: running
+[2025-04-09 04:09:35] seo-prometheus status: running
+[2025-04-09 04:09:35] seo-grafana status: running
+[2025-04-09 04:09:35] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:09:35] -------------------------------------------
+[2025-04-09 04:14:35] Checking container health...
+[2025-04-09 04:14:35] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 04:14:36] Nginx container restart initiated
+[2025-04-09 04:14:36] seo-api status: running
+[2025-04-09 04:14:36] seo-mongodb status: running
+[2025-04-09 04:14:36] seo-redis status: running
+[2025-04-09 04:14:36] seo-website status: running
+[2025-04-09 04:14:36] seo-n8n status: running
+[2025-04-09 04:14:36] seo-prometheus status: running
+[2025-04-09 04:14:36] seo-grafana status: running
+[2025-04-09 04:14:36] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:14:36] -------------------------------------------
+[2025-04-09 04:19:36] Checking container health...
+[2025-04-09 04:19:36] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 04:19:36] Nginx container restart initiated
+[2025-04-09 04:19:36] seo-api status: running
+[2025-04-09 04:19:36] seo-mongodb status: running
+[2025-04-09 04:19:36] seo-redis status: running
+[2025-04-09 04:19:36] seo-website status: running
+[2025-04-09 04:19:36] seo-n8n status: running
+[2025-04-09 04:19:36] seo-prometheus status: running
+[2025-04-09 04:19:36] seo-grafana status: running
+[2025-04-09 04:19:36] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:19:36] -------------------------------------------
+[2025-04-09 04:24:36] Checking container health...
+[2025-04-09 04:24:36] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 04:24:36] Nginx container restart initiated
+[2025-04-09 04:24:36] seo-api status: running
+[2025-04-09 04:24:36] seo-mongodb status: running
+[2025-04-09 04:24:36] seo-redis status: running
+[2025-04-09 04:24:36] seo-website status: running
+[2025-04-09 04:24:36] seo-n8n status: running
+[2025-04-09 04:24:36] seo-prometheus status: running
+[2025-04-09 04:24:36] seo-grafana status: running
+[2025-04-09 04:24:36] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:24:36] -------------------------------------------
+[2025-04-09 04:29:36] Checking container health...
+[2025-04-09 04:29:37] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 04:29:37] Nginx container restart initiated
+[2025-04-09 04:29:37] seo-api status: running
+[2025-04-09 04:29:37] seo-mongodb status: running
+[2025-04-09 04:29:37] seo-redis status: running
+[2025-04-09 04:29:37] seo-website status: running
+[2025-04-09 04:29:37] seo-n8n status: running
+[2025-04-09 04:29:37] seo-prometheus status: running
+[2025-04-09 04:29:37] seo-grafana status: running
+[2025-04-09 04:29:37] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:29:37] -------------------------------------------
+[2025-04-09 04:34:37] Checking container health...
+[2025-04-09 04:34:37] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 04:34:37] Nginx container restart initiated
+[2025-04-09 04:34:37] seo-api status: running
+[2025-04-09 04:34:37] seo-mongodb status: running
+[2025-04-09 04:34:37] seo-redis status: running
+[2025-04-09 04:34:37] seo-website status: running
+[2025-04-09 04:34:37] seo-n8n status: running
+[2025-04-09 04:34:37] seo-prometheus status: running
+[2025-04-09 04:34:37] seo-grafana status: running
+[2025-04-09 04:34:37] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:34:37] -------------------------------------------
+[2025-04-09 04:39:37] Checking container health...
+[2025-04-09 04:39:37] WARNING: Nginx container is not running (status: restarting). Restarting...
+[2025-04-09 04:39:37] Nginx container restart initiated
+[2025-04-09 04:39:37] seo-api status: running
+[2025-04-09 04:39:37] seo-mongodb status: running
+[2025-04-09 04:39:37] seo-redis status: running
+[2025-04-09 04:39:37] seo-website status: running
+[2025-04-09 04:39:37] seo-n8n status: running
+[2025-04-09 04:39:37] seo-prometheus status: running
+[2025-04-09 04:39:37] seo-grafana status: running
+[2025-04-09 04:39:37] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:39:37] -------------------------------------------
+[2025-04-09 04:44:37] Checking container health...
+[2025-04-09 04:44:37] WARNING: Nginx container is not running (status: 
+not_found). Restarting...
+[2025-04-09 04:44:37] Nginx container restart initiated
+[2025-04-09 04:44:37] WARNING: seo-api is not running (status: created). Restarting...
+[2025-04-09 04:44:38] seo-api restart initiated
+[2025-04-09 04:44:38] seo-mongodb status: running
+[2025-04-09 04:44:38] seo-redis status: running
+[2025-04-09 04:44:38] seo-website status: running
+[2025-04-09 04:44:38] seo-n8n status: running
+[2025-04-09 04:44:38] seo-prometheus status: running
+[2025-04-09 04:44:38] seo-grafana status: running
+[2025-04-09 04:44:38] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:44:38] -------------------------------------------
+[2025-04-09 04:49:38] Checking container health...
+[2025-04-09 04:49:38] Nginx container status: running
+[2025-04-09 04:49:38] seo-api status: running
+[2025-04-09 04:49:38] seo-mongodb status: running
+[2025-04-09 04:49:38] seo-redis status: running
+[2025-04-09 04:49:38] seo-website status: running
+[2025-04-09 04:49:38] seo-n8n status: running
+[2025-04-09 04:49:38] seo-prometheus status: running
+[2025-04-09 04:49:38] seo-grafana status: running
+[2025-04-09 04:49:38] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:49:38] -------------------------------------------
+[2025-04-09 04:54:38] Checking container health...
+[2025-04-09 04:54:38] Nginx container status: running
+[2025-04-09 04:54:38] seo-api status: running
+[2025-04-09 04:54:38] seo-mongodb status: running
+[2025-04-09 04:54:38] seo-redis status: running
+[2025-04-09 04:54:38] seo-website status: running
+[2025-04-09 04:54:38] seo-n8n status: running
+[2025-04-09 04:54:38] seo-prometheus status: running
+[2025-04-09 04:54:38] seo-grafana status: running
+[2025-04-09 04:54:38] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:54:38] -------------------------------------------
+[2025-04-09 04:59:38] Checking container health...
+[2025-04-09 04:59:38] Nginx container status: running
+[2025-04-09 04:59:38] seo-api status: running
+[2025-04-09 04:59:38] seo-mongodb status: running
+[2025-04-09 04:59:38] seo-redis status: running
+[2025-04-09 04:59:38] seo-website status: running
+[2025-04-09 04:59:38] seo-n8n status: running
+[2025-04-09 04:59:39] seo-prometheus status: running
+[2025-04-09 04:59:39] seo-grafana status: running
+[2025-04-09 04:59:39] Health check complete. Next check in 300 seconds.
+[2025-04-09 04:59:39] -------------------------------------------
+[2025-04-09 05:04:39] Checking container health...
+[2025-04-09 05:04:39] Nginx container status: running
+[2025-04-09 05:04:39] seo-api status: running
+[2025-04-09 05:04:39] seo-mongodb status: running
+[2025-04-09 05:04:39] seo-redis status: running
+[2025-04-09 05:04:39] seo-website status: running
+[2025-04-09 05:04:39] seo-n8n status: running
+[2025-04-09 05:04:39] seo-prometheus status: running
+[2025-04-09 05:04:39] seo-grafana status: running
+[2025-04-09 05:04:39] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:04:39] -------------------------------------------
+[2025-04-09 05:09:39] Checking container health...
+[2025-04-09 05:09:39] Nginx container status: running
+[2025-04-09 05:09:39] seo-api status: running
+[2025-04-09 05:09:39] seo-mongodb status: running
+[2025-04-09 05:09:39] seo-redis status: running
+[2025-04-09 05:09:39] seo-website status: running
+[2025-04-09 05:09:39] seo-n8n status: running
+[2025-04-09 05:09:39] seo-prometheus status: running
+[2025-04-09 05:09:39] seo-grafana status: running
+[2025-04-09 05:09:39] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:09:39] -------------------------------------------
+[2025-04-09 05:14:39] Checking container health...
+[2025-04-09 05:14:39] Nginx container status: running
+[2025-04-09 05:14:39] seo-api status: running
+[2025-04-09 05:14:39] seo-mongodb status: running
+[2025-04-09 05:14:39] seo-redis status: running
+[2025-04-09 05:14:39] seo-website status: running
+[2025-04-09 05:14:39] seo-n8n status: running
+[2025-04-09 05:14:39] seo-prometheus status: running
+[2025-04-09 05:14:39] seo-grafana status: running
+[2025-04-09 05:14:39] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:14:39] -------------------------------------------
+[2025-04-09 05:19:39] Checking container health...
+[2025-04-09 05:19:39] Nginx container status: running
+[2025-04-09 05:19:39] seo-api status: running
+[2025-04-09 05:19:39] seo-mongodb status: running
+[2025-04-09 05:19:39] seo-redis status: running
+[2025-04-09 05:19:39] seo-website status: running
+[2025-04-09 05:19:39] seo-n8n status: running
+[2025-04-09 05:19:39] seo-prometheus status: running
+[2025-04-09 05:19:39] seo-grafana status: running
+[2025-04-09 05:19:39] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:19:39] -------------------------------------------
+[2025-04-09 05:24:39] Checking container health...
+[2025-04-09 05:24:39] Nginx container status: running
+[2025-04-09 05:24:39] seo-api status: running
+[2025-04-09 05:24:39] seo-mongodb status: running
+[2025-04-09 05:24:39] seo-redis status: running
+[2025-04-09 05:24:39] seo-website status: running
+[2025-04-09 05:24:39] seo-n8n status: running
+[2025-04-09 05:24:39] seo-prometheus status: running
+[2025-04-09 05:24:39] seo-grafana status: running
+[2025-04-09 05:24:39] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:24:39] -------------------------------------------
+[2025-04-09 05:29:39] Checking container health...
+[2025-04-09 05:29:39] Nginx container status: running
+[2025-04-09 05:29:39] seo-api status: running
+[2025-04-09 05:29:39] seo-mongodb status: running
+[2025-04-09 05:29:39] seo-redis status: running
+[2025-04-09 05:29:40] seo-website status: running
+[2025-04-09 05:29:40] seo-n8n status: running
+[2025-04-09 05:29:40] seo-prometheus status: running
+[2025-04-09 05:29:40] seo-grafana status: running
+[2025-04-09 05:29:40] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:29:40] -------------------------------------------
+[2025-04-09 05:35:43] Checking container health...
+[2025-04-09 05:35:56] Nginx container status: running
+[2025-04-09 05:35:56] seo-api status: running
+[2025-04-09 05:35:57] seo-mongodb status: running
+[2025-04-09 05:35:57] seo-redis status: running
+[2025-04-09 05:35:57] seo-website status: running
+[2025-04-09 05:35:57] seo-n8n status: running
+[2025-04-09 05:35:57] seo-prometheus status: running
+[2025-04-09 05:35:57] seo-grafana status: running
+[2025-04-09 05:35:57] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:35:57] -------------------------------------------
+[2025-04-09 05:40:57] Checking container health...
+[2025-04-09 05:40:57] Nginx container status: running
+[2025-04-09 05:40:57] seo-api status: running
+[2025-04-09 05:40:57] seo-mongodb status: running
+[2025-04-09 05:40:57] seo-redis status: running
+[2025-04-09 05:40:57] seo-website status: running
+[2025-04-09 05:40:57] seo-n8n status: running
+[2025-04-09 05:40:57] seo-prometheus status: running
+[2025-04-09 05:40:57] seo-grafana status: running
+[2025-04-09 05:40:57] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:40:57] -------------------------------------------
+[2025-04-09 05:45:57] Checking container health...
+[2025-04-09 05:45:57] Nginx container status: running
+[2025-04-09 05:45:57] seo-api status: running
+[2025-04-09 05:45:57] seo-mongodb status: running
+[2025-04-09 05:45:57] seo-redis status: running
+[2025-04-09 05:45:57] seo-website status: running
+[2025-04-09 05:45:57] seo-n8n status: running
+[2025-04-09 05:45:57] seo-prometheus status: running
+[2025-04-09 05:45:57] seo-grafana status: running
+[2025-04-09 05:45:57] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:45:57] -------------------------------------------
+[2025-04-09 05:50:57] Checking container health...
+[2025-04-09 05:50:57] Nginx container status: running
+[2025-04-09 05:50:57] seo-api status: running
+[2025-04-09 05:50:57] seo-mongodb status: running
+[2025-04-09 05:50:57] seo-redis status: running
+[2025-04-09 05:50:57] seo-website status: running
+[2025-04-09 05:50:57] seo-n8n status: running
+[2025-04-09 05:50:57] seo-prometheus status: running
+[2025-04-09 05:50:57] seo-grafana status: running
+[2025-04-09 05:50:57] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:50:57] -------------------------------------------
+[2025-04-09 05:55:57] Checking container health...
+[2025-04-09 05:55:57] Nginx container status: running
+[2025-04-09 05:55:57] seo-api status: running
+[2025-04-09 05:55:57] seo-mongodb status: running
+[2025-04-09 05:55:57] seo-redis status: running
+[2025-04-09 05:55:57] seo-website status: running
+[2025-04-09 05:55:57] seo-n8n status: running
+[2025-04-09 05:55:58] seo-prometheus status: running
+[2025-04-09 05:55:58] seo-grafana status: running
+[2025-04-09 05:55:58] Health check complete. Next check in 300 seconds.
+[2025-04-09 05:55:58] -------------------------------------------
+[2025-04-09 06:00:58] Checking container health...
+[2025-04-09 06:00:58] Nginx container status: running
+[2025-04-09 06:00:58] seo-api status: running
+[2025-04-09 06:00:58] seo-mongodb status: running
+[2025-04-09 06:00:58] seo-redis status: running
+[2025-04-09 06:00:58] seo-website status: running
+[2025-04-09 06:00:58] seo-n8n status: running
+[2025-04-09 06:00:58] seo-prometheus status: running
+[2025-04-09 06:00:58] seo-grafana status: running
+[2025-04-09 06:00:58] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:00:58] -------------------------------------------
+[2025-04-09 06:05:58] Checking container health...
+[2025-04-09 06:05:58] Nginx container status: running
+[2025-04-09 06:05:58] seo-api status: running
+[2025-04-09 06:05:58] seo-mongodb status: running
+[2025-04-09 06:05:58] seo-redis status: running
+[2025-04-09 06:05:58] seo-website status: running
+[2025-04-09 06:05:58] seo-n8n status: running
+[2025-04-09 06:05:58] seo-prometheus status: running
+[2025-04-09 06:05:58] seo-grafana status: running
+[2025-04-09 06:05:58] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:05:58] -------------------------------------------
+[2025-04-09 06:10:58] Checking container health...
+[2025-04-09 06:10:58] Nginx container status: running
+[2025-04-09 06:10:58] seo-api status: running
+[2025-04-09 06:10:58] seo-mongodb status: running
+[2025-04-09 06:10:58] seo-redis status: running
+[2025-04-09 06:10:58] seo-website status: running
+[2025-04-09 06:10:58] seo-n8n status: running
+[2025-04-09 06:10:58] seo-prometheus status: running
+[2025-04-09 06:10:58] seo-grafana status: running
+[2025-04-09 06:10:58] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:10:58] -------------------------------------------
+[2025-04-09 06:15:58] Checking container health...
+[2025-04-09 06:15:58] Nginx container status: running
+[2025-04-09 06:15:58] seo-api status: running
+[2025-04-09 06:15:58] seo-mongodb status: running
+[2025-04-09 06:15:58] seo-redis status: running
+[2025-04-09 06:15:58] seo-website status: running
+[2025-04-09 06:15:58] seo-n8n status: running
+[2025-04-09 06:15:58] seo-prometheus status: running
+[2025-04-09 06:15:58] seo-grafana status: running
+[2025-04-09 06:15:58] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:15:58] -------------------------------------------
+[2025-04-09 06:20:58] Checking container health...
+[2025-04-09 06:20:58] Nginx container status: running
+[2025-04-09 06:20:58] seo-api status: running
+[2025-04-09 06:20:58] seo-mongodb status: running
+[2025-04-09 06:20:58] seo-redis status: running
+[2025-04-09 06:20:58] seo-website status: running
+[2025-04-09 06:20:58] seo-n8n status: running
+[2025-04-09 06:20:58] seo-prometheus status: running
+[2025-04-09 06:20:58] seo-grafana status: running
+[2025-04-09 06:20:58] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:20:58] -------------------------------------------
+[2025-04-09 06:25:58] Checking container health...
+[2025-04-09 06:25:58] Nginx container status: running
+[2025-04-09 06:25:59] seo-api status: running
+[2025-04-09 06:25:59] seo-mongodb status: running
+[2025-04-09 06:25:59] seo-redis status: running
+[2025-04-09 06:25:59] seo-website status: running
+[2025-04-09 06:25:59] seo-n8n status: running
+[2025-04-09 06:25:59] seo-prometheus status: running
+[2025-04-09 06:25:59] seo-grafana status: running
+[2025-04-09 06:25:59] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:25:59] -------------------------------------------
+[2025-04-09 06:30:59] Checking container health...
+[2025-04-09 06:30:59] Nginx container status: running
+[2025-04-09 06:30:59] seo-api status: running
+[2025-04-09 06:30:59] seo-mongodb status: running
+[2025-04-09 06:30:59] seo-redis status: running
+[2025-04-09 06:30:59] seo-website status: running
+[2025-04-09 06:30:59] seo-n8n status: running
+[2025-04-09 06:31:00] seo-prometheus status: running
+[2025-04-09 06:31:00] seo-grafana status: running
+[2025-04-09 06:31:00] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:31:00] -------------------------------------------
+[2025-04-09 06:36:00] Checking container health...
+[2025-04-09 06:36:00] Nginx container status: running
+[2025-04-09 06:36:00] seo-api status: running
+[2025-04-09 06:36:00] seo-mongodb status: running
+[2025-04-09 06:36:00] seo-redis status: running
+[2025-04-09 06:36:00] seo-website status: running
+[2025-04-09 06:36:00] seo-n8n status: running
+[2025-04-09 06:36:00] seo-prometheus status: running
+[2025-04-09 06:36:00] seo-grafana status: running
+[2025-04-09 06:36:00] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:36:00] -------------------------------------------
+[2025-04-09 06:41:00] Checking container health...
+[2025-04-09 06:41:00] Nginx container status: running
+[2025-04-09 06:41:00] seo-api status: running
+[2025-04-09 06:41:00] seo-mongodb status: running
+[2025-04-09 06:41:00] seo-redis status: running
+[2025-04-09 06:41:00] seo-website status: running
+[2025-04-09 06:41:00] seo-n8n status: running
+[2025-04-09 06:41:00] seo-prometheus status: running
+[2025-04-09 06:41:00] seo-grafana status: running
+[2025-04-09 06:41:00] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:41:00] -------------------------------------------
+[2025-04-09 06:46:00] Checking container health...
+[2025-04-09 06:46:00] Nginx container status: running
+[2025-04-09 06:46:00] seo-api status: running
+[2025-04-09 06:46:00] seo-mongodb status: running
+[2025-04-09 06:46:00] seo-redis status: running
+[2025-04-09 06:46:00] seo-website status: running
+[2025-04-09 06:46:00] seo-n8n status: running
+[2025-04-09 06:46:00] seo-prometheus status: running
+[2025-04-09 06:46:00] seo-grafana status: running
+[2025-04-09 06:46:00] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:46:00] -------------------------------------------
+[2025-04-09 06:51:36] Container Health Monitor started
+[2025-04-09 06:51:36] -------------------------------------------
+[2025-04-09 06:51:36] Checking container health...
+[2025-04-09 06:51:36] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 06:51:37] Nginx container restart initiated
+[2025-04-09 06:51:37] seo-api status: running
+[2025-04-09 06:51:37] seo-mongodb status: running
+[2025-04-09 06:51:37] seo-redis status: running
+[2025-04-09 06:51:37] seo-website status: running
+[2025-04-09 06:51:37] seo-n8n status: running
+[2025-04-09 06:51:37] seo-prometheus status: running
+[2025-04-09 06:51:37] seo-grafana status: running
+[2025-04-09 06:51:37] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:51:37] -------------------------------------------
+[2025-04-09 06:56:36] Checking container health...
+[2025-04-09 06:56:36] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 06:56:37] Nginx container restart initiated
+[2025-04-09 06:56:37] seo-api status: running
+[2025-04-09 06:56:37] seo-mongodb status: running
+[2025-04-09 06:56:37] seo-redis status: running
+[2025-04-09 06:56:37] seo-website status: running
+[2025-04-09 06:56:37] seo-n8n status: running
+[2025-04-09 06:56:37] seo-prometheus status: running
+[2025-04-09 06:56:37] seo-grafana status: running
+[2025-04-09 06:56:37] Health check complete. Next check in 300 seconds.
+[2025-04-09 06:56:37] -------------------------------------------
+[2025-04-09 07:01:37] Checking container health...
+[2025-04-09 07:01:37] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 07:01:37] Nginx container restart initiated
+[2025-04-09 07:01:37] seo-api status: running
+[2025-04-09 07:01:37] seo-mongodb status: running
+[2025-04-09 07:01:37] seo-redis status: running
+[2025-04-09 07:01:37] seo-website status: running
+[2025-04-09 07:01:37] seo-n8n status: running
+[2025-04-09 07:01:37] seo-prometheus status: running
+[2025-04-09 07:01:37] seo-grafana status: running
+[2025-04-09 07:01:37] Health check complete. Next check in 300 seconds.
+[2025-04-09 07:01:37] -------------------------------------------
+[2025-04-09 07:06:37] Checking container health...
+[2025-04-09 07:06:37] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 07:06:37] Nginx container restart initiated
+[2025-04-09 07:06:37] seo-api status: running
+[2025-04-09 07:06:37] seo-mongodb status: running
+[2025-04-09 07:06:37] seo-redis status: running
+[2025-04-09 07:06:37] seo-website status: running
+[2025-04-09 07:06:37] seo-n8n status: running
+[2025-04-09 07:06:37] seo-prometheus status: running
+[2025-04-09 07:06:38] seo-grafana status: running
+[2025-04-09 07:06:38] Health check complete. Next check in 300 seconds.
+[2025-04-09 07:06:38] -------------------------------------------
+[2025-04-09 07:11:38] Checking container health...
+[2025-04-09 07:11:38] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 07:11:38] Nginx container restart initiated
+[2025-04-09 07:11:38] seo-api status: running
+[2025-04-09 07:11:38] seo-mongodb status: running
+[2025-04-09 07:11:38] seo-redis status: running
+[2025-04-09 07:11:38] seo-website status: running
+[2025-04-09 07:11:38] seo-n8n status: running
+[2025-04-09 07:11:38] seo-prometheus status: running
+[2025-04-09 07:11:38] seo-grafana status: running
+[2025-04-09 07:11:38] Health check complete. Next check in 300 seconds.
+[2025-04-09 07:11:38] -------------------------------------------
+[2025-04-09 07:16:38] Checking container health...
+[2025-04-09 07:16:38] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 07:16:38] Nginx container restart initiated
+[2025-04-09 07:16:38] seo-api status: running
+[2025-04-09 07:16:38] seo-mongodb status: running
+[2025-04-09 07:16:38] seo-redis status: running
+[2025-04-09 07:16:38] seo-website status: running
+[2025-04-09 07:16:38] seo-n8n status: running
+[2025-04-09 07:16:38] seo-prometheus status: running
+[2025-04-09 07:16:38] seo-grafana status: running
+[2025-04-09 07:16:38] Health check complete. Next check in 300 seconds.
+[2025-04-09 07:16:38] -------------------------------------------
+[2025-04-09 07:21:38] Checking container health...
+[2025-04-09 07:21:38] WARNING: Nginx container is not running (status: exited). Restarting...
+[2025-04-09 07:21:39] Nginx container restart initiated
+[2025-04-09 07:21:39] seo-api status: running
+[2025-04-09 07:21:39] seo-mongodb status: running
+[2025-04-09 07:21:39] seo-redis status: running
+[2025-04-09 07:21:39] seo-website status: running
+[2025-04-09 07:21:39] seo-n8n status: running
+[2025-04-09 07:21:39] seo-prometheus status: running
+[2025-04-09 07:21:39] seo-grafana status: running
+[2025-04-09 07:21:39] Health check complete. Next check in 300 seconds.
+[2025-04-09 07:21:39] -------------------------------------------

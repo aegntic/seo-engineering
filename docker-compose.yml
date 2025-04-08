@@ -1,91 +1,160 @@
 version: '3'
 
 services:
-  # MongoDB
-  mongodb:
-    image: mongo:latest
-    container_name: seo-mongodb
+  nginx:
+    container_name: seo-nginx
+    image: nginx:alpine
     ports:
-      - "27017:27017"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/html:/usr/share/nginx/html
+      - ./nginx/ssl:/etc/nginx/ssl
+      - ./nginx/.htpasswd:/etc/nginx/.htpasswd
+    depends_on:
+      - api
+      - website
+      - grafana
+      - n8n
+    networks:
+      - seo_network
+    restart: always
+
+  api:
+    container_name: seo-api
+    image: node:18-alpine
+    volumes:
+      - ./api:/app
+    working_dir: /app
+    command: npm start
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://admin:F0ujdluYOVCCDX7N@mongodb:27017/seo_engineering?authSource=admin
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - seo_network
+    restart: always
+
+  website:
+    container_name: seo-website
+    image: deployment-website
+    networks:
+      - seo_network
+    restart: always
+
+  mongodb:
+    container_name: seo-mongodb
+    image: mongo:latest
     volumes:
       - mongodb_data:/data/db
     environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=F0ujdluYOVCCDX7N
       - MONGO_INITDB_DATABASE=seo_engineering
+    networks:
+      - seo_network
     restart: always
 
-  # API server
-  api:
-    build:
-      context: ./api
-      dockerfile: Dockerfile
-    container_name: seo-api
-    ports:
-      - "3001:3001"
+  redis:
+    container_name: seo-redis
+    image: redis:alpine
     volumes:
-      - ./api:/app
-      - /app/node_modules
-    environment:
-      - NODE_ENV=development
-      - MONGODB_URI=mongodb://mongodb:27017/seo_engineering
-      - PORT=3001
-    depends_on:
-      - mongodb
+      - redis_data:/data
+    networks:
+      - seo_network
     restart: always
 
-  # Frontend
-  website:
-    build:
-      context: ./website
-      dockerfile: Dockerfile
-    container_name: seo-website
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./website:/app
-      - /app/node_modules
-    environment:
-      - VITE_API_URL=http://localhost:3001
-    restart: always
-
-  # n8n
   n8n:
-    image: n8nio/n8n:latest
     container_name: seo-n8n
-    ports:
-      - "5678:5678"
+    image: n8nio/n8n:latest
     environment:
-      - N8N_HOST=${N8N_HOST:-localhost}
-      - N8N_PORT=${N8N_PORT:-5678}
-      - N8N_PROTOCOL=${N8N_PROTOCOL:-http}
-      - NODE_ENV=production
-      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY:-seo_engineering_secret_key}
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=https
+      - N8N_HOST=seo.engineering
       - DB_TYPE=postgresdb
       - DB_POSTGRESDB_HOST=postgres
       - DB_POSTGRESDB_PORT=5432
       - DB_POSTGRESDB_DATABASE=n8n
       - DB_POSTGRESDB_USER=n8n
-      - DB_POSTGRESDB_PASSWORD=${DB_POSTGRESDB_PASSWORD:-n8n_password}
-    volumes:
-      - n8n_data:/home/node/.n8n
-      - ./workflows/n8n:/home/node/.n8n/workflows
+      - DB_POSTGRESDB_PASSWORD=EKphhdr^qI%0GcV%
+      - N8N_ENCRYPTION_KEY=cUv6O1byRDMepJvjVGN4HA5yY6F2O5ZDtKSNlMqWVoI=
     depends_on:
       - postgres
+    networks:
+      - seo_network
     restart: always
 
-  # Postgres for n8n
   postgres:
-    image: postgres:14
     container_name: seo-postgres
+    image: postgres:14
     environment:
       - POSTGRES_USER=n8n
-      - POSTGRES_PASSWORD=${DB_POSTGRESDB_PASSWORD:-n8n_password}
+      - POSTGRES_PASSWORD=EKphhdr^qI%0GcV%
       - POSTGRES_DB=n8n
-      - POSTGRES_NON_ROOT_USER=n8n
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - seo_network
     restart: always
+
+  prometheus:
+    container_name: seo-prometheus
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    networks:
+      - seo_network
+    restart: always
+
+  grafana:
+    container_name: seo-grafana
+    image: grafana/grafana:latest
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=qOL0bC2y>)p&9f)
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - grafana_data:/var/lib/grafana
+    networks:
+      - seo_network
+    restart: always
+
+  node-exporter:
+    container_name: seo-node-exporter
+    image: prom/node-exporter:latest
+    networks:
+      - seo_network
+    restart: always
+
+  backup:
+    container_name: seo-backup
+    image: alpine:latest
+    volumes:
+      - ./backups:/backups
+      - ./scripts:/scripts
+    command: /bin/sh -c 'chmod +x /scripts/backup.sh && tail -f /dev/null'
+    depends_on:
+      - mongodb
+    networks:
+      - seo_network
+    restart: always
+
+networks:
+  seo_network:
+    driver: bridge
 
 volumes:
   mongodb_data:
+  redis_data:
   postgres_data:
-  n8n_data:
+  grafana_data:
+  prometheus_data:

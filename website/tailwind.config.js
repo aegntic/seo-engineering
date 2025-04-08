@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -37,6 +38,22 @@ export default {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
         display: ['Lexend', 'ui-sans-serif', 'system-ui'],
+      },
+      backgroundColor: {
+        // Adding darker colors for dark mode
+        'dark': {
+          DEFAULT: '#000000',
+          '50': '#0a0a0a',
+          '100': '#121212',
+          '200': '#1a1a1a',
+          '300': '#262626',
+          '400': '#333333',
+          '500': '#404040',
+          '600': '#4d4d4d',
+          '700': '#595959',
+          '800': '#666666',
+          '900': '#737373',
+        },
       },
     },
   },

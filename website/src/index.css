@@ -21,6 +21,19 @@ body {
   min-height: 100vh;
 }
 
+@layer base {
+  /* Dark mode overrides */
+  .dark {
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+    color-scheme: dark;
+  }
+  
+  .dark body {
+    @apply bg-black text-white;
+  }
+}
+
 @layer components {
   .btn-primary {
     @apply inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition duration-150 ease-in-out;
@@ -36,5 +49,14 @@ body {
   
   .section {
     @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  /* Dark Mode Button Styles */
+  .dark .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white ring-offset-black;
+  }
+  
+  .dark .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 text-primary-300 ring-offset-black;
   }
 }

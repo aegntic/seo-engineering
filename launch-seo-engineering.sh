@@ -53,16 +53,31 @@ if [ -d "nginx/conf.d" ]; then
 fi
 cp -r nginx/ssl ./backups/pre-launch/
 
-# Create basic Nginx configuration if not exists
-if [ ! -f "nginx/conf.d/default.conf" ]; then
-    echo -e "\n${BLUE}► Creating basic Nginx configuration...${NC}"
-    cat > nginx/conf.d/default.conf << 'EOF'
+# Remove any existing Nginx configurations to prevent conflicts
+echo -e "\n${BLUE}► Cleaning up existing Nginx configurations...${NC}"
+rm -f nginx/conf.d/*.conf
+
+# Create a single Nginx configuration file
+echo -e "\n${BLUE}► Creating Nginx configuration...${NC}"
+cat > nginx/conf.d/default.conf << 'EOF'
+# HTTP redirect to HTTPS
 server {
     listen 80;
     server_name seo.engineering www.seo.engineering;
-    return 301 https://$host$request_uri;
+    
+    # Redirect all HTTP traffic to HTTPS
+    location / {
+        return 301 https://$host$request_uri;
+    }
+    
+    # Health check for load balancers
+    location /health {
+        return 200 'SEO.engineering Platform - Online!\n\nStatus: Operational\nDeployed: 2025-04-08\nSSL: Disabled\n';
+        add_header Content-Type text/plain;
+    }
 }
 
+# HTTPS server configuration
 server {
     listen 443 ssl;
     server_name seo.engineering www.seo.engineering;
@@ -91,7 +106,7 @@ server {
     
     # API Endpoint
     location /api {
-        proxy_pass http://api:3001;
+        proxy_pass http://seo-api:3001;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -103,11 +118,8 @@ server {
     }
     
     # n8n Workflow Automation
-    location /n8n {
-        auth_basic "Restricted Area";
-        auth_basic_user_file /etc/nginx/conf.d/.htpasswd;
-        
-        proxy_pass http://n8n:5678;
+    location /n8n/ {
+        proxy_pass http://seo-n8n:5678/;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -116,11 +128,8 @@ server {
     }
     
     # Monitoring dashboards
-    location /monitoring {
-        auth_basic "Restricted Area";
-        auth_basic_user_file /etc/nginx/conf.d/.htpasswd;
-        
-        proxy_pass http://grafana:3000;
+    location /monitoring/ {
+        proxy_pass http://seo-grafana:3000/;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -128,25 +137,29 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
     
+    # Health check for monitoring
+    location /health {
+        return 200 'SEO.engineering Platform - Online!\n\nStatus: Operational\nDeployed: 2025-04-08\nSSL: Enabled\n';
+        add_header Content-Type text/plain;
+    }
+    
     # Error pages
     error_page 404 /404.html;
     error_page 500 502 503 504 /50x.html;
 }
 EOF
-fi
 
 # Create .htpasswd file if not exists
 if [ ! -f "nginx/.htpasswd" ]; then
     echo -e "\n${BLUE}► Creating authentication file...${NC}"
-    
-    # Check if we can copy from SEO.engineering
-    if [ -f "/home/tabs/SEO.engineering/deployment/nginx/.htpasswd" ]; then
-        mkdir -p nginx
-        cp /home/tabs/SEO.engineering/deployment/nginx/.htpasswd nginx/
-    else
-        mkdir -p nginx
-        echo 'admin:$apr1$3cYCaLyh$uVis/0Y6iWZ.o289SdCjb/' > nginx/.htpasswd
-    fi
+    mkdir -p nginx
+    echo 'admin:$apr1$3cYCaLyh$uVis/0Y6iWZ.o289SdCjb/' > nginx/.htpasswd
+fi
+
+# Make sure the system's Nginx is stopped
+echo -e "\n${BLUE}► Ensuring system Nginx is stopped...${NC}"
+if command -v systemctl &> /dev/null; then
+    echo "1123" | sudo -S systemctl stop nginx || true
 fi
 
 # Export environment variables needed for docker-compose
@@ -156,12 +169,16 @@ export DOCKER_CLIENT_TIMEOUT=300
 # Ensure we're using the system Docker socket
 export DOCKER_HOST=unix:///var/run/docker.sock
 
+# First, make sure any previous containers are stopped
+echo -e "\n${BLUE}► Cleaning up previous deployment...${NC}"
+docker compose -f deployment/docker-compose.prod.yml down
+
 # Bring forth your digital realm through the power of containerization
 echo -e "\n${BLUE}► Awakening your digital ecosystem...${NC}"
 echo -e "  This orchestration may take several minutes as each component materializes."
 
 # Launch with Docker Compose - the alchemical process that transmutes code into service
-docker-compose --env-file deployment/.env.production -f deployment/docker-compose.prod.yml up -d
+docker compose --env-file .env.production -f deployment/docker-compose.prod.yml up -d
 
 if [ $? -eq 0 ]; then
     # The digital birth was successful - your realm now exists
@@ -171,19 +188,19 @@ if [ $? -eq 0 ]; then
     echo -e "\n${BLUE}► Your digital gateways:${NC}"
     echo -e "  • Main Website: ${GREEN}https://seo.engineering${NC}"
     echo -e "  • API Access: ${GREEN}https://seo.engineering/api${NC}"
-    echo -e "  • Workflow Studio: ${GREEN}https://seo.engineering/n8n${NC}"
-    echo -e "  • Observatory: ${GREEN}https://seo.engineering/monitoring${NC}"
+    echo -e "  • Workflow Studio: ${GREEN}https://seo.engineering/n8n/${NC}"
+    echo -e "  • Observatory: ${GREEN}https://seo.engineering/monitoring/${NC}"
     
-    echo -e "\n${BLUE}► Access credentials for protected realms:${NC}"
+    echo -e "\n${BLUE}► Access credentials for protected realms (when enabled):${NC}"
     echo -e "  • Username: ${GREEN}admin${NC}"
     echo -e "  • Password: ${GREEN}admin123${NC} (Change this immediately after first login)"
     
     echo -e "\n${BLUE}► To observe the vital signs of your digital ecosystem:${NC}"
-    echo -e "  docker-compose -f deployment/docker-compose.prod.yml logs -f"
+    echo -e "  docker compose -f deployment/docker-compose.prod.yml logs -f"
     
     echo -e "\n${GREEN}Your digital realm awaits your command.${NC}"
 else
     # The digital birth encountered complications
     echo -e "\n${YELLOW}⚠ The awakening was interrupted. Consulting the logs may reveal why.${NC}"
-    echo -e "  docker-compose -f deployment/docker-compose.prod.yml logs"
+    echo -e "  docker compose -f deployment/docker-compose.prod.yml logs"
 fi

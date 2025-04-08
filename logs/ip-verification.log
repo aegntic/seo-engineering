@@ -1,0 +1,14 @@
+[2025-04-09 00:00:02] Starting IP verification check
+[2025-04-09 00:00:02] Current public IP address: 163.53.144.9
+[2025-04-09 00:00:02] Checking DNS record for seo.engineering...
+[2025-04-09 00:00:02] CRITICAL: DNS mismatch for seo.engineering
+[2025-04-09 00:00:02]   - Domain resolves to: 104.197.197.191
+[2025-04-09 00:00:02]   - Current server IP:  163.53.144.9
+[2025-04-09 00:00:02]   - Action required: Update DNS records at Porkbun
+[2025-04-09 00:00:02] Checking DNS record for www.seo.engineering...
+[2025-04-09 00:00:02] CRITICAL: DNS mismatch for www.seo.engineering
+[2025-04-09 00:00:02]   - Domain resolves to: 104.197.197.191
+[2025-04-09 00:00:02]   - Current server IP:  163.53.144.9
+[2025-04-09 00:00:02]   - Action required: Update DNS records at Porkbun
+[2025-04-09 00:00:02] IP verification check completed
+[2025-04-09 00:00:02] -------------------------------------------

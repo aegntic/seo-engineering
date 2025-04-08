@@ -13,3 +13,7 @@ api/.env.test
 nginx/.htpasswd
 nginx/.htpasswd.new
 backups/*.tar.gz
+
+# Ignore node_modules and cache directories
+node_modules/
+**/.cache/

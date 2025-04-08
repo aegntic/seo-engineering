@@ -7,6 +7,7 @@ services:
     container_name: seo-mongodb
     volumes:
       - mongodb_data:/data/db
+      - ./deployment/mongodb:/docker-entrypoint-initdb.d
     environment:
       - MONGO_INITDB_DATABASE=seo_engineering
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USERNAME:-admin}
@@ -74,8 +75,8 @@ services:
   # Frontend
   website:
     build:
-      context: ./website
-      dockerfile: Dockerfile.prod
+      context: ../website
+      dockerfile: Dockerfile.prod.fixed
     container_name: seo-website
     environment:
       - VITE_API_URL=https://${DOMAIN}/api
@@ -153,9 +154,10 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./nginx/ssl:/etc/nginx/ssl
-      - ./nginx/logs:/var/log/nginx
+      - ../nginx/conf.d:/etc/nginx/conf.d
+      - ../nginx/ssl:/etc/nginx/ssl
+      - ../nginx/logs:/var/log/nginx
+      - ../nginx/.htpasswd:/etc/nginx/conf.d/.htpasswd
       - website_build:/usr/share/nginx/html
     networks:
       - seo_network
@@ -198,10 +200,13 @@ services:
     container_name: seo-grafana
     volumes:
       - grafana_data:/var/lib/grafana
-      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning
+      - ../monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ../monitoring/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
+      - ../monitoring/grafana/dashboards:/var/lib/grafana/dashboards
     environment:
       - GF_SECURITY_ADMIN_USER=${GRAFANA_ADMIN_USER:-admin}
       - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-admin}
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel,briangann-gauge-panel,natel-plotly-panel
     networks:
       - seo_network
     depends_on:
@@ -242,7 +247,8 @@ services:
     volumes:
       - ./scripts/backup.sh:/backup.sh
       - ./backups:/backups
-      - mongodb_data:/data/db:ro
+      - mongodb_data:/data/db
+      - ./deployment/mongodb:/docker-entrypoint-initdb.d:ro
       - postgres_data:/var/lib/postgresql/data:ro
     command: /bin/sh -c "chmod +x /backup.sh && crond -f -d 8"
     networks:

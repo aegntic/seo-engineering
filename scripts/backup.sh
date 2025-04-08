@@ -1,61 +1,49 @@
 #!/bin/bash
-# SEO.engineering Backup Script
-# =========================
-# This script performs automated backups of MongoDB and PostgreSQL databases.
-# It should be scheduled via cron to run daily.
+
+# Automated Backup Script
+# SEO.engineering Platform
+# Created: April 8, 2025
 
 # Configuration
-BACKUP_DIR="/backups"
-DATE=$(date +"%Y-%m-%d-%H%M")
-RETENTION_DAYS=7
-
-# MongoDB backup
-MONGO_BACKUP_FILE="mongodb-backup-${DATE}.gz"
-MONGO_HOST="mongodb"
-MONGO_USER=${MONGO_ROOT_USERNAME:-admin}
-MONGO_PASS=${MONGO_ROOT_PASSWORD:-password}
-MONGO_DB="seo.engineering"
-
-# PostgreSQL backup
-PG_BACKUP_FILE="postgres-backup-${DATE}.gz"
-PG_HOST="postgres"
-PG_USER="n8n"
-PG_PASS=${DB_POSTGRESDB_PASSWORD:-n8n_password}
-PG_DB="n8n"
-
-# Logging function
-log() {
-    echo "[$(date +'%Y-%m-%d %H:%M:%S')] $1"
-}
+BACKUP_DIR="/home/tabs/seo-engineering/backups"
+DATE=$(date +%Y-%m-%d)
+BACKUP_NAME="seo-engineering-backup-$DATE"
+RETENTION_DAYS=14
 
 # Create backup directory if it doesn't exist
-mkdir -p "${BACKUP_DIR}"
+mkdir -p $BACKUP_DIR
 
-# MongoDB backup
-log "Starting MongoDB backup..."
-mongodump --host=${MONGO_HOST} --username=${MONGO_USER} --password=${MONGO_PASS} --authenticationDatabase=admin --db=${MONGO_DB} --archive | gzip > "${BACKUP_DIR}/${MONGO_BACKUP_FILE}"
+echo "Starting backup process at $(date)"
 
-if [ $? -eq 0 ]; then
-    log "MongoDB backup completed: ${MONGO_BACKUP_FILE}"
-else
-    log "MongoDB backup failed!"
-fi
+# Create backup directory for this run
+mkdir -p $BACKUP_DIR/$BACKUP_NAME
 
-# PostgreSQL backup
-log "Starting PostgreSQL backup..."
-pg_dump -h ${PG_HOST} -U ${PG_USER} ${PG_DB} | gzip > "${BACKUP_DIR}/${PG_BACKUP_FILE}"
+# 1. Backup MongoDB data
+echo "Backing up MongoDB data..."
+echo "1123" | sudo -S docker exec seo-mongodb mongodump --out=/tmp/mongodb-backup
+echo "1123" | sudo -S docker cp seo-mongodb:/tmp/mongodb-backup $BACKUP_DIR/$BACKUP_NAME/mongodb
+echo "1123" | sudo -S docker exec seo-mongodb rm -rf /tmp/mongodb-backup
 
-if [ $? -eq 0 ]; then
-    log "PostgreSQL backup completed: ${PG_BACKUP_FILE}"
-else
-    log "PostgreSQL backup failed!"
-fi
+# 2. Backup Redis data
+echo "Backing up Redis data..."
+echo "1123" | sudo -S docker exec seo-redis redis-cli SAVE
+echo "1123" | sudo -S docker cp seo-redis:/data/dump.rdb $BACKUP_DIR/$BACKUP_NAME/redis-dump.rdb
 
-# Remove old backups
-log "Cleaning up old backups (older than ${RETENTION_DAYS} days)..."
-find ${BACKUP_DIR} -name "mongodb-backup-*.gz" -mtime +${RETENTION_DAYS} -delete
-find ${BACKUP_DIR} -name "postgres-backup-*.gz" -mtime +${RETENTION_DAYS} -delete
+# 3. Backup configuration files
+echo "Backing up configuration files..."
+cp -r /home/tabs/seo-engineering/nginx $BACKUP_DIR/$BACKUP_NAME/
+cp -r /home/tabs/seo-engineering/grafana $BACKUP_DIR/$BACKUP_NAME/
+cp -r /home/tabs/seo-engineering/deployment $BACKUP_DIR/$BACKUP_NAME/
 
-# Create a backup report
-TOTAL_SIZE=$(du -sh ${BACKUP_DIR} | cut -f1)
-log "Backup complete. Total backup size: ${TOTAL_SIZE}"
+# 4. Compress the backup
+echo "Compressing backup..."
+cd $BACKUP_DIR
+tar -czf $BACKUP_NAME.tar.gz $BACKUP_NAME
+rm -rf $BACKUP_NAME
+
+# 5. Clean up old backups (retention policy)
+echo "Applying retention policy ($RETENTION_DAYS days)..."
+find $BACKUP_DIR -name "seo-engineering-backup-*.tar.gz" -type f -mtime +$RETENTION_DAYS -delete
+
+echo "Backup completed at $(date)"
+echo "Backup stored at: $BACKUP_DIR/$BACKUP_NAME.tar.gz"
