@@ -2,7 +2,8 @@
 
 // Create database and admin user
 db = db.getSiblingDB('admin');
-db.auth('admin', 'F0ujdluYOVCCDX7N');
+const adminPassword = process.env.MONGO_ADMIN_PASSWORD || 'default_password_for_development';
+db.auth('admin', adminPassword);
 
 // Create seo_engineering database
 db = db.getSiblingDB('seo_engineering');
