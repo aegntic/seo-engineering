@@ -6,7 +6,8 @@
  * made by the automation tools with proper versioning and tracking.
  */
 
-const { exec } = require('child_process');
+const { execFile } = require('child_process');
+const shellQuote = require('shell-quote');
 const path = require('path');
 const fs = require('fs').promises;
 const logger = require('../../api/src/utils/logger');
@@ -38,8 +39,10 @@ class GitWrapper {
    */
   async execute(command) {
     return new Promise((resolve, reject) => {
-      exec(
-        `git ${command}`,
+      const args = shellQuote.parse(command);
+      execFile(
+        'git',
+        args,
         { cwd: this.repoPath, timeout: this.options.timeout },
         (error, stdout, stderr) => {
           if (error) {
