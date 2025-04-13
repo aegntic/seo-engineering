@@ -1,4 +1,4 @@
-FROM node:18-alpine AS builder
+FROM node:18-slim AS builder
 
 WORKDIR /app
 
@@ -6,13 +6,18 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci
+RUN rm -rf node_modules && npm cache clean --force
+ENV CI=true
+
+RUN npm rebuild esbuild
+RUN npm ci --force --include=dev
 
 # Copy source files
 COPY . .
+RUN ls -la /app
 
 # Build the application for production
-RUN npm run build
+# Skip build inside Docker, use pre-built dist/
 
 # Production stage - using nginx to serve static files
 FROM nginx:alpine
@@ -33,4 +38,4 @@ RUN echo 'server { \
 # Expose port
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]   

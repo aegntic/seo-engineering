@@ -22,6 +22,7 @@
     "@stripe/react-stripe-js": "^3.6.0",
     "@stripe/stripe-js": "^7.0.0",
     "@visx/visx": "^3.8.0",
+    "aframe": "^1.7.1",
     "d3": "^7.9.0",
     "d3-shape": "^3.2.0",
     "react": "^18.2.0",
@@ -29,7 +30,8 @@
     "react-force-graph": "^1.44.1",
     "react-router-dom": "^7.4.1",
     "react-table": "^7.8.0",
-    "recharts": "^2.10.3"
+    "recharts": "^2.10.3",
+    "three": "^0.175.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",

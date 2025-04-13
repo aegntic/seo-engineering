@@ -380,6 +380,18 @@ EOF
 
 # Create .htpasswd file for protected routes
 create_htpasswd() {
+    if [ -n "$HTPASSWD_USER" ] && [ -n "$HTPASSWD_PASS" ]; then
+        print_status "Using environment-provided credentials for .htpasswd"
+        if command_exists htpasswd; then
+            htpasswd -bc nginx/.htpasswd "$HTPASSWD_USER" "$HTPASSWD_PASS"
+            print_status ".htpasswd created successfully."
+        else
+            print_warning "htpasswd not found, using Docker to create .htpasswd"
+            docker run --rm -v $(pwd)/nginx:/etc/nginx alpine sh -c "apk add --no-cache apache2-utils && htpasswd -bc /etc/nginx/.htpasswd $HTPASSWD_USER $HTPASSWD_PASS"
+            print_status ".htpasswd created successfully via Docker."
+        fi
+        return
+    fi
     print_status "Creating .htpasswd file for protected routes..."
     
     if command_exists htpasswd; then
@@ -512,6 +524,19 @@ setup_backup
 create_dockerfiles
 create_htpasswd
 start_containers
+print_status "Running end-to-end deployment verification..."
+
+export BASE_URL="https://${domain}"
+export ADMIN_EMAIL="admin@seo.engineering"
+export ADMIN_PASSWORD="secureProductionPassword"
+
+if ./test-end-to-end.sh; then
+    print_status "End-to-end verification passed."
+else
+    print_error "End-to-end verification failed. Aborting deployment."
+    exit 1
+fi
+
 check_container_status
 display_info
 

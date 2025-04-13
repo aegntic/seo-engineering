@@ -1,0 +1,393 @@
+Starting security updates at Sun 13 Apr 2025 03:00:01 AEST
+[sudo] password for tabs: 
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 file:/var/cuda-repo-debian11-11-8-local  InRelease [1,575 B]
+Get:1 file:/var/cuda-repo-debian11-11-8-local  InRelease [1,575 B]
+Hit:2 https://packages.microsoft.com/repos/code stable InRelease
+Hit:3 https://dl.google.com/linux/chrome/deb stable InRelease
+Ign:4 http://packages.linuxmint.com xia InRelease
+Ign:5 https://download.docker.com/linux/ubuntu xia InRelease
+Hit:6 http://ddebs.ubuntu.com noble InRelease
+Hit:7 http://packages.linuxmint.com xia Release
+Hit:9 http://ddebs.ubuntu.com noble-updates InRelease
+Err:10 https://download.docker.com/linux/ubuntu xia Release
+  404  Not Found [IP: 18.65.244.85 443]
+Get:11 https://pkgs.tailscale.com/stable/ubuntu noble InRelease
+Hit:12 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:13 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:14 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:15 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:16 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble InRelease
+Hit:17 https://ppa.launchpadcontent.net/guardianproject/ppa/ubuntu noble InRelease
+Reading package lists...
+E: The repository 'https://download.docker.com/linux/ubuntu xia Release' does not have a Release file.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages were automatically installed and are no longer required:
+  libpython3.13-minimal libsubid4 linux-headers-6.8.0-55
+  linux-headers-6.8.0-55-generic linux-image-6.8.0-55-generic
+  linux-modules-6.8.0-55-generic linux-modules-extra-6.8.0-55-generic
+  linux-tools-6.8.0-55 linux-tools-6.8.0-55-generic pass python3.13-minimal
+  qrencode uidmap
+Use 'sudo apt autoremove' to remove them.
+The following upgrades have been deferred due to phasing:
+  ubuntu-drivers-common
+The following packages have been kept back:
+  nvidia-settings
+The following packages will be upgraded:
+  code firefox firefox-locale-en gir1.2-soup-2.4 gir1.2-soup-3.0
+  google-chrome-canary libpython3.10-minimal libpython3.10-stdlib
+  libpython3.13-stdlib libsnmp-base libsnmp40t64 libsoup-2.4-1 libsoup-3.0-0
+  libsoup-3.0-common libsoup-gnome-2.4-1 libsoup2.4-common pci.ids python3.10
+  python3.10-distutils python3.10-lib2to3 python3.10-minimal python3.10-venv
+  python3.13 thunderbird thunderbird-locale-en thunderbird-locale-en-us
+26 to upgrade, 0 to newly install, 0 to remove and 2 not to upgrade.
+Need to get 394 MB of archives.
+After this operation, 8,753 kB of additional disk space will be used.
+Get:1 https://packages.microsoft.com/repos/code stable/main amd64 code amd64 1.99.2-1744250061 [104 MB]
+Get:2 https://dl.google.com/linux/chrome/deb stable/main amd64 google-chrome-canary amd64 137.0.7123.0-1 [117 MB]
+Get:3 http://packages.linuxmint.com xia/upstream amd64 firefox amd64 137.0.1+linuxmint1+xia [80.1 MB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 pci.ids all 0.0~2024.03.31-1ubuntu0.1 [275 kB]
+Get:5 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble/main amd64 python3.10-lib2to3 all 3.10.17-1+noble1 [82.2 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-soup-2.4 amd64 2.74.3-6ubuntu1.2 [31.9 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsoup-gnome-2.4-1 amd64 2.74.3-6ubuntu1.2 [6,158 B]
+Get:8 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsoup2.4-common all 2.74.3-6ubuntu1.2 [8,592 B]
+Get:9 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsoup-2.4-1 amd64 2.74.3-6ubuntu1.2 [282 kB]
+Get:10 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble/main amd64 python3.10-distutils all 3.10.17-1+noble1 [144 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsoup-3.0-common all 3.4.4-5ubuntu0.2 [10.6 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-soup-3.0 amd64 3.4.4-5ubuntu0.2 [22.5 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsoup-3.0-0 amd64 3.4.4-5ubuntu0.2 [287 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsnmp-base all 5.9.4+dfsg-1.1ubuntu3.1 [206 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsnmp40t64 amd64 5.9.4+dfsg-1.1ubuntu3.1 [1,066 kB]
+Get:16 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble/main amd64 python3.10-venv amd64 3.10.17-1+noble1 [2,915 kB]
+Get:17 http://packages.linuxmint.com xia/upstream amd64 firefox-locale-en amd64 137.0.1+linuxmint1+xia [551 kB]
+Get:18 http://packages.linuxmint.com xia/upstream amd64 thunderbird amd64 1:128.9.1esr+linuxmint1+xia [75.5 MB]
+Get:19 http://packages.linuxmint.com xia/upstream amd64 thunderbird-locale-en all 1:128.9.1esr+linuxmint1+xia [1,545 kB]
+Get:20 http://packages.linuxmint.com xia/upstream amd64 thunderbird-locale-en-us all 1:128.9.1esr+linuxmint1+xia [1,654 B]
+Get:21 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble/main amd64 python3.10 amd64 3.10.17-1+noble1 [48.9 kB]
+Get:22 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble/main amd64 libpython3.10-stdlib amd64 3.10.17-1+noble1 [1,821 kB]
+Get:23 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble/main amd64 python3.10-minimal amd64 3.10.17-1+noble1 [1,905 kB]
+Get:24 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble/main amd64 libpython3.10-minimal amd64 3.10.17-1+noble1 [803 kB]
+Get:25 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble/main amd64 python3.13 amd64 3.13.3-1+noble1 [2,296 kB]
+Get:26 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble/main amd64 libpython3.13-stdlib amd64 3.13.3-1+noble1 [2,859 kB]
+debconf: unable to initialise frontend: Dialog
+debconf: (Dialogue frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialise frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 394 MB in 1min 28s (4,480 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 654147 files and directories currently installed.)
+Preparing to unpack .../00-firefox_137.0.1+linuxmint1+xia_amd64.deb ...
+Unpacking firefox (137.0.1+linuxmint1+xia) over (137.0+linuxmint1+xia) ...
+Preparing to unpack .../01-google-chrome-canary_137.0.7123.0-1_amd64.deb ...
+Unpacking google-chrome-canary (137.0.7123.0-1) over (137.0.7115.0-1) ...
+Preparing to unpack .../02-python3.10-lib2to3_3.10.17-1+noble1_all.deb ...
+Unpacking python3.10-lib2to3 (3.10.17-1+noble1) over (3.10.16-1+noble1) ...
+Preparing to unpack .../03-python3.10-distutils_3.10.17-1+noble1_all.deb ...
+Unpacking python3.10-distutils (3.10.17-1+noble1) over (3.10.16-1+noble1) ...
+Preparing to unpack .../04-python3.10-venv_3.10.17-1+noble1_amd64.deb ...
+Unpacking python3.10-venv (3.10.17-1+noble1) over (3.10.16-1+noble1) ...
+Preparing to unpack .../05-python3.10_3.10.17-1+noble1_amd64.deb ...
+Unpacking python3.10 (3.10.17-1+noble1) over (3.10.16-1+noble1) ...
+Preparing to unpack .../06-libpython3.10-stdlib_3.10.17-1+noble1_amd64.deb ...
+Unpacking libpython3.10-stdlib:amd64 (3.10.17-1+noble1) over (3.10.16-1+noble1) ...
+Preparing to unpack .../07-python3.10-minimal_3.10.17-1+noble1_amd64.deb ...
+Unpacking python3.10-minimal (3.10.17-1+noble1) over (3.10.16-1+noble1) ...
+Preparing to unpack .../08-libpython3.10-minimal_3.10.17-1+noble1_amd64.deb ...
+Unpacking libpython3.10-minimal:amd64 (3.10.17-1+noble1) over (3.10.16-1+noble1) ...
+Preparing to unpack .../09-pci.ids_0.0~2024.03.31-1ubuntu0.1_all.deb ...
+Unpacking pci.ids (0.0~2024.03.31-1ubuntu0.1) over (0.0~2024.03.31-1) ...
+Preparing to unpack .../10-code_1.99.2-1744250061_amd64.deb ...
+Unpacking code (1.99.2-1744250061) over (1.99.0-1743632463) ...
+debconf: unable to initialise frontend: Dialog
+debconf: (Dialogue frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialise frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+Preparing to unpack .../11-firefox-locale-en_137.0.1+linuxmint1+xia_amd64.deb ...
+Unpacking firefox-locale-en (137.0.1+linuxmint1+xia) over (137.0+linuxmint1+xia) ...
+Preparing to unpack .../12-gir1.2-soup-2.4_2.74.3-6ubuntu1.2_amd64.deb ...
+Unpacking gir1.2-soup-2.4:amd64 (2.74.3-6ubuntu1.2) over (2.74.3-6ubuntu1.1) ...
+Preparing to unpack .../13-libsoup-gnome-2.4-1_2.74.3-6ubuntu1.2_amd64.deb ...
+Unpacking libsoup-gnome-2.4-1:amd64 (2.74.3-6ubuntu1.2) over (2.74.3-6ubuntu1.1) ...
+Preparing to unpack .../14-libsoup2.4-common_2.74.3-6ubuntu1.2_all.deb ...
+Unpacking libsoup2.4-common (2.74.3-6ubuntu1.2) over (2.74.3-6ubuntu1.1) ...
+Preparing to unpack .../15-libsoup-2.4-1_2.74.3-6ubuntu1.2_amd64.deb ...
+Unpacking libsoup-2.4-1:amd64 (2.74.3-6ubuntu1.2) over (2.74.3-6ubuntu1.1) ...
+Preparing to unpack .../16-libsoup-3.0-common_3.4.4-5ubuntu0.2_all.deb ...
+Unpacking libsoup-3.0-common (3.4.4-5ubuntu0.2) over (3.4.4-5ubuntu0.1) ...
+Preparing to unpack .../17-gir1.2-soup-3.0_3.4.4-5ubuntu0.2_amd64.deb ...
+Unpacking gir1.2-soup-3.0:amd64 (3.4.4-5ubuntu0.2) over (3.4.4-5ubuntu0.1) ...
+Preparing to unpack .../18-libsoup-3.0-0_3.4.4-5ubuntu0.2_amd64.deb ...
+Unpacking libsoup-3.0-0:amd64 (3.4.4-5ubuntu0.2) over (3.4.4-5ubuntu0.1) ...
+Preparing to unpack .../19-python3.13_3.13.3-1+noble1_amd64.deb ...
+Unpacking python3.13 (3.13.3-1+noble1) over (3.13.0-1+noble1) ...
+dpkg: error processing archive /tmp/apt-dpkg-install-5m6oZI/19-python3.13_3.13.3-1+noble1_amd64.deb (--unpack):
+ trying to overwrite '/usr/bin/python3.13', which is also in package python3.13-minimal 3.13.0-1+noble1
+dpkg-deb: error: paste subprocess was killed by signal (Broken pipe)
+Preparing to unpack .../20-libpython3.13-stdlib_3.13.3-1+noble1_amd64.deb ...
+Unpacking libpython3.13-stdlib:amd64 (3.13.3-1+noble1) over (3.13.0-1+noble1) ...
+dpkg: error processing archive /tmp/apt-dpkg-install-5m6oZI/20-libpython3.13-stdlib_3.13.3-1+noble1_amd64.deb (--unpack):
+ trying to overwrite '/etc/python3.13/sitecustomize.py', which is also in package libpython3.13-minimal:amd64 3.13.0-1+noble1
+dpkg-deb: error: paste subprocess was killed by signal (Broken pipe)
+Preparing to unpack .../21-libsnmp-base_5.9.4+dfsg-1.1ubuntu3.1_all.deb ...
+Unpacking libsnmp-base (5.9.4+dfsg-1.1ubuntu3.1) over (5.9.4+dfsg-1.1ubuntu3) ...
+Preparing to unpack .../22-libsnmp40t64_5.9.4+dfsg-1.1ubuntu3.1_amd64.deb ...
+Unpacking libsnmp40t64:amd64 (5.9.4+dfsg-1.1ubuntu3.1) over (5.9.4+dfsg-1.1ubuntu3) ...
+Preparing to unpack .../23-thunderbird_1%3a128.9.1esr+linuxmint1+xia_amd64.deb ...
+Unpacking thunderbird (1:128.9.1esr+linuxmint1+xia) over (1:128.9.0esr+linuxmint1+xia) ...
+Preparing to unpack .../24-thunderbird-locale-en_1%3a128.9.1esr+linuxmint1+xia_all.deb ...
+Unpacking thunderbird-locale-en (1:128.9.1esr+linuxmint1+xia) over (1:128.9.0esr+linuxmint1+xia) ...
+Preparing to unpack .../25-thunderbird-locale-en-us_1%3a128.9.1esr+linuxmint1+xia_all.deb ...
+Unpacking thunderbird-locale-en-us (1:128.9.1esr+linuxmint1+xia) over (1:128.9.0esr+linuxmint1+xia) ...
+Errors were encountered while processing:
+ /tmp/apt-dpkg-install-5m6oZI/19-python3.13_3.13.3-1+noble1_amd64.deb
+ /tmp/apt-dpkg-install-5m6oZI/20-libpython3.13-stdlib_3.13.3-1+noble1_amd64.deb
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  libsubid4 linux-headers-6.8.0-55 linux-headers-6.8.0-55-generic
+  linux-image-6.8.0-55-generic linux-modules-6.8.0-55-generic
+  linux-modules-extra-6.8.0-55-generic linux-tools-6.8.0-55
+  linux-tools-6.8.0-55-generic pass qrencode uidmap
+0 to upgrade, 0 to newly install, 11 to remove and 4 not to upgrade.
+24 not fully installed or removed.
+After this operation, 301 MB disk space will be freed.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 654145 files and directories currently installed.)
+Removing uidmap (1:4.13+dfsg1-4ubuntu3.2) ...
+Removing libsubid4:amd64 (1:4.13+dfsg1-4ubuntu3.2) ...
+Removing linux-headers-6.8.0-55-generic (6.8.0-55.57) ...
+Removing linux-headers-6.8.0-55 (6.8.0-55.57) ...
+Removing linux-image-6.8.0-55-generic (6.8.0-55.57) ...
+debconf: unable to initialise frontend: Dialog
+debconf: (Dialogue frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialise frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+/etc/kernel/prerm.d/dkms:
+dkms: removing: nvidia 550.120 (6.8.0-55-generic) (x86_64)
+Module nvidia-550.120 for kernel 6.8.0-55-generic (x86_64).
+Before uninstall, this module version was ACTIVE on this kernel.
+
+nvidia.ko.zst:
+ - Uninstallation
+   - Deleting from: /lib/modules/6.8.0-55-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+nvidia-modeset.ko.zst:
+ - Uninstallation
+   - Deleting from: /lib/modules/6.8.0-55-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+nvidia-drm.ko.zst:
+ - Uninstallation
+   - Deleting from: /lib/modules/6.8.0-55-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+nvidia-uvm.ko.zst:
+ - Uninstallation
+   - Deleting from: /lib/modules/6.8.0-55-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+
+nvidia-peermem.ko.zst:
+ - Uninstallation
+   - Deleting from: /lib/modules/6.8.0-55-generic/updates/dkms/
+ - Original module
+   - No original module was found for this module on this kernel.
+   - Use the dkms install command to reinstall any previous module version.
+depmod....
+/etc/kernel/postrm.d/initramfs-tools:
+update-initramfs: Deleting /boot/initrd.img-6.8.0-55-generic
+/etc/kernel/postrm.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/50_linuxmint.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-6.8.0-57-generic
+Found initrd image: /boot/initrd.img-6.8.0-57-generic
+Found linux image: /boot/vmlinuz-6.8.0-56-generic
+Found initrd image: /boot/initrd.img-6.8.0-56-generic
+Found linux image: /boot/vmlinuz-6.8.0-38-generic
+Found initrd image: /boot/initrd.img-6.8.0-38-generic
+Warning: os-prober will be executed to detect other bootable partitions.
+Its output will be used to detect bootable binaries on them and create new boot entries.
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+Removing linux-modules-extra-6.8.0-55-generic (6.8.0-55.57) ...
+Removing linux-modules-6.8.0-55-generic (6.8.0-55.57) ...
+Removing linux-tools-6.8.0-55-generic (6.8.0-55.57) ...
+Removing linux-tools-6.8.0-55 (6.8.0-55.57) ...
+Removing pass (1.7.4-6) ...
+Removing qrencode (4.1.1-1build2) ...
+Setting up code (1.99.2-1744250061) ...
+debconf: unable to initialise frontend: Dialog
+debconf: (Dialogue frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialise frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+Setting up pci.ids (0.0~2024.03.31-1ubuntu0.1) ...
+Setting up firefox (137.0.1+linuxmint1+xia) ...
+Setting up libsnmp-base (5.9.4+dfsg-1.1ubuntu3.1) ...
+Setting up python3.10-lib2to3 (3.10.17-1+noble1) ...
+Setting up libsoup-3.0-common (3.4.4-5ubuntu0.2) ...
+Setting up thunderbird-locale-en (1:128.9.1esr+linuxmint1+xia) ...
+Setting up thunderbird-locale-en-us (1:128.9.1esr+linuxmint1+xia) ...
+Setting up google-chrome-canary (137.0.7123.0-1) ...
+Setting up firefox-locale-en (137.0.1+linuxmint1+xia) ...
+Setting up libpython3.10-minimal:amd64 (3.10.17-1+noble1) ...
+Setting up python3.10-distutils (3.10.17-1+noble1) ...
+Setting up libsoup2.4-common (2.74.3-6ubuntu1.2) ...
+Setting up thunderbird (1:128.9.1esr+linuxmint1+xia) ...
+Setting up libsoup-2.4-1:amd64 (2.74.3-6ubuntu1.2) ...
+Setting up libsnmp40t64:amd64 (5.9.4+dfsg-1.1ubuntu3.1) ...
+Setting up libsoup-3.0-0:amd64 (3.4.4-5ubuntu0.2) ...
+Setting up python3.10-minimal (3.10.17-1+noble1) ...
+Setting up libpython3.10-stdlib:amd64 (3.10.17-1+noble1) ...
+Setting up gir1.2-soup-3.0:amd64 (3.4.4-5ubuntu0.2) ...
+Setting up libsoup-gnome-2.4-1:amd64 (2.74.3-6ubuntu1.2) ...
+Setting up python3.10 (3.10.17-1+noble1) ...
+Setting up gir1.2-soup-2.4:amd64 (2.74.3-6ubuntu1.2) ...
+Setting up python3.10-venv (3.10.17-1+noble1) ...
+Processing triggers for gnome-menus (3.36.0-1.1ubuntu3) ...
+Processing triggers for mate-menus (1.26.1+mint1) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for shared-mime-info (2.4-4) ...
+Processing triggers for mintsystem (8.6.2) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for desktop-file-utils (0.27-2build1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Updating Docker containers...
+alpine: Pulling from library/nginx
+Digest: sha256:4ff102c5d78d254a6f0da062b3cf39eaf07f01eec0927fd21e219d0af8bc0591
+Status: Image is up to date for nginx:alpine
+docker.io/library/nginx:alpine
+18-alpine: Pulling from library/node
+Digest: sha256:8d6421d663b4c28fd3ebc498332f249011d118945588d0a35cb9bc4b8ca09d9e
+Status: Image is up to date for node:18-alpine
+docker.io/library/node:18-alpine
+latest: Pulling from library/mongo
+2726e237d1a3: Pulling fs layer
+adf7a2b7606d: Pulling fs layer
+1a08ed22982f: Pulling fs layer
+90ade5227b11: Pulling fs layer
+66eecf3d03b3: Pulling fs layer
+8fc21ef9255d: Pulling fs layer
+29fee425ac1e: Pulling fs layer
+7e4d144a0672: Pulling fs layer
+90ade5227b11: Waiting
+8fc21ef9255d: Waiting
+66eecf3d03b3: Waiting
+7e4d144a0672: Waiting
+29fee425ac1e: Waiting
+adf7a2b7606d: Verifying Checksum
+adf7a2b7606d: Download complete
+1a08ed22982f: Verifying Checksum
+1a08ed22982f: Download complete
+2726e237d1a3: Verifying Checksum
+2726e237d1a3: Download complete
+90ade5227b11: Verifying Checksum
+90ade5227b11: Download complete
+66eecf3d03b3: Verifying Checksum
+66eecf3d03b3: Download complete
+2726e237d1a3: Pull complete
+adf7a2b7606d: Pull complete
+1a08ed22982f: Pull complete
+90ade5227b11: Pull complete
+66eecf3d03b3: Pull complete
+8fc21ef9255d: Verifying Checksum
+8fc21ef9255d: Download complete
+8fc21ef9255d: Pull complete
+7e4d144a0672: Download complete
+29fee425ac1e: Verifying Checksum
+29fee425ac1e: Download complete
+29fee425ac1e: Pull complete
+7e4d144a0672: Pull complete
+Digest: sha256:ab6556e6d71d9773dd74002db924dc637abb49d079d6ef945982af3078fdf22c
+Status: Downloaded newer image for mongo:latest
+docker.io/library/mongo:latest
+alpine: Pulling from library/redis
+Digest: sha256:02419de7eddf55aa5bcf49efb74e88fa8d931b4d77c07eff8a6b2144472b6952
+Status: Image is up to date for redis:alpine
+docker.io/library/redis:alpine
+latest: Pulling from grafana/grafana
+Digest: sha256:62d2b9d20a19714ebfe48d1bb405086081bc602aa053e28cf6d73c7537640dfb
+Status: Image is up to date for grafana/grafana:latest
+docker.io/grafana/grafana:latest
+latest: Pulling from prom/prometheus
+Digest: sha256:502ad90314c7485892ce696cb14a99fceab9fc27af29f4b427f41bd39701a199
+Status: Image is up to date for prom/prometheus:latest
+docker.io/prom/prometheus:latest
+latest: Pulling from n8nio/n8n
+f18232174bc9: Already exists
+8cc209e5911c: Pulling fs layer
+d7a069a788e0: Pulling fs layer
+42ec265e2954: Pulling fs layer
+c8212b925ea8: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+4f4fb700ef54: Waiting
+c8212b925ea8: Waiting
+eb688e36d5e6: Pulling fs layer
+49c5b70c95f2: Pulling fs layer
+d9afc8e000fd: Pulling fs layer
+2842b5213505: Pulling fs layer
+eb688e36d5e6: Waiting
+a6e51738e4aa: Pulling fs layer
+49c5b70c95f2: Waiting
+d9afc8e000fd: Waiting
+2842b5213505: Waiting
+a6e51738e4aa: Waiting
+42ec265e2954: Verifying Checksum
+42ec265e2954: Download complete
+d7a069a788e0: Verifying Checksum
+d7a069a788e0: Download complete
+8cc209e5911c: Download complete
+4f4fb700ef54: Verifying Checksum
+4f4fb700ef54: Download complete
+c8212b925ea8: Verifying Checksum
+c8212b925ea8: Download complete
+8cc209e5911c: Pull complete
+d7a069a788e0: Pull complete
+42ec265e2954: Pull complete
+49c5b70c95f2: Download complete
+c8212b925ea8: Pull complete
+4f4fb700ef54: Pull complete
+2842b5213505: Verifying Checksum
+2842b5213505: Download complete
+d9afc8e000fd: Verifying Checksum
+d9afc8e000fd: Download complete
+a6e51738e4aa: Verifying Checksum
+a6e51738e4aa: Download complete
+eb688e36d5e6: Download complete
+eb688e36d5e6: Pull complete
+49c5b70c95f2: Pull complete
+d9afc8e000fd: Pull complete
+2842b5213505: Pull complete
+a6e51738e4aa: Pull complete
+Digest: sha256:4604b6878a13c90e8eeba071aba25c6dc2e962a282f134907dcecbcacf7fb97b
+Status: Downloaded newer image for n8nio/n8n:latest
+docker.io/n8nio/n8n:latest
+Security updates completed at Sun 13 Apr 2025 03:03:03 AEST
